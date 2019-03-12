@@ -13,7 +13,7 @@
 							<th>Name</th>
 							<th>email</th>
 							<th>Actions</th>
-							<th><a type="button" class="btn btn-primary" href="{{ route('users.create') }}">Add User</a></th>
+							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createUser">Add User</a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -32,6 +32,7 @@
 				</table>
 			</div>								
 		</div>
+		@include('admin.user.create')
 	</div>
 </div>
 @stop
