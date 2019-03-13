@@ -9,7 +9,7 @@ class Producto extends Model
     //nombre de la tabla
     protected $table='producto';
     //atributos de la tabla
-    protected $fillable = ['nombre', 'descripcion','cantidad','stock'];
+    protected $fillable = ['nombre_producto', 'descripcion','cantidad','stock'];
 
     public function deseable()
     {

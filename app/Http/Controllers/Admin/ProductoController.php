@@ -39,11 +39,12 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-       /* $this->product->create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password)
-        ]);*/
+        $this->product->create([
+            'nombre_producto' => $request->nombre_producto,
+            'descripcion' => $request->descripcion,
+            'cantidad' => $request->cantidad,
+            'stock' => $request->stock
+        ]);
     }
 
     /**
