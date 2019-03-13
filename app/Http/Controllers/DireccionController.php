@@ -13,7 +13,7 @@ class DireccionController extends Controller
      */
     public function index()
     {
-        //
+        return "direccion";
     }
 
     /**

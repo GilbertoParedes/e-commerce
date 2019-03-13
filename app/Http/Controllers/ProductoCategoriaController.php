@@ -13,7 +13,7 @@ class ProductoCategoriaController extends Controller
      */
     public function index()
     {
-        //
+        return "producto categoria";
     }
 
     /**

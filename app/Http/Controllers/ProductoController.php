@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+//manda llamar el metodo
+use App\Producto;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +15,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+       return "producto";
     }
 
     /**
@@ -45,7 +47,6 @@ class ProductoController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**

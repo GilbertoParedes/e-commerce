@@ -13,7 +13,7 @@ class CarritoController extends Controller
      */
     public function index()
     {
-        //
+        return "hola desde el carrito";
     }
 
     /**
