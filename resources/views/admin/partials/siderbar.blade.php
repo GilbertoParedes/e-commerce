@@ -9,7 +9,7 @@
 			<!--/down-->
 							<div class="down">	
 								<a href="index.html"><img src="{{ asset('admin/images/admin.jpg') }}"></a>
-								<a href="index.html"><span class=" name-caret">Gilberto Paredes</span></a>
+								<a href="index.html"><span class=" name-caret">Laura Topacio</span></a>
 								<p>System Administrator in Company</p>
 								<ul>
 									<li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
@@ -35,16 +35,15 @@
 											<li id="menu-academico-boletim" ><a href="widget.html">Roles</a></li>
 											<li id="menu-academico-avaliacoes" ><a href="calender.html">Permisos</a></li>
 										  </ul>
-										{{--
-										</li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Tabs &amp; Panels</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+										 </li>
+										
+										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Products</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href="tabs.html"> Tabs &amp; Panels</a></li>
-											<li id="menu-academico-boletim" ><a href="widget.html">Widgets</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="calender.html">Calendar</a></li>
+											<li id="menu-academico-avaliacoes" ><a href=""> Ver</a></li>
 											
-										  </ul>
+										   </ul>
 										</li>
+										{{--
 										 <li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o"></i> <span>Ui Elements</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 											 <ul id="menu-academico-sub" >
 												<li id="menu-academico-avaliacoes" ><a href="forms.html">Forms</a></li>

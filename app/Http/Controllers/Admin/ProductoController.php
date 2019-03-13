@@ -8,14 +8,17 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   protected $product;
+
+    // contructor de modelo para uso en cualquier método
+    function __construct(Producto $product)
+    {
+        $this->product = $product;
+    }
     public function index()
     {
-       return "producto";
+        $products = $this->product->all();
+        return view('admin.product.products', compact('products'));
     }
 
     /**

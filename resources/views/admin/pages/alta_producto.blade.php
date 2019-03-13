@@ -2,23 +2,27 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Alta de Productos</div>
-                    <div class="card-body">
-                       {{-- @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif--}}
-                        <form>
-                            
-                        </form>
-
-                    </div>
-            </div>
-        </div>
+  <h2>Registro de productos</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="text">Nombre del producto:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre">
     </div>
+     <div class="form-group">
+      <label for="text">Descripción:</label>
+      <input type="text" class="form-control" id="descripcion"  name="descripcion">
+    </div>
+    <div class="form-group">
+      <label for="text">Cantidad:</label>
+      <input type="text" class="form-control" id="cantidad"  name="cantidad">
+    </div>
+    <div class="form-group">
+      <label for="text">Stock:</label>
+      <input type="text" class="form-control" id="cantidad"  name="cantidad">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
 </div>
+
 @endsection

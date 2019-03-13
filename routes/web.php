@@ -25,7 +25,7 @@ Route::get('categoria', 'Admin\CategoriaController@index');
 Route::get('deseable', 'Admin\DeseableController@index');
 Route::get('direccion', 'Admin\DireccionController@index');
 Route::get('productocategoria', 'Admin\ProductoCategoriaController@index');
-Route::get('producto', 'Admin\ProductoController@index');
+Route::get('/products', 'Admin\ProductoController@index');
 
 
 

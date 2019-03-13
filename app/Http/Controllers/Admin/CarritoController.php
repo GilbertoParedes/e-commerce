@@ -3,17 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Carrito;
 
 class CarritoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $carrito;
     public function index()
     {
-        return "hola desde el carrito";
+        //return "hola desde el carrito";
     }
 
     /**
