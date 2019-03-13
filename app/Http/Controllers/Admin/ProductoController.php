@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 //manda llamar el metodo
-use App\Producto;
-
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Producto;
 
 class ProductoController extends Controller
 {
@@ -28,7 +28,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.product.create');
     }
 
     /**
@@ -39,7 +39,11 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       /* $this->product->create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);*/
     }
 
     /**

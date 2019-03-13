@@ -19,13 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'Admin\UserController');
-Route::get('carrito', 'Admin\CarritoController@index');
-Route::get('carritoproducto', 'Admin\CarritoproductoController@index');
-Route::get('categoria', 'Admin\CategoriaController@index');
-Route::get('deseable', 'Admin\DeseableController@index');
-Route::get('direccion', 'Admin\DireccionController@index');
-Route::get('productocategoria', 'Admin\ProductoCategoriaController@index');
-Route::get('/products', 'Admin\ProductoController@index');
+Route::resource('/carrito', 'Admin\CarritoController');
+Route::resource('/carritoproducto', 'Admin\CarritoproductoController');
+Route::resource('/categoria', 'Admin\CategoriaController');
+Route::resource('/deseable', 'Admin\DeseableController');
+Route::resource('/direccion', 'Admin\DireccionController');
+Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
+Route::resource('/products', 'Admin\ProductoController');
+
 
 
 

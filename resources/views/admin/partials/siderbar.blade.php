@@ -39,7 +39,7 @@
 										
 										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Products</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href=""> Ver</a></li>
+											<li id="menu-academico-avaliacoes" ><a href="{{ route('products.index') }}"> Ver</a></li>
 											
 										   </ul>
 										</li>

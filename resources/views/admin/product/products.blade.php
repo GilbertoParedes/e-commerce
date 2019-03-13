@@ -17,11 +17,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($users as $user)
+						@foreach($products as $product)
 						<tr>
-							<td>{{ $user->id }}</td>
-							<td>{{ $user->name }}</td>
-							<td>{{ $user->email }}</td>
+							<td>{{ $product->nombre }}</td>
+							<td>{{ $product->descripcion }}</td>
+							<td>{{ $product->cantidad }}</td>
+							<td>{{ $product->stock }}</td>
+
 							<td>
 								<button type="button" class="btn btn-primary">Editar</button>
 								<button type="button" class="btn btn-danger">Eliminar</button>
@@ -32,7 +34,7 @@
 				</table>
 			</div>								
 		</div>
-		@include('admin.user.create')
+		@include('admin.product.create')
 	</div>
 </div>
 @stop

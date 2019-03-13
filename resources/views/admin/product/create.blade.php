@@ -12,7 +12,7 @@
 					<form class="form-horizontal" action="{{ route('users.store') }}" method="post">
 						@csrf
 						<div class="form-group">
-							<label class="col-md-2 control-label">Nombre del producto</label>
+							<label class="col-md-2 control-label">Nombre</label>
 							<div class="col-md-8">
 								<div class="input-group">							
 									<span class="input-group-addon">
@@ -23,7 +23,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-2 control-label">Descripción del producto</label>
+							<label class="col-md-2 control-label">Descripción</label>
 							<div class="col-md-8">
 								<div class="input-group">							
 									<span class="input-group-addon">
@@ -34,7 +34,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-2 control-label">Selecciona una imagen</label>
+							<label class="col-md-2 control-label"></label>
 							<div class="col-md-8">
 								<div class="input-group">
 									<span class="input-group-addon">
