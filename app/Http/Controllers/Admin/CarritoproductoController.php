@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-//manda llamar el metodo
-use App\Producto;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-class ProductoController extends Controller
+class CarritoproductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-       return "producto";
+        return "Carrito Producto";
     }
 
     /**
@@ -47,6 +45,7 @@ class ProductoController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**

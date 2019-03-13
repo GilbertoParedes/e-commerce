@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-class CarritoproductoController extends Controller
+class DireccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class CarritoproductoController extends Controller
      */
     public function index()
     {
-        return "Carrito Producto";
+        return "direccion";
     }
 
     /**
