@@ -10,4 +10,9 @@ class Producto extends Model
     protected $table='producto';
     //atributos de la tabla
     protected $fillable = ['nombre', 'descripcion','cantidad','stock'];
+
+    public function deseable()
+    {
+        return $this->hasMany('App\Deseable','producto_id');
+    }
 }

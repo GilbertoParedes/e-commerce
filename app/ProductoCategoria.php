@@ -10,4 +10,16 @@ class ProductoCategoria extends Model
     protected $table='producto_categoria';
     //atributos de la tabla
     protected $fillable = ['producto_id', 'categoria_id'];
+
+    //relacion con tablas de clave foranea de productos
+    public function product()
+    {
+        return $this->belongsToMany('App\Producto','producto_id');
+    }
+
+    //relacion con tablas de clave foranea de categoria
+      public function category()
+    {
+        return $this->belongsToMany('App\Categoria','categoria_id');
+    }
 }

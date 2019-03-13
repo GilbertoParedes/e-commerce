@@ -10,4 +10,9 @@ class Direccion extends Model
     protected $table='direccion';
     //atributos de la tabla
     protected $fillable = ['pais', 'estado','municipio','calle','colonia','cp','telefono','numero','usuario_id'];
+
+      public function usuario()
+    {
+        return $this->hasMany('App\User','usuario_id');
+    }
 }

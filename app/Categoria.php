@@ -10,4 +10,5 @@ class Categoria extends Model
     protected $table='categoria';
     //atributos de la tabla
     protected $fillable = ['categoria'];
+    
 }

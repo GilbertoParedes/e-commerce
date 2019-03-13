@@ -10,4 +10,9 @@ class Carrito extends Model
     protected $table='carrito';
     //atributos de la tabla
     protected $fillable = ['fecha_inicio', 'fecha_fin','status','usuario_id'];
+
+   public function user()
+    {
+        return $this->belongsTo('App\User','usuario_id');
+    }
 }

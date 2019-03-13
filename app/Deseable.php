@@ -10,4 +10,5 @@ class Deseable extends Model
     protected $table='deseable';
     //atributos de la tabla
     protected $fillable = ['usuario_id', 'producto_id'];
+     
 }
