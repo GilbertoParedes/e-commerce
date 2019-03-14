@@ -26,9 +26,9 @@
 							<td>{{ $product->stock }}</td>
 							<td><button type="button" class="btn btn-primary">Editar</button></td>
 							<td>							
-								<form action="{{route('products.destroy', $product->pk_producto)}}" method="post">
-								{!!csrf_field()!!}
-									<button type="button" class="btn btn-danger">Eliminar</button>
+								<form action="{{route('products.destroy', $product->pk_producto)}}" method="delete">
+								{{csrf_field()}}
+									<button type="submit" class="btn btn-danger">Eliminar</button>
 								</form>
 
 							</td>

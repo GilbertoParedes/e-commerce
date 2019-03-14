@@ -94,5 +94,6 @@ class ProductoController extends Controller
         $var=$this->product->findOrFail($id);
         $var->delete();
         return back();
+
     }
 }
