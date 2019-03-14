@@ -3,23 +3,23 @@
 @section('content')
 <div class="container">
 	<div class="graph-visual tables-main">
-	<h2 class="inner-tittle">List Products</h2>
+	<h2 class="inner-tittle">Lista de Productos</h2>
 		<div class="graph">
 			<div class="tables">										
 				<table class="table">
 					<thead>
 						<tr>
-							<th>#</th>
-							<th>Name</th>
+							<th>Nombre</th>
 							<th>Descripción</th>
-							<th>Foto</th>
+							<th>Cantidad</th>
+							<th>Stock</th>
 							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createUser">Agregar Producto</a></th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach($products as $product)
 						<tr>
-							<td>{{ $product->nombre }}</td>
+							<td>{{ $product->nombre_producto }}</td>
 							<td>{{ $product->descripcion }}</td>
 							<td>{{ $product->cantidad }}</td>
 							<td>{{ $product->stock }}</td>
