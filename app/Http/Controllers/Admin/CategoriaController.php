@@ -7,15 +7,18 @@ use App\Http\Controllers\Controller;
 use App\Categoria;
 class CategoriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     protected $categoria;
+
+    // contructor de modelo para uso en cualquier método
+    function __construct(Categoria $categoria)
+    {
+        $this->categoria = $categoria;
+    }
     public function index()
     {
-        return "categoria";
-    }
+     $categorias = $this->categoria->all();
+        return view('admin.categoria.category', compact('categorias')); 
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +27,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+         return view('admin.categoria.create');
     }
 
     /**
@@ -35,7 +38,11 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          $this->categoria->create([
+            'categoria' => $request->categoria
+        ]);
+
+         return back();
     }
 
     /**

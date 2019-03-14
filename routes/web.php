@@ -26,10 +26,7 @@ Route::resource('/deseable', 'Admin\DeseableController');
 Route::resource('/direccion', 'Admin\DireccionController');
 Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
 Route::resource('/products', 'Admin\ProductoController');
-Route::delete('/products/{pk_producto}',function($id){
-	Producto::findOrFail($id)->destroy();
-	return redirect('/');
-});
+
 
 
 
