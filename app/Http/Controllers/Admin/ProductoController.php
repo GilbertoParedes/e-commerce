@@ -45,6 +45,9 @@ class ProductoController extends Controller
             'cantidad' => $request->cantidad,
             'stock' => $request->stock
         ]);
+
+         return back();
+
     }
 
     /**
@@ -88,6 +91,8 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $var=$this->product->findOrFail($id);
+        $var->delete();
+        return back();
     }
 }

@@ -8,7 +8,7 @@
 			<div class="tables">										
 				<table class="table">
 					<thead>
-						<tr>
+						<tr><th>#</th>
 							<th>Nombre</th>
 							<th>Descripción</th>
 							<th>Cantidad</th>
@@ -19,14 +19,18 @@
 					<tbody>
 						@foreach($products as $product)
 						<tr>
+							<td>{{ $product->pk_producto }}</td>
 							<td>{{ $product->nombre_producto }}</td>
 							<td>{{ $product->descripcion }}</td>
 							<td>{{ $product->cantidad }}</td>
 							<td>{{ $product->stock }}</td>
+							<td><button type="button" class="btn btn-primary">Editar</button></td>
+							<td>							
+								<form action="{{route('products.destroy', $product->pk_producto)}}" method="post">
+								{!!csrf_field()!!}
+									<button type="button" class="btn btn-danger">Eliminar</button>
+								</form>
 
-							<td>
-								<button type="button" class="btn btn-primary">Editar</button>
-								<button type="button" class="btn btn-danger">Eliminar</button>
 							</td>
 						</tr>
 						@endforeach
