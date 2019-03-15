@@ -38,9 +38,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-          $this->categoria->create([
-           'type' => $request->tipo,
-           'category' => $request->categoria
+          $this->category->create([
+           'type' => $request->type,
+           'category' => $request->category
         ]);
 
          return back();
@@ -65,8 +65,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $cat=Categoria::find($id);
-        return view('admin.category.edit')->width('categories',$cat);
+    
+       $cat=Category::find($id);
+        return view('admin.category.edit')->with('category',$cat);
     }
 
     /**
@@ -78,7 +79,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $cat=Category::find($id);
+      $cat->fill($request->all());
+      $cat->save();
     }
 
     /**

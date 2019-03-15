@@ -1,24 +1,21 @@
-<!-- Modal -->
-<div class="modal fade" id="createCat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Editar Categorías </h4>
-      </div>
-      <div class="modal-body">
-			<div class="outter-wp">
-				<div class="forms-main">
-					<form class="form-horizontal" action="{{ route('categoria.store') }}" method="post">
+@extends('admin.layouts.layout_admin')
+@section('title','Editar categoria'.$categories->category)
+@section('content')
+<div class="container">
+		<div class="graph-visual tables-main">
+			<h2 class="inner-tittle">Editar título el {{$categories->type}} de  {{$categories->category}} </h2>
+			<form class="form-horizontal" action="{{ route('category.update', $category->id) }}" method="PUT">
+
 						@csrf
-						<div class="form-group">
+
+					<div class="form-group">
 							<label class="col-md-2 control-label">Tipo</label>
 							<div class="col-md-8">
 								<div class="input-group">							
 									<span class="input-group-addon">
-										<i class="glyphicon glyphicon-user"></i>
+										
 									</span>
-									<input type="text" class="form-control1 icon" name="tipo" placeholder="Introduce el nombre de la categoría">
+									<input type="text" class="form-control1 icon" name="type" placeholder="Introduce el nombre de la categoría"  readonly="readonly" value="{!!$categories->type !!}">
 								</div>
 							</div>
 						</div>
@@ -27,21 +24,21 @@
 							<div class="col-md-8">
 								<div class="input-group">							
 									<span class="input-group-addon">
-										<i class="glyphicon glyphicon-user"></i>
+										
 									</span>
-									<input type="text" class="form-control1 icon" name="categoria" placeholder="Introduce el nombre de la categoría">
+									<input type="text" class="form-control1 icon" name="category" placeholder="Introduce el nombre de la categoría" value="{!!$categories->category !!}">
 								</div>
 							</div>
 						</div>
+						<center>	
 
-						<div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        <button type="submit" class="btn btn-primary">Guardar</button>
-				      	</div>
+							<button type="submit" class="btn btn-primary">Guardar</button>
+						</center>
+						
+					        
+				      	
 					</form>
-				</div>
-			</div>
-      </div>
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
+@stop

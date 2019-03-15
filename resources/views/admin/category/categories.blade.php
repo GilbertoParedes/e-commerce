@@ -18,8 +18,8 @@
 						@foreach($categories as $category)
 						<tr>
 							<td>{{ $category->id }}</td>
-							<td>{{ $category->tipo }}</td>
-							<td>{{ $category->categoria }}</td>
+							<td>{{ $category->type }}</td>
+							<td>{{ $category->category }}</td>
 							
 							<td><a href="{{route('category.edit',$category->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 							<td>							
