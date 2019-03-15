@@ -19,14 +19,14 @@
 					<tbody>
 						@foreach($products as $product)
 						<tr>
-							<td>{{ $product->pk_producto }}</td>
+							<td>{{ $product->id }}</td>
 							<td>{{ $product->nombre_producto }}</td>
 							<td>{{ $product->descripcion }}</td>
 							<td>{{ $product->cantidad }}</td>
 							<td>{{ $product->stock }}</td>
 							<td>
 								<button type="button" class="btn btn-primary">Editar</button>
-								<a href="{{ route('product.destroy', $product->pk_producto) }}" type="button" class="btn btn-danger">Eliminar</a>
+								<a href="{{ route('product.destroy', $product->id) }}" type="button" class="btn btn-danger">Eliminar</a>
 							</td>
 						</tr>
 						@endforeach

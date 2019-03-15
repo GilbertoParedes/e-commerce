@@ -14,7 +14,7 @@ class CreateDireccion extends Migration
     public function up()
     {
         Schema::create('direccion', function (Blueprint $table) {
-            $table->increments('pk_direccion');
+            $table->increments('id');
             $table->string('pais',15);
             $table->string('estado',15);
             $table->string('municipio',15);

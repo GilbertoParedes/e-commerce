@@ -12,6 +12,17 @@
 					<form class="form-horizontal" action="{{ route('categoria.store') }}" method="post">
 						@csrf
 						<div class="form-group">
+							<label class="col-md-2 control-label">Tipo</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<input type="text" class="form-control1 icon" name="tipo" placeholder="Introduce el nombre de la categoría">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
 							<label class="col-md-2 control-label">Categoría</label>
 							<div class="col-md-8">
 								<div class="input-group">							

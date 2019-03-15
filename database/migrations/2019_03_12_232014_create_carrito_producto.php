@@ -14,7 +14,7 @@ class CreateCarritoProducto extends Migration
     public function up()
     {
         Schema::create('carrito_producto', function (Blueprint $table) {
-            $table->increments('id_carrito_producto');
+            $table->increments('id');
             $table->integer('cantidad');
             $table->integer('carrito_id')->unsigned();
             $table->integer('producto_id')->unsigned();
@@ -27,7 +27,7 @@ class CreateCarritoProducto extends Migration
             
             /***relacion foranea de producto***/
             $table->foreign('producto_id')
-            ->references('pk_producto')
+            ->references('id')
             ->on('producto')
             ->onDelete('cascade');
 

@@ -39,6 +39,7 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
           $this->categoria->create([
+           'tipo' => $request->tipo,
             'categoria' => $request->categoria
         ]);
 
@@ -65,8 +66,8 @@ class CategoriaController extends Controller
     public function edit($id)
     {
     //    dd($id);
-     //$cat=Categoria::find($id);
-    
+    /* $cat=Categoria::find($id);
+    dd($id);*/
   //return view('admin.categoria.edit')->width('categoria',$cat);
   /*   $cat = Categoria::where('pk_categoria', '=', $id)
             ->get(['categoria']);

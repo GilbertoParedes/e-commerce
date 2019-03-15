@@ -9,6 +9,7 @@
 				<table class="table">
 					<thead>
 						<tr><th>#</th>
+							<th>Tipo</th>
 							<th>Categoría</th>
 							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCat">Agregar</a></th>
 						</tr>
@@ -16,12 +17,13 @@
 					<tbody>
 						@foreach($categorias as $categoria)
 						<tr>
-							<td>{{ $categoria->pk_categoria }}</td>
+							<td>{{ $categoria->id }}</td>
+							<td>{{ $categoria->tipo }}</td>
 							<td>{{ $categoria->categoria }}</td>
 							
-							<td><a href="{{route('categoria.edit',$categoria->pk_categoria)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
+							<td><a href="{{route('categoria.edit',$categoria->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 							<td>							
-								<form action="{{route('categoria.destroy', $categoria->pk_categoria)}}" method="delete">
+								<form action="{{route('categoria.destroy', $categoria->id)}}" method="delete">
 								{{csrf_field()}}
 									<button type="submit" class="btn btn-danger">Eliminar</button>
 								</form>

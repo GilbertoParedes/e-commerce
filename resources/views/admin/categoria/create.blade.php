@@ -11,6 +11,18 @@
 				<div class="forms-main">
 					<form class="form-horizontal" action="{{ route('categoria.store') }}" method="post">
 						@csrf
+
+						<div class="form-group">
+						    <label class="col-md-2 control-label">Tipo</label>
+						    <div class="col-md-8">
+							    <select class="form-control1"  id="tipo" name="tipo">
+							      <option>Selecciona el tipo de categoría</option>
+							      <option value="arreglo">Arreglo</option>
+							      <option value="globo">Globo</option>
+							      <option value="complemento">Complemento</option>
+							    </select>
+							</div>
+						</div>
 						<div class="form-group">
 							<label class="col-md-2 control-label">Categoría</label>
 							<div class="col-md-8">
@@ -22,7 +34,7 @@
 								</div>
 							</div>
 						</div>
-
+						
 						<div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					        <button type="submit" class="btn btn-primary">Guardar</button>

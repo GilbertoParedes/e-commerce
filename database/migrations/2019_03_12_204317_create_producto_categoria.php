@@ -14,19 +14,19 @@ class CreateProductoCategoria extends Migration
     public function up()
     {
         Schema::create('producto_categoria', function (Blueprint $table) {
-            $table->increments('pk_producto_categoria');
+            $table->increments('id');
             $table->integer('producto_id')->unsigned();
             $table->integer('categoria_id')->unsigned();
 
             /***relacion foranea de producto***/
             $table->foreign('producto_id')
-            ->references('pk_producto')
+            ->references('id')
             ->on('producto')
             ->onDelete('cascade');
 
             /***relacion foranea de producto***/
             $table->foreign('categoria_id')
-            ->references('pk_categoria')
+            ->references('id')
             ->on('categoria')
             ->onDelete('cascade');
         });

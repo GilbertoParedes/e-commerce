@@ -14,7 +14,7 @@ class CreateDeseable extends Migration
     public function up()
     {
         Schema::create('deseable', function (Blueprint $table) {
-            $table->increments('pk_deseable');
+            $table->increments('id');
             $table->bigInteger('usuario_id')->unsigned();
             $table->integer('producto_id')->unsigned();
 
@@ -27,7 +27,7 @@ class CreateDeseable extends Migration
 
              /***relacion foranea de producto***/
             $table->foreign('producto_id')
-            ->references('pk_producto')
+            ->references('id')
             ->on('producto')
             ->onDelete('cascade');
 
