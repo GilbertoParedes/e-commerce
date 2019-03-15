@@ -79,9 +79,18 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $cat=Category::find($id);
-      $cat->fill($request->all());
-      $cat->save();
+    
+    $request->validate([
+        'category'=>'required'
+       
+      ]);
+
+      $share = Category::find($id);
+      $share->category = $request->get('category');
+      $share->save();
+
+      return redirect('/category')->with('success', 'Stock has been updated');
+
     }
 
     /**
