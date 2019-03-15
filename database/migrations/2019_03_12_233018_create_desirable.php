@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDeseable extends Migration
+class CreateDesirable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,22 @@ class CreateDeseable extends Migration
      */
     public function up()
     {
-        Schema::create('deseable', function (Blueprint $table) {
+        Schema::create('desirable', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('usuario_id')->unsigned();
-            $table->integer('producto_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('product_id')->unsigned();
 
             /***relacion foranea de usuario***/
-            $table->foreign('usuario_id')
+            $table->foreign('user_id')
             ->references('id')
             ->on('users')
             ->onDelete('cascade');
 
 
              /***relacion foranea de producto***/
-            $table->foreign('producto_id')
+            $table->foreign('product_id')
             ->references('id')
-            ->on('producto')
+            ->on('product')
             ->onDelete('cascade');
 
             $table->timestamps();
@@ -42,6 +42,6 @@ class CreateDeseable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('deseable');
+        Schema::dropIfExists('desirable');
     }
 }
