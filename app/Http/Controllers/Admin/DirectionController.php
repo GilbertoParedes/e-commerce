@@ -14,7 +14,7 @@ class DirectionController extends Controller
      */
     public function index()
     {
-        return "direccion";
+       /* return "direccion";*/
     }
 
     /**

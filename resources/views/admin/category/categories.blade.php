@@ -15,15 +15,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($categorias as $categoria)
+						@foreach($categories as $category)
 						<tr>
-							<td>{{ $categoria->id }}</td>
-							<td>{{ $categoria->tipo }}</td>
-							<td>{{ $categoria->categoria }}</td>
+							<td>{{ $category->id }}</td>
+							<td>{{ $category->tipo }}</td>
+							<td>{{ $category->categoria }}</td>
 							
-							<td><a href="{{route('categoria.edit',$categoria->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
+							<td><a href="{{route('category.edit',$category->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 							<td>							
-								<form action="{{route('categoria.destroy', $categoria->id)}}" method="delete">
+								<form action="{{route('category.destroy', $category->id)}}" method="delete">
 								{{csrf_field()}}
 									<button type="submit" class="btn btn-danger">Eliminar</button>
 								</form>
@@ -35,7 +35,7 @@
 				</table>
 			</div>								
 		</div>
-		@include('admin.categoria.create')
+		@include('admin.category.create')
 	</div>
 </div>
 @stop

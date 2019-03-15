@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categoria extends Model
+class Category extends Model
 {
     //nombre de la tabla
-    protected $table='categoria';
+    protected $table='category';
     //atributos de la tabla
-    protected $fillable = ['tipo','categoria'];
+    protected $fillable = ['type','category'];
     
 }

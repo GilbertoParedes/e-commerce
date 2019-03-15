@@ -9,13 +9,13 @@
       <div class="modal-body">
 			<div class="outter-wp">
 				<div class="forms-main">
-					<form class="form-horizontal" action="{{ route('categoria.store') }}" method="post">
+					<form class="form-horizontal" action="{{ route('category.store') }}" method="post">
 						@csrf
 
 						<div class="form-group">
 						    <label class="col-md-2 control-label">Tipo</label>
 						    <div class="col-md-8">
-							    <select class="form-control1"  id="tipo" name="tipo">
+							    <select class="form-control1"  id="type" name="type">
 							      <option>Selecciona el tipo de categoría</option>
 							      <option value="arreglo">Arreglo</option>
 							      <option value="globo">Globo</option>
@@ -30,7 +30,7 @@
 									<span class="input-group-addon">
 										<i class="glyphicon glyphicon-user"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="categoria" placeholder="Introduce el nombre de la categoría">
+									<input type="text" class="form-control1 icon" name="category" placeholder="Introduce el nombre de la categoría">
 								</div>
 							</div>
 						</div>

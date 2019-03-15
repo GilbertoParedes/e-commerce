@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Direccion extends Model
+class Direction extends Model
 {
       //nombre de la tabla
     protected $table='direccion';

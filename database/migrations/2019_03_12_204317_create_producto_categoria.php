@@ -27,7 +27,7 @@ class CreateProductoCategoria extends Migration
             /***relacion foranea de producto***/
             $table->foreign('categoria_id')
             ->references('id')
-            ->on('categoria')
+            ->on('category')
             ->onDelete('cascade');
         });
     }

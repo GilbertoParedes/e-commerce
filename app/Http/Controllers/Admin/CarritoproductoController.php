@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\CarritoProducto;
-class CarritoproductoController extends Controller
+class CarritoProductoController extends Controller
 {
     /**
      * Display a listing of the resource.

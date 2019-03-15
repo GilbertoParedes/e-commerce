@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Categoria;
-class CategoriaController extends Controller
+use App\Category;
+class CategoryController extends Controller
 {
-     protected $categoria;
+     protected $category;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Categoria $categoria)
+    function __construct(Category $category)
     {
-        $this->categoria = $categoria;
+        $this->category = $category;
     }
     public function index()
     {
-     $categorias = $this->categoria->all();
-        return view('admin.categoria.category', compact('categorias')); 
+     $categories = $this->category->all();
+        return view('admin.category.categories', compact('categories')); 
      }
 
     /**
@@ -27,7 +27,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-         return view('admin.categoria.create');
+         return view('admin.category.create');
     }
 
     /**
@@ -39,8 +39,8 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
           $this->categoria->create([
-           'tipo' => $request->tipo,
-            'categoria' => $request->categoria
+           'type' => $request->tipo,
+           'category' => $request->categoria
         ]);
 
          return back();
@@ -65,13 +65,8 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-    //    dd($id);
-    /* $cat=Categoria::find($id);
-    dd($id);*/
-  //return view('admin.categoria.edit')->width('categoria',$cat);
-  /*   $cat = Categoria::where('pk_categoria', '=', $id)
-            ->get(['categoria']);
-      dd($cat);*/
+        $cat=Categoria::find($id);
+        return view('admin.category.edit')->width('categories',$cat);
     }
 
     /**
