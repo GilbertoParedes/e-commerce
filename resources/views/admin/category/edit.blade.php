@@ -8,12 +8,12 @@
 					        @method('PATCH')
 					        @csrf
 					        <div class="form-group">
-					          <label for="name">Share Name:</label>
-					          <input type="text" class="form-control" name="type" value={{ $category->type }} />
+					          <label for="name">Tipo:</label>
+					          <input type="text" class="form-control" name="type" readonly="readonly" value={{ $category->type }} />
 					        </div>
 					        <div class="form-group">
-					          <label for="price">Share Price :</label>
-					          <input type="text" class="form-control" name="category" value={{ $category->category }} />
+					          <label for="price">Nombre:</label>
+					          <input type="text" class="form-control" name="category"  value={{ $category->category }} />
 					        </div>
 					        
 					        <button type="submit" class="btn btn-primary">Update</button>

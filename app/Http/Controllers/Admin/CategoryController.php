@@ -89,7 +89,7 @@ class CategoryController extends Controller
       $share->category = $request->get('category');
       $share->save();
 
-      return redirect('/category')->with('success', 'Stock has been updated');
+      return redirect('/category')->with('success', 'La categoría ha sido actualizada con éxito');
 
     }
 
@@ -101,6 +101,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+    
+     $share = Category::find($id);
+     $share->delete();
+
+     return redirect('/category')->with('success', 'La categoría ha sido eliminada');
     }
 }
