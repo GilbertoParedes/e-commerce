@@ -25,7 +25,8 @@ Route::resource('/categoria', 'Admin\CategoriaController');
 Route::resource('/deseable', 'Admin\DeseableController');
 Route::resource('/direccion', 'Admin\DireccionController');
 Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
-Route::resource('/products', 'Admin\ProductoController');
+Route::resource('/products', 'Admin\ProductoController')->except(['destroy']);
+Route::DELETE('/products/{id}', 'Admin\ProductoController@destroy')->name('product.destroy');
 
 
 

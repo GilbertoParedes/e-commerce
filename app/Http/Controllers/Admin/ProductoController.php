@@ -91,7 +91,9 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        $var=$this->product->findOrFail($id);
+
+        $var = $this->product->find($id);
+        //dd($var);
         $var->delete();
         return back();
 
