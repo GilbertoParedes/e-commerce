@@ -19,7 +19,7 @@
 							<td>{{ $categoria->pk_categoria }}</td>
 							<td>{{ $categoria->categoria }}</td>
 							
-							<td><button type="button" class="btn btn-primary">Editar</button></td>
+							<td><a href="{{route('categoria.edit',$categoria->pk_categoria)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 							<td>							
 								<form action="{{route('categoria.destroy', $categoria->pk_categoria)}}" method="delete">
 								{{csrf_field()}}
