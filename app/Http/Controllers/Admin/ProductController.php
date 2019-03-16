@@ -68,7 +68,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+         $productEdit=Product::find($id);
+        return view('admin.products.edit')->with('product',$productEdit);
     }
 
     /**
@@ -80,7 +81,18 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $request->validate([
+        'name'=>'required',
+        'description'=>'required',
+        'quantity'=>'required',
+        'stock'=>'required'
+      ]);
+
+      $productoModificar = Product::find($id);
+      $productoModificar->product = $request->get('product');
+      $productoModificar->save();
+
+      return redirect('/products')->with('success', 'El producto ha sido actualizada con éxito');
     }
 
     /**
