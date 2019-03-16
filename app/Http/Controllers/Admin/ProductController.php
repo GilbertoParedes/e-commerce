@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Admin;
 //manda llamar el metodo
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Producto;
+use App\Product;
 
-class ProductoController extends Controller
+class ProductController extends Controller
 {
    protected $product;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Producto $product)
+    function __construct(Product $product)
     {
         $this->product = $product;
     }
@@ -40,9 +40,9 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         $this->product->create([
-            'nombre_producto' => $request->nombre_producto,
-            'descripcion' => $request->descripcion,
-            'cantidad' => $request->cantidad,
+            'name' => $request->name,
+            'description' => $request->description,
+            'quantity' => $request->quantity,
             'stock' => $request->stock
         ]);
 
@@ -92,10 +92,10 @@ class ProductoController extends Controller
     public function destroy($id)
     {
 
-        $var = $this->product->find($id);
-        //dd($var);
-        $var->delete();
-        return back();
+     $share = Product::find($id);
+     $share->delete();
+
+     return redirect('/products')->with('success', 'El producto ha sido eliminado');
 
     }
 }

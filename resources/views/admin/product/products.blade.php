@@ -20,14 +20,20 @@
 						@foreach($products as $product)
 						<tr>
 							<td>{{ $product->id }}</td>
-							<td>{{ $product->nombre_producto }}</td>
-							<td>{{ $product->descripcion }}</td>
-							<td>{{ $product->cantidad }}</td>
+							<td>{{ $product->name }}</td>
+							<td>{{ $product->description }}</td>
+							<td>{{ $product->quantity }}</td>
 							<td>{{ $product->stock }}</td>
 							<td>
 								<button type="button" class="btn btn-primary">Editar</button>
-								<a href="{{ route('product.destroy', $product->id) }}" type="button" class="btn btn-danger">Eliminar</a>
+							
 							</td>
+							<td>	
+								<form action="{{ route('product.destroy', $product->id)}}" method="post">
+				                  @csrf
+				                  @method('DELETE')
+				                  <button class="btn btn-primary" type="submit">Borrar</button>
+				                </form></td>
 						</tr>
 						@endforeach
 					</tbody>

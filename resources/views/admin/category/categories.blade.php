@@ -12,6 +12,7 @@
 							<th>Tipo</th>
 							<th>Categoría</th>
 							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCat">Agregar</a></th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>

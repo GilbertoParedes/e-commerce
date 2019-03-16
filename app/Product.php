@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Producto extends Model
+class Product extends Model
 {
     //nombre de la tabla
-    protected $table='producto';
+    protected $table='product';
     //atributos de la tabla
-    protected $fillable = ['nombre_producto', 'descripcion','cantidad','stock'];
+    protected $fillable = ['name', 'description','quantity','stock'];
 
     public function deseable()
     {

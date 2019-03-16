@@ -18,7 +18,7 @@
 									<span class="input-group-addon">
 										<i class="glyphicon glyphicon-user"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="nombre_producto" placeholder="Nombre">
+									<input type="text" class="form-control1 icon" name="name" placeholder="Nombre">
 								</div>
 							</div>
 						</div>
@@ -29,7 +29,7 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="descripcion" placeholder="Ingresa una descripción">
+									<input type="text" class="form-control1 icon" name="description" placeholder="Ingresa una descripción">
 								</div>
 							</div>
 						</div>
@@ -40,7 +40,7 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="cantidad" placeholder="Ingresa una descripción">
+									<input type="text" class="form-control1 icon" name="quantity" placeholder="Ingresa una descripción">
 								</div>
 							</div>
 						</div>
@@ -68,8 +68,8 @@
 							</div>
 						</div>-->
 						<div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        <button type="submit" class="btn btn-primary">Save</button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					        <button type="submit" class="btn btn-primary">Guardar</button>
 				      	</div>
 					</form>
 				</div>
