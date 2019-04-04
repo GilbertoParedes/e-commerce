@@ -28,7 +28,7 @@ class CreateDeseable extends Migration
              /***relacion foranea de producto***/
             $table->foreign('product_id')
             ->references('id')
-            ->on('producto')
+            ->on('product')
             ->onDelete('cascade');
 
             $table->timestamps();

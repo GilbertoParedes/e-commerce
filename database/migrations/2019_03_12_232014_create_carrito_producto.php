@@ -28,7 +28,7 @@ class CreateCarritoProducto extends Migration
             /***relacion foranea de producto***/
             $table->foreign('producto_id')
             ->references('id')
-            ->on('producto')
+            ->on('product')
             ->onDelete('cascade');
 
 
