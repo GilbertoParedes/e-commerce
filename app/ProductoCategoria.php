@@ -14,7 +14,7 @@ class ProductoCategoria extends Model
     //relacion con tablas de clave foranea de productos
     public function product()
     {
-        return $this->belongsToMany('App\Producto','producto_id');
+        return $this->belongsToMany('App\Product','producto_id');
     }
 
     //relacion con tablas de clave foranea de categoria
