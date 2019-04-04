@@ -39,6 +39,8 @@
     <script src="{{ asset('admin/js/skycons.js') }}"></script>
 
     <script src="{{ asset('admin/js/jquery.easydropdown.js') }}"></script>
+    <script src="{{ asset('admin/js/dropzone.js') }}"></script>
+
 
     <!--//skycons-icons-->
    

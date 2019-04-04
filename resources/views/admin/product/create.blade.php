@@ -9,7 +9,7 @@
       <div class="modal-body">
 			<div class="outter-wp">
 				<div class="forms-main">
-					<form class="form-horizontal" action="{{ route('products.store') }}" method="post">
+					<form class="form-horizontal dropzone"  id="my-awesome-dropzone" action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
 						@csrf
 						<div class="form-group">
 							<label class="col-md-2 control-label">Nombre</label>
@@ -52,6 +52,17 @@
 										<i class="fa fa-envelope-o"></i>
 									</span>
 									<input type="text" class="form-control1 icon" name="stock" placeholder="Ingresa una descripción">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">FOTO</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+									<input type="file" name="file" />
 								</div>
 							</div>
 						</div>
