@@ -1,24 +1,31 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-//manda llamar el metodo
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Product;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
-class ProductController extends Controller
+class RolesController extends Controller
 {
-   protected $product;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    protected $role;
 
-    // contructor de modelo para uso en cualquier método
-    function __construct(Product $product)
+    function __construct(Role $role)
     {
-        $this->product = $product;
+        $this->role = $role;
     }
+
     public function index()
     {
-        $products = $this->product->all();
-        return view('admin.product.products', compact('products'));
+        $roles = $this->role->all();
+        return view('admin.roles.index', compact('roles'));
+        //dd($roles);
     }
 
     /**
@@ -28,7 +35,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        //
     }
 
     /**
@@ -39,15 +46,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->product->create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'quantity' => $request->quantity,
-            'stock' => $request->stock
-        ]);
-
-         return back();
-
+        //
     }
 
     /**
@@ -58,6 +57,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -68,8 +68,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-         $productEdit=Product::find($id);
-        return view('admin.product.edit')->with('product',$productEdit);
+        //
     }
 
     /**
@@ -81,18 +80,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $request->validate([
-        'name'=>'required',
-        'description'=>'required',
-        'quantity'=>'required',
-        'stock'=>'required'
-      ]);
-
-      $productoModificar = Product::find($id);
-      $productoModificar->update($request->all());
-      
-
-      return redirect('/products')->with('success', 'El producto ha sido actualizada con éxito');
+        //
     }
 
     /**
@@ -103,11 +91,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-
-     $share = Product::find($id);
-     $share->delete();
-
-     return redirect('/products')->with('success', 'El producto ha sido eliminado');
-
+        //
     }
 }

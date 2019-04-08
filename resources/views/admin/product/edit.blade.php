@@ -4,12 +4,12 @@
 		<div class="graph-visual tables-main">
 			<h2 class="inner-tittle">Editar producto</h2>
 			
-					<form method="post" action="{{ route('product.update',  $product->id) }}">
+					<form method="post" action="{{ route('products.update',  $product->id) }}">
 					        @method('PATCH')
 					        @csrf
 					        <div class="form-group">
 					          <label for="name">Nombre:</label>
-					          <input type="text" class="form-control" name="name" readonly="readonly" value={{ $product->name }} />
+					          <input type="text" class="form-control" name="name" value={{ $product->name }} />
 					        </div>
 					        <div class="form-group">
 					          <label for="price">Descripcion:</label>
