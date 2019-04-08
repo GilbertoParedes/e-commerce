@@ -1,0 +1,947 @@
+ body{
+background-image: url("../images/principal/fondo.png");
+ }
+  @font-face
+ 
+{
+   font-family: "paloma";
+   src: url("../tipografia/La Paloma.ttf");
+}
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../tipografia/Acumin Pro Cond ExtraLight.otf");
+}
+  @font-face
+{
+   font-family: "seguiemj";
+   src: url("../tipografia/seguiemj.ttf");
+}
+  @font-face
+{
+   font-family: "simplifica";
+   src: url("../tipografia/simplifica.ttf");
+}
+#im{
+    width: 100%;
+    height: auto;
+}
+
+#banner2{
+  background-color: #CECECE;
+  width: 100%;
+  height: 100%;
+}
+/*****************************************************************************************************************................****/
+@media screen and (max-width: 575px) and (min-width: 50px){
+   body
+  { 
+background-color: white;
+  }
+  #content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 5%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:35px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 3%;
+  width: 60%
+}
+#texto{
+width: 95%;
+color: #464646;
+font-size:20px;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+
+/******baner final*/
+/************banner final */
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 96%;
+  height: 50%;
+  margin-left: 2%;
+  margin-right: 2%; 
+}
+#texto_ofertas{
+
+  margin-top:5px;
+  color: #1c1c1c;
+  font-size: 3vw;
+  font-family: "seguiemj";
+}
+#texto_oferta{
+  margin-top:5%;
+  color: #1c1c1c;
+  font-size: 3vw;
+  font-family: "seguiemj";
+  float: right;
+}
+
+.correo{
+width: 68%;
+float: left;
+height:40px;
+font-size: 3vw;
+}
+#btn_4{
+  float: right;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 30%;
+height: 39px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 18px;
+}
+#iconos_banner{
+  width:12%;
+  margin-right: 5%;
+  height: auto;
+}
+#iconos_ban{
+  margin-top: 7px;
+  margin-right: -80%;
+  float: right;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 98%;
+  margin-left: 1%;
+  height: 1%;
+}
+/*fin margen*/
+
+}
+/*****************************************************************************************************************................****/
+@media screen and (max-width: 767px) and (min-width: 576px){
+   body
+  { 
+background-color: purple;
+  }
+  #content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 5%;
+padding: 9% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:40px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 8%;
+  width: 50%
+}
+#texto{
+width: 95%;
+color: #464646;
+font-size:2.6vw;
+font-family: "seguiemj";
+}
+/* fin fotos de catalogo*/
+
+/*banner final/
+/************banner final */
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 96%;
+  height: 50%;
+  margin-left: 2%;
+  margin-right: 2%; 
+}
+#texto_ofertas{
+
+  margin-top:5px;
+  color: #1c1c1c;
+  font-size: 2vw;
+  font-family: "seguiemj";
+}
+#texto_oferta{
+  margin-top:5%;
+  color: #1c1c1c;
+  font-size: 2.2vw;
+  font-family: "seguiemj";
+  float: right;
+}
+
+.correo{
+width: 68%;
+float: left;
+height:40px;
+font-size: 2vw;
+}
+#btn_4{
+  float: right;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 30%;
+height: 39px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 18px;
+}
+#iconos_banner{
+  width:10%;
+  margin-right: 5%;
+  height: auto;
+}
+#iconos_ban{
+  margin-top: 7px;
+  margin-right: -70%;
+  float: right;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+/*banner 2*/
+
+#linea_banner{
+   width:3%;
+   height:auto;
+   margin-bottom: 5px;
+ }
+ /*fin banner 2*/
+
+}
+/*****************************************************************************************************************................****/
+@media screen and (max-width: 991px) and (min-width: 768px){
+   body
+  { 
+background-color: yellow;
+  }
+  #content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 5%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:37px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 8%;
+  width: 60%
+}
+#texto{
+width: 95%;
+color: #464646;
+font-size:1.6vw;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 150px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 96%;
+  height: 50%;
+  margin-left: 2%;
+  margin-right: 2%; 
+}
+#texto_ofertas{
+
+  margin-top:15px;
+  color: #1c1c1c;
+  font-size: 2.2vw;
+  width: 500px;
+  font-family: "seguiemj";
+  margin-left: 74%;
+}
+#texto_oferta{
+  margin-top:10px;
+  color: #1c1c1c;
+  font-size: 2.2vw;
+  font-family: "seguiemj";
+  float: right;
+}
+
+.correo{
+width: 75%;
+float: right;
+height: 36px;
+font-size: 1.5vw;
+}
+#btn_4{
+  float: right;
+margin-right: -215%;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 50%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 18px;
+}
+#iconos_banner{
+    margin-top:10px;
+
+  width:10%;
+  margin-right: 5%;
+  height: auto;
+}
+
+/* FIN BANNER FINAL*/
+
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+
+}
+/***************************************************************************************************************************/
+@media screen and (max-width: 1199px) and (min-width: 992px){
+ body{
+  background-color: pink;
+ }
+  #content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 10%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:22px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 11%;
+  width: 50%
+}
+#texto{
+width: 95%;
+color: #464646;
+font-size:.8vw;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 110px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 100%;
+  height: 50%;
+ 
+}
+#texto_ofertas{
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+    float: right;
+
+}
+#texto_oferta{
+  float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+
+}
+#btn_4{
+  float: right;
+margin-top:40px;
+margin-left: -10px;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 140%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 1.2vw;
+}
+.correo{
+margin-top:40px;
+margin-right: 2px;
+width: 97%;
+height: 36px;
+font-size: 1.2vw;
+}
+#iconos_banner{
+  margin-top: 38px;
+  width: 22%;
+  margin-right: 5%;
+  height: auto;
+  display: inline-block;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+}
+/*****************************************************************************************************************................****/
+@media screen and (max-width: 1349px) and (min-width: 1200px){
+   body
+  { 
+  background-color: purple;
+  }
+#content{
+    width: 98%;
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 10%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:22px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 11%;
+  width:45%
+}
+#texto{
+width: 95%;
+color: #464646;
+font-size:.8vw;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 110px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 100%;
+  height: 50%;
+ 
+}
+#texto_ofertas{
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+    float: right;
+
+}
+#texto_oferta{
+  float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+
+}
+#btn_4{
+  float: right;
+margin-top:40px;
+margin-left: -10px;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 140%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 1.2vw;
+}
+.correo{
+margin-top:40px;
+margin-right: 2px;
+width: 97%;
+height: 36px;
+font-size: 1.2vw;
+}
+#iconos_banner{
+  margin-top: 38px;
+  width: 22%;
+  margin-right: 5%;
+  height: auto;
+  display: inline-block;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+}
+/**************************************************************************************************************************/
+@media screen and (max-width: 1599px) and (min-width: 1350px){
+   body
+  { 
+background-color: gray;
+  }
+  #content{
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 10%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:25px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 10%;
+  width: 50%
+}
+#texto{
+margin-top: -7%;
+width: 95%;
+color: #464646;
+font-size:.8vw;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 110px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 99%;
+  height: 50%;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+#texto_ofertas{
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+    float: right;
+
+}
+#texto_oferta{
+  float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1.2vw;
+  font-family: "seguiemj";
+
+}
+#btn_4{
+  float: right;
+margin-top:40px;
+margin-left: -10px;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 152%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 1.2vw;
+}
+.correo{
+margin-top:40px;
+margin-right: 2px;
+width: 98%;
+height: 36px;
+font-size: 1.2vw;
+}
+#iconos_banner{
+  margin-top: 38px;
+  width: 22%;
+  margin-right: 5%;
+  height: auto;
+  display: inline-block;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+
+/*************************************************************************************************************************************************/
+}
+@media screen and (max-width: 1800px) and (min-width: 1600px){
+   body
+  { 
+background-color: blue;
+  }
+  #content{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/*fotos de catalogo*/
+#precio{
+margin-top: 10%;
+padding: 5% 8%;
+width: 95%;
+background-color: #F1F0F6;
+color: #808180;
+font-size:25px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 10%;
+  width: 50%
+}
+#texto{
+margin-top: -7%;
+width: 95%;
+color: #464646;
+font-size:.8vw;
+font-family: "seguiemj";
+}
+
+/* fin fotos de catalogo*/
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 110px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 98%;
+  height: 50%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+#texto_ofertas{
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: .9vw;
+  font-family: "seguiemj";
+    float: right;
+
+}
+#texto_oferta{
+  float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1vw;
+  font-family: "seguiemj";
+
+}
+#btn_4{
+  float: right;
+margin-top:40px;
+margin-left: -10px;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 152%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 1.1vw;
+}
+.correo{
+margin-top:40px;
+margin-right: 2px;
+width: 90%;
+height: 36px;
+font-size: 1vw;
+}
+#iconos_banner{
+  margin-top: 35px;
+  width: 22%; 
+  margin-right: 15%;
+  height: auto;
+  display: inline-block;
+  float: right;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+}
+/**************************************************************************************************************************/
+@media screen and (max-width: 8000px) and (min-width: 1801px){
+   body
+  { 
+  background-color: red;
+  }
+ #content{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/*fotos de catalogo*/
+#precio{
+  margin-top: 10%;
+  padding: 7% 7%;
+  width: 95%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:28px;
+font-family: "simplifica";
+}
+#compraaqui{
+  margin-top: 10%;
+  width: 50%
+}
+#texto{
+margin-top: -5%;
+width: 95%;
+color: #464646;
+font-size:16px;
+font-family: "seguiemj";
+}
+/* fin fotos de catalogo*/
+
+/* BANNER FINAL*/
+.banner_correo{
+  width: 100%;
+  height: 110px;
+  background-color: #f2f2f2;
+}
+#banner_contenedor{
+  width: 90%;
+  height: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#texto_ofertas{
+   float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1vw;
+  font-family: "seguiemj";
+    float: right;
+
+}
+#texto_oferta{
+  float: right;
+  margin-top:46px;
+  color: #1c1c1c;
+  font-size: 1vw;
+  font-family: "seguiemj";
+
+}
+#btn_4{
+  float: right;
+margin-top:40px;
+margin-left: -10px;
+background-color: #1C1C1C;
+color: #EAEAEA;
+width: 152%;
+height: 36px;
+font-family: "seguiemj";
+border-style: solid;
+border: 2px solid black;
+font-size: 1.1vw;
+}
+.correo{
+margin-top:40px;
+margin-right: 2px;
+width: 90%;
+height: 36px;
+font-size: 1vw;
+}
+#iconos_banner{
+  margin-top: 30px;
+  width: 20%; 
+  margin-right: 10%;
+  height: auto;
+  display: inline-block;
+  float: right;
+}
+/* FIN BANNER FINAL*/
+/*corazon*/
+.top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+/*fin corazon*/
+/*margen de contenido de catalogo*/
+#elementos{
+  width: 75%;
+  margin-left:12.5%;
+  height:12.5%;
+}
+/*fin margen*/
+
+}

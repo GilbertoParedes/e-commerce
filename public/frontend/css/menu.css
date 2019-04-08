@@ -1,0 +1,222 @@
+.parte1{
+  width: 100%;
+   height: 100px;
+  background-color: gray;
+}
+
+a:link{
+    text-decoration:none; 
+}
+  @font-face
+{
+   font-family: "tipograf";
+   src: url("../tipografia/Megan June.otf");
+}
+p{
+   font-family: "tipograf";
+   color:white;
+}
+#texto{
+  font-family: "tipograf";
+  color: #413b3c;
+}
+
+#myTopnav{
+ /* background-image: url('../iconos/TEXTURA.png');*/
+}
+@media screen and (max-width: 769px) and (min-width: 50px){
+   body
+  { 
+  }
+  #texto{
+      font-size: 17px;
+      overflow: unset;
+  }
+  #menu{
+  margin-top: 15px;
+  width: 24px;
+  height: auto;
+}
+#iconos{
+  width: 15px;
+  height: auto;
+}
+#linea{
+  height: 4%;
+  width: auto;
+
+}
+#alineacion{
+  margin-top: -55px;
+  float: right;
+  margin-right: 20px;
+}
+#alineacion1{
+float: left;
+margin-top:5px;
+  margin-left: 5px;
+}
+#logo{
+  margin-top: -55px;
+  margin-bottom: 5px;
+  width: 95px;
+  height: auto;
+  float: center;
+}
+#flechita{
+  width: 7%;
+  height: auto;
+}
+}
+
+
+@media screen and (max-width: 1084px) and (min-width: 770px){
+   body
+  { 
+  }
+  #texto{
+      font-size: 1.7vw;
+  }
+
+
+  #menu{
+  width: 24px;
+  height: auto;
+}
+#iconos{
+  width: 17px;
+  height: auto;
+}
+#linea{
+  height: 5%;
+  width: auto;
+
+}
+#alineacion{
+  margin-top: 20px;
+  float: right;
+  margin-right: 30px;
+}
+#alineacion1{
+float: left;
+margin-top: 15px;
+  margin-left: 15px;
+}
+#logo{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 125px;
+  height: auto;
+  float: center;
+}
+#flechita{
+  width: 6%;
+  height: auto;
+}
+
+}
+
+@media screen and (max-width: 1356px) and (min-width: 1085px){
+
+ 
+   body
+  { 
+  }
+  #texto{
+      font-size: 23px;
+  }
+
+  #menu{
+  width: 40px;
+  margin-top: 50px;
+  height: auto;
+  margin-left: 45px;
+}
+#iconos{
+  width: 25px;
+  height: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}
+#linea{
+  height: 5%;
+  width: auto;
+
+}
+#alineacion{
+  margin-top: 50px;
+  float: right;
+  margin-right: 60px;
+}
+#alineacion1{
+float: left;
+  margin-left: 15px;
+}
+#logo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 150px;
+  height: auto;
+  float: center;
+
+}
+#elementos{
+  width: 10%;
+}
+#flechita{
+  width: 5%;
+  height: auto;
+}
+}
+
+@media screen and (max-width: 8000px) and (min-width: 1355px) {
+.parte2{
+  width: 100%;
+  height: 30px;
+}
+  #texto{
+      font-size: 25px;
+  }
+  #menu{
+  width: 40px;
+  margin-top: 50px;
+  height: auto;
+  margin-left: 45px;
+}
+#iconos{
+  width: 25px;
+  height: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}
+#linea{
+  height: 5%;
+  width: auto;
+
+}
+#alineacion{
+  margin-top: 50px;
+  float: right;
+  margin-right: 60px;
+}
+#alineacion1{
+float: left;
+  margin-left: 15px;
+}
+#logo{
+  margin-top: 20px;
+  width: 150px;
+  height: auto;
+  float: center;
+
+}
+#elementos{
+  width: 10%;
+}
+#flechita{
+  width: 5%;
+  height: auto;
+}
+}
