@@ -14,11 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
-Route::get('home', 'HomeController@index')->name('home');
-
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'Admin\UserController');
 Route::resource('/carrito', 'Admin\CarritoController');
@@ -28,25 +24,8 @@ Route::resource('/deseable', 'Admin\DeseableController');
 Route::resource('/direccion', 'Admin\DirectionController');
 Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
 Route::resource('/products', 'Admin\ProductController');
+
 Route::resource('/index', 'Frontend\PagesController');
-
-=======
-Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
-{
->>>>>>> 40d3db1d1bdb215974730e8f65bbe6186a8c837a
-
-	Route::resource('users', 'Admin\UserController');
-	Route::resource('carrito', 'Admin\CarritoController');
-	Route::resource('carritoproducto', 'Admin\CarritoproductoController');
-	Route::resource('category', 'Admin\CategoryController');
-	Route::resource('deseable', 'Admin\DeseableController');
-	Route::resource('direccion', 'Admin\DirectionController');
-	Route::resource('productocategoria', 'Admin\ProductoCategoriaController');
-	Route::resource('products', 'Admin\ProductController');
-	Route::resource('roles', 'Admin\RolesController');
-
-});
-
 
 
 
