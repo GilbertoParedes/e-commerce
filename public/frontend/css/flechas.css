@@ -1,0 +1,84 @@
+@media (max-width: 575.98px) { 
+#flecha_der{
+	margin-top: -45%;
+	margin-left: 94%;
+	 position:absolute;
+	 height: 10px;
+}
+#flecha_izq{
+	margin-top: -45%;
+	margin-left: -5%;
+	 position:absolute;
+ }
+ #flecha{
+ 	width: 15px;
+ }
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+#flecha_der{
+	margin-top: -30%;
+	margin-left: 92%;
+	 position:absolute;
+	 height: 10px;
+}
+#flecha_izq{
+	margin-top: -30%;
+	margin-left: -5%;
+	 position:absolute;
+ }
+ #flecha{
+ 	width: 15px;
+ }
+ }
+@media (min-width: 768px) and (max-width: 991.98px) {
+#flecha_der{
+	margin-top: -32%;
+	margin-left: 97%;
+	 position:absolute;
+	 height: 10px;
+	 background-color: red;
+}
+#flecha_izq{
+	margin-top: -32%;
+	margin-left: 1%;
+	 position:absolute;
+ }
+ #flecha{
+ 	width: 20px;
+ }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+#flecha_der{
+	margin-top: -32%;
+	margin-left: 103%;
+	 position:absolute;
+	 height: 10px;
+}
+#flecha_izq{
+	margin-top: -32%;
+	margin-left: -5%;
+	 position:absolute;
+ }
+ #flecha{
+ 	width: 20px;
+ }
+ }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+#flecha_der{
+	margin-top: -27%;
+	margin-left: 103%;
+	 position:absolute;
+}
+#flecha_izq{
+	margin-top: -27%;
+	margin-left: -5%;
+	 position:absolute;
+ }
+ #flecha{
+ 	width: 25px;
+ }
+}

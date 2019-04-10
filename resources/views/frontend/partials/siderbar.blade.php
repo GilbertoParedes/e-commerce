@@ -1,128 +1,126 @@
-
-<div class="topnav" id="myTopnav">
-     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-4 col-4 ">
-         <div class="dropdown3">
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="iconos/menu.png" id="menu_icon" >  </a>
-              <br><br><br><br>
-              <div class="dropdown-content2">
+<!--/sidebar-menu-->
+      <div class="sidebar-menu">
+        <header class="logo">
+          <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo"> <h1>Augment</h1></span> 
+          <!--<img id="logo" src="" alt="Logo"/>--> 
+          </a> 
+        </header>
+      <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+      <!--/down-->
+              <div class="down">  
+                <a href="index.html"><img src="{{ asset('admin/images/admin.jpg') }}"></a>
+                <a href="index.html"><span class=" name-caret">{{ Auth::user()->name }}</span></a>
+                <p>{{ Auth::user()->email }}</p>
                 <ul>
-                  <li><a href="#" id="texto1">VISITA POR PRIMERA VEZ</a></li>
-                  <li><a href="#" id="texto1">CONTÁCTANOS</a></li>
+                  <li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <span>Log out</span><i class="lnr lnr-power-switch"></i>
+                                        
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                          @csrf
+                                      </form>
+                                        </a>
+                  </li>
                 </ul>
               </div>
-         </div>
+                 <!--//down-->
+                           <div class="menu">
+                  <ul id="menu" >
+                    <li><a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+                    <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Users &amp; Roles</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                       <ul id="menu-academico-sub" >
+                      <li id="menu-academico-avaliacoes" ><a href="{{ route('users.index') }}"> Users</a></li>
+                      <li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>
+                      <li id="menu-academico-avaliacoes" ><a href="calender.html">Permisos</a></li>
+                      </ul>
+                     </li>
+                    
+                    <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Products</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                       <ul id="menu-academico-sub" >
+                      <li id="menu-academico-avaliacoes" ><a href="{{ route('products.index') }}"> View</a></li>
+                      
+                       </ul>
+                    </li>
+
+                    <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Category</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                       <ul id="menu-academico-sub" >
+                      <li id="menu-academico-avaliacoes" ><a href="{{ route('category.index') }}"> View</a></li>
+                       </ul>
+                    </li>
+                    {{--
+                     <li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o"></i> <span>Ui Elements</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                       <ul id="menu-academico-sub" >
+                        <li id="menu-academico-avaliacoes" ><a href="forms.html">Forms</a></li>
+                        <li id="menu-academico-boletim" ><a href="validation.html">Validation Forms</a></li>
+                        <li id="menu-academico-boletim" ><a href="table.html">Tables</a></li>
+                        <li id="menu-academico-boletim" ><a href="buttons.html">Buttons</a></li>
+                        </ul>
+                     </li>
+                  <li><a href="typography.html"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
+                  <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                      <ul id="menu-academico-sub" >
+                        <li id="menu-academico-avaliacoes" ><a href="login.html">Login</a></li>
+                        <li id="menu-academico-boletim" ><a href="register.html">Register</a></li>
+                      <li id="menu-academico-boletim" ><a href="404.html">404</a></li>
+                      <li id="menu-academico-boletim" ><a href="sign.html">Sign up</a></li>
+                      <li id="menu-academico-boletim" ><a href="profile.html">Profile</a></li>
+                      </ul>
+                   </li>
+                   <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Mail Box</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                     <ul>
+                    <li><a href="inbox.html"><i class="fa fa-inbox"></i> Inbox</a></li>
+                    <li><a href="compose.html"><i class="fa fa-pencil-square-o"></i> Compose Mail</a></li>
+                    <li><a href="editor.html"><span class="lnr lnr-highlight"></span> Editors Page</a></li>
+                  
+                    </ul>
+                  </li>
+                      <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Components</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                     <ul id="menu-academico-sub" >
+                      <li id="menu-academico-avaliacoes" ><a href="grids.html">Grids</a></li>
+                      <li id="menu-academico-boletim" ><a href="media.html">Media Objects</a></li>
+
+                      </ul>
+                   </li>
+                  <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>Charts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                    <ul>
+                    <li><a href="map.html"><i class="lnr lnr-map"></i> Maps</a></li>
+                    <li><a href="graph.html"><i class="lnr lnr-apartment"></i> Graph Visualization</a></li>
+                  </ul>
+                  </li>
+                  <li id="menu-comunicacao" ><a href="#"><i class="fa fa-smile-o"></i> <span>More</span><span class="fa fa-angle-double-right" style="float: right"></span></a>
+                    <ul id="menu-comunicacao-sub" >
+                    <li id="menu-mensagens" style="width:120px" ><a href="project.html">Projects <i class="fa fa-angle-right" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
+                      <ul id="menu-mensagens-sub" >
+                      <li id="menu-mensagens-enviadas" style="width:130px" ><a href="ribbon.html">Ribbons</a></li>
+                      <li id="menu-mensagens-recebidas"  style="width:130px"><a href="blank.html">Blank</a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-arquivos" ><a href="500.html">500</a></li>
+                    </ul>
+                  </li> 
+                  --}}
+                  </ul>
+                </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-4 col-4 ">
-        <center><img src="iconos/logo.png" class="img-responsive" id="logotipo"></center>
-      </div>
-       <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-       <div id="alineacion">
-            <img src="iconos/lupa.png" id="iconos">
-            <img src="iconos/linea.png" id="linea">
-            <img src="iconos/carrito.png" id="iconos">
-            <img src="iconos/linea.png" id="linea">
-            <img src="iconos/corazon.png" id="iconos">
-            <img src="iconos/linea.png" id="linea">
-            <img src="iconos/perfil.png" id="iconos">
-        </div>
-      </div>
-    </div>
-<div class="row">
-
-<div id="elementos_ocultos" >
-  <div class="dropdowns">
-        <center>
-           <button class="dropbtn"><a href=".php" id="txt_oculto">VISITA POR PRIMERA VEZ</a></button>
-        </center>
-    </div>  
-</div>
-<div id="elementos">
-       <div class="dropdowns">
-          <center>
-            <button class="dropbtn">
-              <a href="lomasvendido.php" id="texto">LO MÁS VENDIDO</a>
-            </button>
-          </center>
-      </div> 
-</div>
-<div id="elementos">
-   <div class="dropdowns">
-          <center>
-            <button class="dropbtn">
-              <a href=".php" id="texto">ARREGLOS -$450</a>
-            </button>
-          </center>
-      </div> 
-</div>
-<div id="elementos">
-        <div class="dropdowns">
-          <center>  
-            <button class="dropbtn">
-              <a href="alamos.php" id="texto">CATEGORÍAS
-                <img src="iconos/flecha.png" id="flechita">
-              </a> 
-            </button>
-          </center>
-        <div class="dropdown-content">  
-            <a href="" id="texto2">CUMPLEAÑOS</a>
-            <a href="" id="texto2">ANIVERSARIO</a>
-            <a href="" id="texto2">COMPROMISOS Y BODAS</a> 
-            <a href="" id="texto2">ENAMORADOS</a>
-            <a href="" id="texto2">KIDS ZONE</a>
-            <a href="" id="texto2">GRACIAS</a>
-            <a href="" id="texto2">LO SIENTO</a>
-            <a href="" id="texto2">MATERNIDAD</a>
-            <a href="" id="texto2">¿POR QUÉ NO?</a>
-            <a href="" id="texto2">GRADUACIONES</a>
-            <a href="" id="texto2">NACIMIENTOS</a>
-            <a href="" id="texto2">MEJÓRATE</a>       
-        </div>
-      </div> 
-</div>
-<div id="elementos" >
-  <div class="dropdowns">
-        <center>
-            <button class="dropbtn"><a href="colomos.php" id="texto">GLOBOS
-                <img src="iconos/flecha.png" id="flechita"></a> 
-            </button>
-        </center>
-        
-        <div class="dropdown-content">
-           <a href="" id="texto2">CUMPLEAÑOS</a>
-           <a href="" id="texto2">MEJÓRATE</a>
-           <a href="" id="texto2">NACIMIENTOS</a>
-           <a href="" id="texto2">KIDS ZONE</a>
-           <a href="" id="texto2">ENAMORADOS</a>
-           <a href="" id="texto2">GRADUACIONES</a>
-           <a href="" id="texto2">LETRAS Y NÚMEROS</a>
-           <a href="" id="texto2">PAQUETES COMPLETOS</a>
-        </div>
-      </div> 
-</div>
-
-<div id="elementos" >
-     <div class="dropdowns">
-        <center>
-           <button class="dropbtn"><a href=".php" id="texto">PAQUETES</a></button>
-        </center>
-     </div>
-</div>
-<div id="elementos" >
-  <div class="dropdowns">
-        <center>
-           <button class="dropbtn"><a href=".php" id="texto">TEMPORADA</a></button>
-        </center>
-    </div> 
-</div>
-<div id="elementos_ocultos" >
-    <div class="dropdowns">
-        <center>
-           <button class="dropbtn"><a href=".php" id="txt_oculto">CONTÁCTANOS</a></button>
-        </center>
-    </div>  
-</div>
-
-</div>
-
+<script>
+  var toggle = true;
+                    
+  $(".sidebar-icon").click(function() {                
+    if (toggle)
+    {
+      $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+      $("#menu span").css({"position":"absolute"});
+    }
+    else
+    {
+      $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                  setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+      }, 400);
+    }             
+      toggle = !toggle;
+    });
+</script>
