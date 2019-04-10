@@ -1,3 +1,4 @@
+
 <div class="topnav" id="myTopnav">
      <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-4 ">
@@ -124,18 +125,4 @@
 </div>
 
 </div>
-<style type="text/css">
 
-</style>
-
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
