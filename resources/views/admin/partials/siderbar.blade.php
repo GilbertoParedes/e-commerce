@@ -32,7 +32,7 @@
 										<li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Users &amp; Roles</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
 											<li id="menu-academico-avaliacoes" ><a href="{{ route('users.index') }}"> Users</a></li>
-											<li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>
+											{{--	<li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>--}}
 											<li id="menu-academico-avaliacoes" ><a href="calender.html">Permisos</a></li>
 										  </ul>
 										 </li>
