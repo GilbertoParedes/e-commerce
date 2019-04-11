@@ -26,6 +26,7 @@ Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
 Route::resource('/products', 'Admin\ProductController');
 
 Route::resource('/index', 'Frontend\PagesController');
+Route::resource('/lomasvendido', 'Frontend\LomasvendidoController');
 
 
 

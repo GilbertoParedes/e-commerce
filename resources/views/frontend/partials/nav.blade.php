@@ -42,7 +42,7 @@
        <div class="dropdowns">
           <center>
             <button class="dropbtn">
-              <a href="lo_mas_vendido.php" id="texto">LO MÁS VENDIDO</a>
+              <a href="lomasvendido.php" id="texto">LO MÁS VENDIDO</a>
             </button>
           </center>
       </div> 

@@ -5,22 +5,22 @@ background-image: url("../images/principal/fondo.png");
  
 {
    font-family: "paloma";
-   src: url("../tipografia/La Paloma.ttf");
+   src: url("../fonts/La Paloma.ttf");
 }
   @font-face
 {
    font-family: "acumin";
-   src: url("../tipografia/Acumin Pro Cond ExtraLight.otf");
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
 }
   @font-face
 {
    font-family: "seguiemj";
-   src: url("../tipografia/seguiemj.ttf");
+   src: url("../fonts/seguiemj.ttf");
 }
   @font-face
 {
    font-family: "simplifica";
-   src: url("../tipografia/simplifica.ttf");
+   src: url("../fonts/simplifica.ttf");
 }
 
 @media (max-width: 575.98px) { 
