@@ -9,8 +9,7 @@
       <div class="modal-body">
 			<div class="outter-wp">
 				<div class="forms-main">
-					<form class="form-horizontal" action="{{ route('users.store') }}" method="post">
-						@csrf
+					{!! Form::open(['route' => 'users.store', 'method' => 'post', 'class' => 'form-horizontal', 'files' => true]) !!}
 						<div class="form-group">
 							<label class="col-md-2 control-label">Name</label>
 							<div class="col-md-8">
@@ -18,7 +17,7 @@
 									<span class="input-group-addon">
 										<i class="glyphicon glyphicon-user"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="name" placeholder="Name">
+									<input type="text" class="form-control icon" name="name" placeholder="Name">
 								</div>
 							</div>
 						</div>
@@ -29,10 +28,18 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="email" placeholder="Email Address">
+									<input type="text" class="form-control icon" name="email" placeholder="Email Address">
 								</div>
 							</div>
 						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Role</label>
+							<div class="col-md-8">
+								<div class="input-group">
+                               	{!! Form::select('role', $roles->pluck('name', 'name'), '', ['class' => 'form-control']) !!}
+                           		</div>
+                           	</div>
+                       	</div>
 						<div class="form-group">
 							<label class="col-md-2 control-label">Password</label>
 							<div class="col-md-8">
@@ -44,11 +51,19 @@
 								</div>
 							</div>
 						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Imagen</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="file" class="form-control1 icon" name="photo" placeholder="Perfíl">
+								</div>
+							</div>
+						</div>
 						<div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					        <button type="submit" class="btn btn-primary">Save</button>
 				      	</div>
-					</form>
+				      	{!! Form::close() !!}
 				</div>
 			</div>
       </div>

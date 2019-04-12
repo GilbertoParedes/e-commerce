@@ -29,7 +29,8 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 	Route::resource('direccion', 'Admin\DirectionController');
 	Route::resource('productocategoria', 'Admin\ProductoCategoriaController');
 	Route::resource('products', 'Admin\ProductController');
-	Route::resource('roles', 'Admin\RolesController');
+	Route::resource('roles', 'Admin\RolesController')->except('show', 'create');
+	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
 
 });
 

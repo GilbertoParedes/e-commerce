@@ -1,15 +1,15 @@
 <!-- Modal -->
-<div class="modal fade" id="createRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="createPermission" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Create Role </h4>
+        <h4 class="modal-title" id="myModalLabel">Create Permission </h4>
       </div>
       <div class="modal-body">
 			<div class="outter-wp">
 				<div class="forms-main">
-					<form class="form-horizontal" action="{{ route('roles.store') }}" method="post" enctype="multipart/form-data">
+					<form class="form-horizontal" action="{{ route('permissions.store') }}" method="post" enctype="multipart/form-data">
 						@csrf
 						<div class="form-group">
 							<label class="col-md-2 control-label">Name</label>

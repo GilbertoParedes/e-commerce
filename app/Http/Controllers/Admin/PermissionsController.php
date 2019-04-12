@@ -4,28 +4,29 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
-class RolesController extends Controller
+class PermissionsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    protected $role;
-
-    function __construct(Role $role)
+    // variable protegida que almacena el modelo de Permisos
+    protected $permission;
+    // Constructor de permisos
+    function __construct(Permission $permission)
     {
-        $this->role = $role;
+        $this->permission = $permission;
     }
 
     public function index()
     {
-        $roles = $this->role->all();
-        return view('admin.roles.index', compact('roles'));
-
+        // accede a todos los regístros de la tabla de permisos
+        $permissions = $this->permission->all();
+        // retorna la vista principal del administrador de permisos junto con los permisos obtenidos
+        return view('admin.permission.index', compact('permissions'));
     }
 
     /**
@@ -46,7 +47,7 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->role->create($request->all());
+        $this->permission->create($request->all());
         return back();
         //dd($request->all());
     }
@@ -70,8 +71,8 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        $role = $this->role->find($id);
-        return view('admin.roles.edit', compact('role'));
+        $permission = $this->permission->find($id);
+        return view('admin.permission.edit', compact('permission'));
     }
 
     /**
@@ -83,9 +84,9 @@ class RolesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $role = $this->role->find($id);
-        $role->update($request->all());
-        return redirect()->route('roles.index');
+        $permission = $this->permission->find($id);
+        $permission->update($request->all());
+        return redirect()->route('permissions.index');
     }
 
     /**
@@ -96,8 +97,8 @@ class RolesController extends Controller
      */
     public function destroy($id)
     {
-        $role = $this->role->find($id);
-        $role->delete();
+        $permission = $this->permission->find($id);
+        $permission->delete();
         return back();
     }
 }

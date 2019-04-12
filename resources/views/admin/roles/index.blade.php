@@ -14,6 +14,8 @@
 							<th>Guard</th>
 							<th>Editar</th>
 							<th>Eliminar</th>
+							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRole">
+							Create Role</a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -22,11 +24,14 @@
 							<td>{{ $role->id }}</td>
 							<td>{{ $role->name }}</td>
 							<td>{{ $role->guard_name }}</td>
-							<td><a href="{{route('roles.edit', $role->id)}}"><button type="button" class="btn btn-primary">Editar</button></td>
-							<td><form action="{{ route('products.destroy', $product->id)}}" method="post">
+							<td>
+								<a href="{{route('roles.edit', $role->id)}}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a>
+							</td>
+							<td>
+								<form action="{{ route('roles.destroy', $role->id)}}" method="post">
 				                  @csrf
 				                  @method('DELETE')
-				                  <button class="btn btn-danger" type="submit">Borrar</button>
+				                  <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
 				                </form>
 				           </td>	
 						</tr>
@@ -36,6 +41,7 @@
 
 			</div>								
 		</div>
+		@include('admin.roles.create')
 	</div>
 </div>
 
