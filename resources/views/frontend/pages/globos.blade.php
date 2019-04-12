@@ -1,8 +1,8 @@
-@extends('frontend.layouts.layout_catalogo')
-@section('title', 'Catalogo de productos')
+@extends('frontend.layouts.layout_globos')
+@section('title', 'globos')
   
 @section('content')
-
+ 
 <div id="content">
 <!-- slider1 -->
   <div class="row">
@@ -12,12 +12,11 @@
     </div>
   </div>
 <!-- fin slider -->
-
 <br>
 <!-- texto arreglos florales -->
   <div class="row">
       <div class="col-12" >
-        <H1 id="txt_globo">ARREGLOS FLORALES</H1>
+        <H1 id="txt_globo">GLOBOS</H1>
         <hr>
       </div>   
   </div>
@@ -25,8 +24,9 @@
 
 <!--     GLOBOS   --> 
 
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-6" >
+<div class="margen">
+    <div class="row" >
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6" >
          
              <img src="frontend/images/lomasvendido/globo 1.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
               <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
@@ -52,7 +52,7 @@
         </div>   
       
    </div>
-
+</div>
    <!--     fin globos   --> 
 </div>
 

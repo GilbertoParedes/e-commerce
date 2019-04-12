@@ -34,7 +34,7 @@
 <div id="elementos_ocultos" >
   <div class="dropdowns"  >
         <center>
-           <button class="dropbtn"><a href="visita_por_primera_vez.php" id="txt_oculto">VISITA POR PRIMERA VEZ</a></button>
+           <button class="dropbtn"><a href="visita_por_primera_vez" id="txt_oculto">VISITA POR PRIMERA VEZ</a></button>
         </center>
     </div>  
 </div>
@@ -51,7 +51,7 @@
    <div class="dropdowns">
           <center>
             <button class="dropbtn">
-              <a href=".php" id="texto">ARREGLOS -$450</a>
+              <a href="" id="texto">ARREGLOS -$450</a>
             </button>
           </center>
       </div> 
@@ -66,7 +66,7 @@
             </button>
           </center>
         <div class="dropdown-content">  
-            <a href="" id="texto2">CUMPLEAÑOS</a>
+            <a href="catalogo" id="texto2">CUMPLEAÑOS</a>
             <a href="" id="texto2">ANIVERSARIO</a>
             <a href="" id="texto2">COMPROMISOS Y BODAS</a> 
             <a href="" id="texto2">ENAMORADOS</a>
@@ -84,13 +84,13 @@
 <div id="elementos" >
   <div class="dropdowns">
         <center>
-            <button class="dropbtn"><a href="colomos.php" id="texto">GLOBOS
+            <button class="dropbtn"><a href="#" id="texto">GLOBOS
                 <img src="frontend/icons/flecha.png" id="flechita"></a> 
             </button>
         </center>
         
         <div class="dropdown-content">
-           <a href="" id="texto2">CUMPLEAÑOS</a>
+           <a href="globos" id="texto2">CUMPLEAÑOS</a>
            <a href="" id="texto2">MEJÓRATE</a>
            <a href="" id="texto2">NACIMIENTOS</a>
            <a href="" id="texto2">KIDS ZONE</a>
