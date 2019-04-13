@@ -14,12 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
-{
+	Route::resource('/index', 'Frontend\PagesController');
+	Route::resource('/lomasvendido', 'Frontend\LomasvendidoController');
+	Route::resource('/catalogo', 'Frontend\CatalogoController');
+	Route::resource('/globos', 'Frontend\GlobosController');
 
 	Route::resource('users', 'Admin\UserController');
 	Route::resource('carrito', 'Admin\CarritoController');
@@ -31,8 +32,6 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 	Route::resource('products', 'Admin\ProductController');
 	Route::resource('roles', 'Admin\RolesController')->except('show', 'create');
 	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
-
-});
 
 
 
