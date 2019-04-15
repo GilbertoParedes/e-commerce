@@ -13,6 +13,7 @@
 							<th>Name</th>
 							<th>email</th>
 							<th>Actions</th>
+							<th>Photo</th>
 							<th><a type="button" class="btn btn-primary" data-toggle="modal" data-target="#createUser">Add User</a></th>
 						</tr>
 					</thead>
@@ -22,6 +23,7 @@
 							<td>{{ $user->id }}</td>
 							<td>{{ $user->name }}</td>
 							<td>{{ $user->email }}</td>
+							<td><img src="{{ $user->path }}" class="img-circle" width="50px" height="50px" alt="Photo of perfil"></td>
 							<td>
 								<button type="button" class="btn btn-primary">Editar</button>
 								<button type="button" class="btn btn-danger">Eliminar</button>

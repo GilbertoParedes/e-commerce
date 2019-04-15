@@ -16,22 +16,23 @@ Route::get('/', function () {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/users', 'Admin\UserController');
-Route::resource('/carrito', 'Admin\CarritoController');
-Route::resource('/carritoproducto', 'Admin\CarritoproductoController');
-Route::resource('/category', 'Admin\CategoryController');
-Route::resource('/deseable', 'Admin\DeseableController');
-Route::resource('/direccion', 'Admin\DirectionController');
-Route::resource('/productocategoria', 'Admin\ProductoCategoriaController');
-Route::resource('/products', 'Admin\ProductController');
 
-Route::resource('/index', 'Frontend\PagesController');
-Route::resource('/lomasvendido', 'Frontend\LomasvendidoController');
-Route::resource('/catalogo', 'Frontend\CatalogoController');
-Route::resource('/globos', 'Frontend\GlobosController');
-Route::resource('/paquetescompletos', 'Frontend\PaquetesCompletosController');
-Route::resource('/contactanos', 'Frontend\ContactanosController');
 
+	Route::resource('/index', 'Frontend\PagesController');
+	Route::resource('/lomasvendido', 'Frontend\LomasvendidoController');
+	Route::resource('/catalogo', 'Frontend\CatalogoController');
+	Route::resource('/globos', 'Frontend\GlobosController');
+
+	Route::resource('users', 'Admin\UserController');
+	Route::resource('carrito', 'Admin\CarritoController');
+	Route::resource('carritoproducto', 'Admin\CarritoproductoController');
+	Route::resource('category', 'Admin\CategoryController');
+	Route::resource('deseable', 'Admin\DeseableController');
+	Route::resource('direccion', 'Admin\DirectionController');
+	Route::resource('productocategoria', 'Admin\ProductoCategoriaController');
+	Route::resource('products', 'Admin\ProductController');
+	Route::resource('roles', 'Admin\RolesController')->except('show', 'create');
+	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
 
 
 

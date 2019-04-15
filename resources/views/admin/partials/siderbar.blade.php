@@ -8,7 +8,7 @@
 			<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
 			<!--/down-->
 							<div class="down">	
-								<a href="index.html"><img src="{{ asset('admin/images/admin.jpg') }}"></a>
+								<a href="index.html"><img src="{{ Auth::user()->path }}" width="100px"></a>
 								<a href="index.html"><span class=" name-caret">{{ Auth::user()->name }}</span></a>
 								<p>{{ Auth::user()->email }}</p>
 								<ul>
@@ -29,10 +29,11 @@
                            <div class="menu">
 									<ul id="menu" >
 										<li><a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-										<li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Users &amp; Roles</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+										<li id="menu-academico" ><a href="#"><i class="fa fa-user"></i> <span> Users &amp; Roles</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
 											<li id="menu-academico-avaliacoes" ><a href="{{ route('users.index') }}"> Users</a></li>
-											{{--	<li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>--}}
+											<li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>
+											<li id="menu-academico-avaliacoes" ><a href="{{ route('permissions.index') }}">Permisos</a></
 											<li id="menu-academico-avaliacoes" ><a href="calender.html">Permisos</a></li>
 										  </ul>
 										 </li>
