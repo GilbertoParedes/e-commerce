@@ -8,14 +8,14 @@
               <div class="dropdown-content2">
                 <ul>
                   <li><a href="#" id="texto1">VISITA POR PRIMERA VEZ</a></li>
-                  <li><a href="#" id="texto1">CONTÁCTANOS</a></li>
+                  <li><a href="contactanos" id="texto1">CONTÁCTANOS</a></li>
                 </ul>
               </div>
          </div>
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-4 col-4 ">
-        <center><img src="frontend/icons/logo.png" class="img-responsive" id="logotipo"></center>
+        <center><a href="index"><img src="frontend/icons/logo.png" class="img-responsive" id="logotipo"></a></center>
       </div>
        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
        <div id="alineacion">
@@ -60,24 +60,24 @@
         <div class="dropdowns">
           <center>  
             <button class="dropbtn">
-              <a href="alamos.php" id="texto">CATEGORÍAS
+              <a href="#" id="texto">CATEGORÍAS
                 <img src="frontend/icons/flecha.png" id="flechita">
               </a> 
             </button>
           </center>
         <div class="dropdown-content">  
             <a href="catalogo" id="texto2">CUMPLEAÑOS</a>
-            <a href="" id="texto2">ANIVERSARIO</a>
-            <a href="" id="texto2">COMPROMISOS Y BODAS</a> 
-            <a href="" id="texto2">ENAMORADOS</a>
-            <a href="" id="texto2">KIDS ZONE</a>
-            <a href="" id="texto2">GRACIAS</a>
-            <a href="" id="texto2">LO SIENTO</a>
-            <a href="" id="texto2">MATERNIDAD</a>
-            <a href="" id="texto2">¿POR QUÉ NO?</a>
-            <a href="" id="texto2">GRADUACIONES</a>
-            <a href="" id="texto2">NACIMIENTOS</a>
-            <a href="" id="texto2">MEJÓRATE</a>       
+            <a href="catalogo" id="texto2">ANIVERSARIO</a>
+            <a href="catalogo" id="texto2">COMPROMISOS Y BODAS</a> 
+            <a href="catalogo" id="texto2">ENAMORADOS</a>
+            <a href="catalogo" id="texto2">KIDS ZONE</a>
+            <a href="catalogo" id="texto2">GRACIAS</a>
+            <a href="catalogo" id="texto2">LO SIENTO</a>
+            <a href="catalogo" id="texto2">MATERNIDAD</a>
+            <a href="catalogo" id="texto2">¿POR QUÉ NO?</a>
+            <a href="catalogo" id="texto2">GRADUACIONES</a>
+            <a href="catalogo" id="texto2">NACIMIENTOS</a>
+            <a href="catalogo" id="texto2">MEJÓRATE</a>       
         </div>
       </div> 
 </div>
