@@ -19,6 +19,7 @@ class CreateProduct extends Migration
             $table->mediumText('description');
             $table->bigInteger('quantity');
             $table->bigInteger('stock');
+            $table->string('path');
             $table->timestamps();
         });
     }

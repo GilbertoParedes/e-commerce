@@ -66,7 +66,7 @@
             </button>
           </center>
         <div class="dropdown-content">  
-            <a href="catalogo" id="texto2">CUMPLEAÑOS</a>
+            <a href="" id="texto2">CUMPLEAÑOS</a>
             <a href="catalogo" id="texto2">ANIVERSARIO</a>
             <a href="catalogo" id="texto2">COMPROMISOS Y BODAS</a> 
             <a href="catalogo" id="texto2">ENAMORADOS</a>

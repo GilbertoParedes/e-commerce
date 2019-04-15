@@ -24,6 +24,7 @@
 							<td>{{ $product->description }}</td>
 							<td>{{ $product->quantity }}</td>
 							<td>{{ $product->stock }}</td>
+							<td><img src="../{{ $product->path }}"  width="100px" height="100px" alt="Photo of perfil"></td>
 							<td><a href="{{route('products.edit', $product->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 							<td>	
 								<form action="{{ route('products.destroy', $product->id)}}" method="post">

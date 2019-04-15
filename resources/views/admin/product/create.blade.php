@@ -9,8 +9,7 @@
       <div class="modal-body">
 			<div class="outter-wp">
 				<div class="forms-main">
-					<form class="form-horizontal dropzone"  id="my-awesome-dropzone" action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
-						@csrf
+					{!! Form::open(['route' => 'products.store', 'method' => 'post', 'class' => 'form-horizontal', 'files' => true]) !!}
 						<div class="form-group">
 							<label class="col-md-2 control-label">Nombre</label>
 							<div class="col-md-8">
@@ -55,34 +54,19 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-md-2 control-label">FOTO</label>
+					    <div class="form-group">
+							<label class="col-md-2 control-label">Imagen</label>
 							<div class="col-md-8">
-								<div class="input-group">							
-									<span class="input-group-addon">
-										<i class="fa fa-envelope-o"></i>
-									</span>
-									<input type="file" name="file" />
+								<div class="input-group">
+									<input type="file" class="form-control1 icon" name="photo" placeholder="Perfíl">
 								</div>
 							</div>
 						</div>
-						<!--<div class="form-group">
-							<label class="col-md-2 control-label"></label>
-							<div class="col-md-8">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-key"></i>
-									</span>
-									 <input type="file" class="form-control-file border" name="file">
-
-								</div>
-							</div>
-						</div>-->
 						<div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 					        <button type="submit" class="btn btn-primary">Guardar</button>
 				      	</div>
-					</form>
+				    {!! Form::close() !!}
 				</div>
 			</div>
       </div>
