@@ -35,6 +35,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 	Route::resource('products', 'Admin\ProductController');
 	Route::resource('roles', 'Admin\RolesController')->except('show', 'create');
 	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
+	
+	Route::resource('catalogo_arreglos', 'Frontend\CatalogoController')->except('show');
 
 
 	

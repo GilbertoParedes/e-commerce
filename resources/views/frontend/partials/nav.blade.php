@@ -65,19 +65,22 @@
               </a> 
             </button>
           </center>
-        <div class="dropdown-content">  
-            <a href="" id="texto2">CUMPLEAÑOS</a>
-            <a href="catalogo" id="texto2">ANIVERSARIO</a>
-            <a href="catalogo" id="texto2">COMPROMISOS Y BODAS</a> 
-            <a href="catalogo" id="texto2">ENAMORADOS</a>
-            <a href="catalogo" id="texto2">KIDS ZONE</a>
-            <a href="catalogo" id="texto2">GRACIAS</a>
-            <a href="catalogo" id="texto2">LO SIENTO</a>
-            <a href="catalogo" id="texto2">MATERNIDAD</a>
-            <a href="catalogo" id="texto2">¿POR QUÉ NO?</a>
-            <a href="catalogo" id="texto2">GRADUACIONES</a>
-            <a href="catalogo" id="texto2">NACIMIENTOS</a>
-            <a href="catalogo" id="texto2">MEJÓRATE</a>       
+
+        <div class="dropdown-content">
+
+    
+            <a href="{{ route('catalogo.show','1') }}" id="texto2">CUMPLEAÑOS</a>
+            <a href="{{ route('catalogo.show','2') }}" id="texto2">ANIVERSARIO</a>
+            <a href="{{ route('catalogo.show','3') }}" id="texto2">COMPROMISOS Y BODAS</a> 
+            <a href="{{ route('catalogo.show','4') }}" id="texto2">ENAMORADOS</a>
+            <a href="{{ route('catalogo.show','5') }}" id="texto2">KIDS ZONE</a>
+            <a href="{{ route('catalogo.show','6') }}" id="texto2">GRACIAS</a>
+            <a href="{{ route('catalogo.show','7') }}" id="texto2">LO SIENTO</a>
+            <a href="{{ route('catalogo.show','8') }}" id="texto2">MATERNIDAD</a>
+            <a href="{{ route('catalogo.show','9') }}" id="texto2">¿POR QUÉ NO?</a>
+            <a href="{{ route('catalogo.show','10') }}" id="texto2">GRADUACIONES</a>
+            <a href="{{ route('catalogo.show','11') }}" id="texto2">NACIMIENTOS</a>
+            <a href="{{ route('catalogo.show','12') }}" id="texto2">MEJÓRATE</a>       
         </div>
       </div> 
 </div>
