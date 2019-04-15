@@ -21,7 +21,8 @@
 							<td>{{ $category->id }}</td>
 							<td>{{ $category->type }}</td>
 							<td>{{ $category->category }}</td>
-							
+							<td><img src="../{{ $category->path }}"  width="100px" height="50px" alt="Photo of perfil"></td>
+
 							<td><a href="{{route('category.edit',$category->id)}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
 											
 							<td>

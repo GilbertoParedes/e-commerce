@@ -17,6 +17,7 @@ class CreateCategory extends Migration
             $table->increments('id');
             $table->string('type');
             $table->string('category');
+            $table->string('path');
             $table->timestamps();
         });
     }

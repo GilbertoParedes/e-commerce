@@ -15,7 +15,10 @@
 					          <label for="price">Nombre:</label>
 					          <input type="text" class="form-control" name="category"  value={{ $category->category }} />
 					        </div>
-					        
+					        <div class="form-group">
+					          <label for="price">Banner:</label>
+					         <img src="{{$category->path}}"  width="100px" height="50px" alt="Photo of perfil">
+					        </div>
 					        <button type="submit" class="btn btn-primary">Update</button>
 					</form>
 		</div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
+use Illuminate\Support\Facades\Storage;
+
 class CategoryController extends Controller
 {
      protected $category;
@@ -38,12 +40,27 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-          $this->category->create([
-           'type' => $request->type,
-           'category' => $request->category
+        //dd($request->all());
+       //obtine el campo de tipo archivo
+        $file = $request->file('photo');
+        // toma el objeto del archivo y se obtine el nombre real con el método getClientOriginalName
+        $fileName = $file->getClientOriginalName();
+        
+        // Almacena el archivo en el disco local del directorio Storage
+        Storage::disk('local')->put('public/category/'.$fileName, \File::get($file));
+        //crea la ruta con el nombre de la image donde será almacenada para insertarla en el campo path de la tabla users
+        //$path = storage_path('public/users/'.$fileName);
+        $path = $file->storeAs('/storage/app/public/category', $fileName);
+        // método create del modelo User
+        //dd($path);
+        $this->category->create([
+            'type' => $request->type,
+            'category' => $request->category,
+            'path' => $path
         ]);
 
-         return back();
+        return back();
+
     }
 
     /**
