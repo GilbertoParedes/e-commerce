@@ -7,7 +7,7 @@
               <br><br><br><br>
               <div class="dropdown-content2">
                 <ul>
-                  <li><a href="#" id="texto1">VISITA POR PRIMERA VEZ</a></li>
+                  <li><a href="visita_por_primera_vez" id="texto1">VISITA POR PRIMERA VEZ</a></li>
                   <li><a href="contactanos" id="texto1">CONTÁCTANOS</a></li>
                 </ul>
               </div>
@@ -69,18 +69,18 @@
         <div class="dropdown-content">
 
     
-            <a href="{{ route('catalogo.show','1') }}" id="texto2">CUMPLEAÑOS</a>
-            <a href="{{ route('catalogo.show','2') }}" id="texto2">ANIVERSARIO</a>
-            <a href="{{ route('catalogo.show','3') }}" id="texto2">COMPROMISOS Y BODAS</a> 
-            <a href="{{ route('catalogo.show','4') }}" id="texto2">ENAMORADOS</a>
-            <a href="{{ route('catalogo.show','5') }}" id="texto2">KIDS ZONE</a>
-            <a href="{{ route('catalogo.show','6') }}" id="texto2">GRACIAS</a>
-            <a href="{{ route('catalogo.show','7') }}" id="texto2">LO SIENTO</a>
-            <a href="{{ route('catalogo.show','8') }}" id="texto2">MATERNIDAD</a>
-            <a href="{{ route('catalogo.show','9') }}" id="texto2">¿POR QUÉ NO?</a>
-            <a href="{{ route('catalogo.show','10') }}" id="texto2">GRADUACIONES</a>
-            <a href="{{ route('catalogo.show','11') }}" id="texto2">NACIMIENTOS</a>
-            <a href="{{ route('catalogo.show','12') }}" id="texto2">MEJÓRATE</a>       
+            <a href="catalogo_cumpleanos" id="texto2">CUMPLEAÑOS</a>
+            <a href="catalogo_aniversario" id="texto2">ANIVERSARIO</a>
+            <a href="catalogo_compromisos_bodas" id="texto2">COMPROMISOS Y BODAS</a> 
+            <a href="catalogo_enamorados" id="texto2">ENAMORADOS</a>
+            <a href="catalogo_kid_zone" id="texto2">KIDS ZONE</a>
+            <a href="catalogo_gracias" id="texto2">GRACIAS</a>
+            <a href="catalogo_lo_siento" id="texto2">LO SIENTO</a>
+            <a href="catalogo_maternidad" id="texto2">MATERNIDAD</a>
+            <a href="catalogo_por_que_no" id="texto2">¿POR QUÉ NO?</a>
+            <a href="catalogo_graduaciones" id="texto2">GRADUACIONES</a>
+            <a href="catalogo_nacimientos" id="texto2">NACIMIENTOS</a>
+            <a href="catalogo_mejorate" id="texto2">MEJÓRATE</a>       
         </div>
       </div> 
 </div>
@@ -93,14 +93,14 @@
         </center>
         
         <div class="dropdown-content">
-           <a href="globos" id="texto2">CUMPLEAÑOS</a>
-           <a href="" id="texto2">MEJÓRATE</a>
-           <a href="" id="texto2">NACIMIENTOS</a>
-           <a href="" id="texto2">KIDS ZONE</a>
-           <a href="" id="texto2">ENAMORADOS</a>
-           <a href="" id="texto2">GRADUACIONES</a>
-           <a href="" id="texto2">LETRAS Y NÚMEROS</a>
-           <a href="" id="texto2">PAQUETES COMPLETOS</a>
+           <a href="globos_cumpleanos" id="texto2">CUMPLEAÑOS</a>
+           <a href="globos_mejorate" id="texto2">MEJÓRATE</a>
+           <a href="globos_nacimientos" id="texto2">NACIMIENTOS</a>
+           <a href="globos_kids_zone" id="texto2">KIDS ZONE</a>
+           <a href="globos_enamorados" id="texto2">ENAMORADOS</a>
+           <a href="globos_graduaciones" id="texto2">GRADUACIONES</a>
+           <a href="globos_letras_numeros" id="texto2">LETRAS Y NÚMEROS</a>
+           <a href="paquetescompletos" id="texto2">PAQUETES COMPLETOS</a>
         </div>
       </div> 
 </div>
@@ -108,21 +108,21 @@
 <div id="elementos" >
      <div class="dropdowns">
         <center>
-           <button class="dropbtn"><a href=".php" id="texto">PAQUETES</a></button>
+           <button class="dropbtn"><a href="#" id="texto">PAQUETES</a></button>
         </center>
      </div>
 </div>
 <div id="elementos" >
   <div class="dropdowns">
         <center>
-           <button class="dropbtn"><a href=".php" id="texto">TEMPORADA</a></button>
+           <button class="dropbtn"><a href="#" id="texto">TEMPORADA</a></button>
         </center>
     </div> 
 </div>
 <div id="elementos_ocultos" >
     <div class="dropdowns">
         <center>
-           <button class="dropbtn"><a href=".php" id="txt_oculto">CONTÁCTANOS</a></button>
+           <button class="dropbtn"><a href="contactanos" id="txt_oculto">CONTÁCTANOS</a></button>
         </center>
     </div>  
 </div>

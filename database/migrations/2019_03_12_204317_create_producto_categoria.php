@@ -17,6 +17,7 @@ class CreateProductoCategoria extends Migration
             $table->increments('id');
             $table->integer('producto_id')->unsigned();
             $table->integer('categoria_id')->unsigned();
+            $table->timestamps();
 
             /***relacion foranea de producto***/
             $table->foreign('producto_id')

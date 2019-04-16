@@ -22,7 +22,6 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
-
 @media (max-width: 575.98px) { 
 
 #content{

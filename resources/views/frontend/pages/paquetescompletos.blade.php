@@ -2,13 +2,14 @@
 @section('title', 'globos')
   
 @section('content')
- 
+  <style type="text/css">
+    #un_div { display : none; }
+</style>
 <div id="content">
 <!-- slider1 -->
   <div class="row">
     <div class="col">
-      <img  src="frontend/images/paquetes/banner.png" id="im">
-
+      <img src="../{{ $categorias->path }}"  alt="Photo of perfil" id="im">
     </div>
   </div>
 <!-- fin slider -->
@@ -26,14 +27,23 @@
 
 <div class="margen">
     <div class="row" >
+       @foreach($cat_prod as $cat)
+           <div id="un_div" >  
+              {{$categoria_producto_id=$cat->id}}
+              {{$producto_id=$cat->producto_id}}
+           </div> 
+
+       @foreach($productos as $pro)
+           <div id="un_div">  {{ $id_productos=$pro->id}}</div>
+            @if ($producto_id == $id_productos)
         <div class="col-lg-12 col-md-12 col-sm-12 col-12" >
          
-             <img src="frontend/images/paquetes/paquetes_completos.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
+             <img src="../{{ $pro->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
               <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
 
              <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >$299.00</p></center>
+                     <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
                  </div>
                  <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
                   <center>
@@ -50,7 +60,11 @@
                  </div>
              </div>
         </div>   
-      
+        @endif
+
+             
+           @endforeach
+      @endforeach   
    </div>
 </div>
    <!--     fin globos   --> 

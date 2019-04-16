@@ -5,21 +5,31 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+use App\Category;
+use App\ProductoCategoria;
+
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
    protected $product;
+   protected $cat;
+   protected $product_cat;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Product $product)
+    function __construct(Product $product, Category $cat, ProductoCategoria $product_cat)
     {
         $this->product = $product;
+        $this->cat = $cat;
+        $this->product_cat=$product_cat;
     }
     public function index()
     {
         $products = $this->product->all();
-        return view('admin.product.products', compact('products'));
+        $categories = $this->cat->all();
+        $products_categorias = $this->product_cat->all();
+
+        return view('admin.product.products', compact('products', 'categories'));
     }
 
     /**
@@ -54,7 +64,7 @@ class ProductController extends Controller
         $path = $file->storeAs('/storage/app/public/product', $fileName);
         // método create del modelo User
         //dd($path);
-      
+
         $this->product->create([
             'name' => $request->name,
             'description' => $request->description,
@@ -62,8 +72,25 @@ class ProductController extends Controller
             'stock' => $request->stock,
             'path' => $path
         ]);
-        return back();
 
+        $name_product=$request->name;
+        $id_category=$request->category;
+
+        //seleccionar producto con el nombre
+        $producto= $this->product->where('name',  $name_product)->get();
+
+        //extraer la id del producto
+        foreach ($producto as $items) {
+           $id_producto= $items->id;  
+
+           //guardar registro en tabla producto categoria
+           $this->product_cat->create([
+                'producto_id'=> $id_producto,
+                'categoria_id'=> $id_category
+           ]);
+        }
+
+        return back();
 
     }
 
@@ -123,6 +150,8 @@ class ProductController extends Controller
 
      $share = Product::find($id);
      $share->delete();
+
+ 
 
      return redirect('/products')->with('success', 'El producto ha sido eliminado');
 
