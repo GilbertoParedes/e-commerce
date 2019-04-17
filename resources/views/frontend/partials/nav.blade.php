@@ -14,19 +14,35 @@
          </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-4 col-4 ">
-        <center><a href="index"><img src="frontend/icons/logo.png" class="img-responsive" id="logotipo"></a></center>
+     <div class="col-lg-4 col-md-4 col-sm-4 col-3 ">
+        <center><img src="frontend/icons/LOGO.png" class="img-responsive" id="logotipo"></center>
       </div>
        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-       <div id="alineacion">
-            <img src="frontend/icons/lupa.png" id="iconos">
-            <img src="frontend/icons/linea.png" id="linea">
-            <img src="frontend/icons/carrito.png" id="iconos">
-            <img src="frontend/icons/linea.png" id="linea">
-            <img src="frontend/icons/corazon.png" id="iconos">
-            <img src="frontend/icons/linea.png" id="linea">
-            <img src="frontend/icons/perfil.png" id="iconos">
+       <div class="row" id="alineacion">
+              <div class="col-3">
+                <a href="">
+                  <img src="frontend/icons/lupa2.png" id="iconos"> 
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="">
+                  <img src="frontend/icons/carrito.png" id="iconos"> 
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="">
+                  <img src="frontend/icons/corazon2.png" id="iconos"> 
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="#miModal">
+                  <img src="frontend/icons/perfil.png" id="iconos"> 
+                </a>
+              </div>
+        
         </div>
+
+   
       </div>
     </div>
 <div class="row">
@@ -108,14 +124,14 @@
 <div id="elementos" >
      <div class="dropdowns">
         <center>
-           <button class="dropbtn"><a href="#" id="texto">PAQUETES</a></button>
+           <button class="dropbtn"><a href="paquetes" id="texto">PAQUETES</a></button>
         </center>
      </div>
 </div>
 <div id="elementos" >
   <div class="dropdowns">
         <center>
-           <button class="dropbtn"><a href="#" id="texto">TEMPORADA</a></button>
+           <button class="dropbtn"><a href="arreglos_temporada" id="texto">TEMPORADA</a></button>
         </center>
     </div> 
 </div>

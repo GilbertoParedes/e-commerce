@@ -40,7 +40,7 @@ class GlobosController extends Controller
     public function globos_mejorate()
     {
         //categoria arreglo de cumpleaños
-        $id_cat=4;
+        $id_cat=19;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
@@ -51,7 +51,7 @@ class GlobosController extends Controller
     public function globos_nacimientos()
     {
         //categoria arreglo de cumpleaños
-        $id_cat=5;
+        $id_cat=20;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
@@ -61,7 +61,7 @@ class GlobosController extends Controller
        public function globos_kids_zone()
     {
         //categoria arreglo de cumpleaños
-        $id_cat=6;
+        $id_cat=21;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
@@ -71,7 +71,7 @@ class GlobosController extends Controller
          public function globos_enamorados()
     {
         //categoria arreglo de cumpleaños
-        $id_cat=7;
+        $id_cat=22;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
@@ -81,7 +81,7 @@ class GlobosController extends Controller
          public function globos_graduaciones()
     {
         //categoria arreglo de cumpleaños
-        $id_cat=8;
+        $id_cat=23;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
@@ -107,6 +107,16 @@ class GlobosController extends Controller
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
         $productos = $this->product->all();
         return view('frontend.pages.paquetescompletos', compact('categorias', 'cat_prod','productos'));
+    }
+       public function paquetes()
+    {
+        //categoria arreglo de cumpleaños
+        $id_cat=25;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
     }
  
 }

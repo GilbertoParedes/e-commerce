@@ -18,6 +18,7 @@
 							      <option>Selecciona el tipo de categoría</option>
 							      <option value="arreglo">Arreglo</option>
 							      <option value="globo">Globo</option>
+							      <option value="paquete">Paquetes</option>
 							      <option value="complemento">Complemento</option>
 							    </select>
 							</div>

@@ -35,6 +35,9 @@ Route::get('catalogo_nacimientos', 'Frontend\CatalogoController@catalogo_nacimie
 Route::get('catalogo_aniversario', 'Frontend\CatalogoController@catalogo_aniversario');
 Route::get('catalogo_aniversario', 'Frontend\CatalogoController@catalogo_aniversario');
 Route::get('catalogo_mejorate', 'Frontend\CatalogoController@catalogo_mejorate');
+Route::get('arreglos_temporada', 'Frontend\CatalogoController@arreglos_temporada');
+Route::get('paquetes', 'Frontend\GlobosController@paquetes');
+
 
 Route::get('globos_cumpleanos', 'Frontend\GlobosController@globos_cumpleanos');
 Route::get('globos_mejorate', 'Frontend\GlobosController@globos_mejorate');

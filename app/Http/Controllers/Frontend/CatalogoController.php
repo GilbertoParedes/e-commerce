@@ -157,5 +157,14 @@ class CatalogoController extends Controller
         $productos = $this->product->all();
         return view('frontend.pages.catalogo', compact('categorias', 'cat_prod','productos'));
     }
-
+     public function arreglos_temporada()
+    {
+        //categoria arreglo de cumpleaños
+        $id_cat=24;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        return view('frontend.pages.catalogo', compact('categorias', 'cat_prod','productos'));
+    }
 }
