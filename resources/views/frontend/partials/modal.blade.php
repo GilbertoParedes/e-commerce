@@ -29,39 +29,42 @@
           <input type="submit" class="button" value="CREAR CUENTA">
         </div>
       </div>
+
+{!! Form::open(['route' => 'login.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+
       <div class="for-pwd-htm">
         <div class="group">
-          <input id="nombre" type="text"  placeholder="Nombre" class="input_modales">
+          <input id="nombre" type="text"  placeholder="Nombre" name="name" class="input_modales">
         </div>
         <div class="group">
-          <input type="text" id="fname" name="fname" placeholder="Apellido" class="input_modales">  
+          <input type="text" id="apellido" name="apellido" placeholder="Apellido" name="apellido" class="input_modales">  
         </div>
         <div class="group">
-          <input id="nombre" type="text"  placeholder="Correo electrónico" class="input_modales">
+          <input id="correo" type="email"  placeholder="Correo electrónico" name="correo" class="input_modales">
         </div>
         <div class="group">
-          <input type="text" id="fname" name="fname" placeholder="Contraseña" class="input_modales" class="input_pass">
+          <input type="password" id="pass" name="pass" placeholder="Contraseña" class="input_modales" class="input_pass" >
           <p id="texto_login2">Mínimo 8 caracteres, una letra mayúscula y un número</p>
         </div>
         <div class="group">
-          <input type="text" id="fname" name="fname" placeholder="Confirmar contraseña" class="input_modales" class="input_pass">
+          <input type="password" id="pass2" name="pass2" placeholder="Confirmar contraseña" class="input_modales" class="input_pass">
         </div>
         <br>
         <div class="group">
           
           <div class="row">
             <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select">
+              <select class="form-control form-control-sm" id="select" name="sexo">
                 <option selected>Sexo</option>
-                <option>Femenino</option>
-                <option>Masculino</option>
+                <option value="H">Femenino</option>
+                <option value="M">Masculino</option>
               </select>
             </div>
             <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select" value="Edad">
-                <option>Edad</option>
-                <option>Femenino</option>
-                <option>Masculino</option>
+              <select class="form-control form-control-sm" id="select" value="edad">
+                <option selected>Edad</option>
+                <option>18</option>
+                <option>19</option>
               </select>
             </div>
           </div>
@@ -110,6 +113,15 @@
           <input type="submit" class="button" value="INICIA SESIÓN">
         </div>
       </div>
+  {!! Form::close() !!}
+
+  <script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+      alert(msg);
+    }
+  </script>
     </div>
   </div>
 </div>

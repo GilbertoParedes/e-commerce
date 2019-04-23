@@ -47,7 +47,8 @@ Route::get('globos_enamorados', 'Frontend\GlobosController@globos_enamorados');
 Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones');
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
-Route::get('cuenta', 'Frontend\UserController@cuenta');
+	
+	Route::resource('login', 'Frontend\UserController');
 
 	Route::resource('index', 'Frontend\PagesController');
 	Route::resource('catalogo', 'Frontend\CatalogoController');
