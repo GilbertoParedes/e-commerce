@@ -48,11 +48,10 @@ Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 
-
 	Route::resource('index', 'Frontend\PagesController');
-
 	Route::resource('catalogo', 'Frontend\CatalogoController');
 	Route::resource('globos', 'Frontend\GlobosController');
+	Route::resource('favoritos', 'Frontend\FavoriteController');
 
 	Route::resource('users', 'Admin\UserController');
 	Route::resource('carrito', 'Admin\CarritoController');
