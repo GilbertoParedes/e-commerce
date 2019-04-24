@@ -37,6 +37,7 @@ Route::get('catalogo_aniversario', 'Frontend\CatalogoController@catalogo_anivers
 Route::get('catalogo_mejorate', 'Frontend\CatalogoController@catalogo_mejorate');
 Route::get('arreglos_temporada', 'Frontend\CatalogoController@arreglos_temporada');
 Route::get('paquetes', 'Frontend\GlobosController@paquetes');
+Route::get('comprarahora', 'Frontend\ComprarController@comprar');
 
 
 Route::get('globos_cumpleanos', 'Frontend\GlobosController@globos_cumpleanos');
@@ -49,7 +50,7 @@ Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_num
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	
 	Route::resource('cuenta', 'Frontend\UserController');
-
+	Route::resource('carrito_compras','Frontend\CarritoController');
 	Route::resource('index', 'Frontend\PagesController');
 	Route::resource('catalogo', 'Frontend\CatalogoController');
 	Route::resource('globos', 'Frontend\GlobosController');

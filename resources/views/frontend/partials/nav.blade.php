@@ -25,12 +25,12 @@
                 </a>
               </div>
               <div class="col-3">
-                <a href="">
+                <a href="carrito_compras">
                   <img src="frontend/icons/carrito.png" id="iconos"> 
                 </a>
               </div>
               <div class="col-3">
-                <a href="">
+                <a href="favoritos">
                   <img src="frontend/icons/corazon2.png" id="iconos"> 
                 </a>
               </div>

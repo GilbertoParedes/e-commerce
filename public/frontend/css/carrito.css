@@ -1,0 +1,993 @@
+ body{
+background-image: url("../images/principal/fondo.png");
+ }
+  @font-face
+ 
+{
+   font-family: "paloma";
+   src: url("../fonts/La Paloma.ttf");
+}
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
+}
+  @font-face
+{
+   font-family: "seguiemj";
+   src: url("../fonts/seguiemj.ttf");
+}
+  @font-face
+{
+   font-family: "simplifica";
+   src: url("../fonts/simplifica.ttf");
+}
+
+@media (max-width: 575.98px) { 
+
+#content{
+    width: 98%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#im{
+  width: 100%;
+}
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 6vw;
+padding-top: 2%;
+padding-bottom: 2%;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 6vw;
+padding-top: 2%;
+padding-bottom: 2%;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size:3vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1.8vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size:3.5vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 2.5%;
+width: 100%;
+
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size:4vw;
+  margin-top: 3%;
+}
+#sub{
+  margin-top: -3%;
+  font-size: 6vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-family: "seguiemj";
+  font-size: 3.5vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:88vw solid #e1e1e1;
+  height: 2px;
+  
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 15%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 3.7vw;
+}
+#cuadro{
+  width: 40%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 6%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 4vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 55%;
+  height: auto;
+  margin-left:20%;
+}
+
+#clic{
+  width: 100%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+   width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:4vw;
+font-family: "simplifica";
+}
+#compraaqui{
+  width: 9vw;
+  margin-left: -40px;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:3.5vw;
+font-family: "simplifica";
+}
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+#content{
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#im{
+  width: 100%;
+}
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size:2vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1.8vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#cont_tab{
+  background-color: #f9f9f9;
+}
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size:3vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 1.5%;
+width: 100%;
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size:3vw;
+  margin-top: 3%;
+}
+#sub{
+  margin-top: -3%;
+  font-size: 4vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-family: "seguiemj";
+  font-size: 2.5vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:88vw solid #e1e1e1;
+  height: 2px;
+  
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 15%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 3vw;
+}
+#cuadro{
+  width: 40%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 6%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 1.8vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+/*CORAZON*/
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 50%;
+  height: auto;
+  margin-left:25%;
+}
+#corazon2{
+  width:50%;
+  height: auto;
+margin-left: -100%;
+margin-top: 10%;
+}
+#clic{
+  width: 100%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+   width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:4vw;
+font-family: "simplifica";
+}
+#compraaqui{
+  width: 8vw;
+  margin-top: -5px;
+  margin-left: -40px;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:3vw;
+font-family: "simplifica";
+}
+
+}
+ /*************************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+#content{
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+#im{
+  width: 100%;
+}
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size:2vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1.8vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#cont_tab{
+  background-color: #f9f9f9;
+}
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size: 1.8vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 5.5%;
+width: 100%;
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size: 1.8vw;
+  margin-top: 10%;
+}
+#sub{
+  margin-top: -7%;
+  font-size: 2vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "seguiemj";
+  font-size: 1.8vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:16vw solid #e1e1e1;
+  height: 2px;
+  width: 10vw
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 28%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 1.8vw;
+}
+#cuadro{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 8%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 1.8vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+/****************************/
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 50%;
+  height: auto;
+  margin-left:25%;
+}
+#corazon2{
+  width:50%;
+  height: auto;
+margin-left: -100%;
+margin-top: 10%;
+}
+#clic{
+  width: 100%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+   width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:2vw;
+font-family: "simplifica";
+}
+#compraaqui{
+  width: 5vw;
+  margin-top: -1vw;
+  margin-left: -3vw;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:1.6vw;
+font-family: "simplifica";
+}
+
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+#content{
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#im{
+  width: 100%;
+}
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#cont_tab{
+  background-color: #f9f9f9;
+}
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 4%;
+width: 100%;
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size: 1.3vw;
+  margin-top: 10%;
+}
+#sub{
+  margin-top: -7%;
+  font-size: 2vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:16vw solid #e1e1e1;
+  height: 2px;
+  width: 10vw
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 25%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 1.3vw;
+}
+#cuadro{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 8%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 1.5vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+/**************************************/
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 50%;
+  height: auto;
+  margin-left:20%;
+}
+#corazon2{
+  width:50%;
+  height: auto;
+margin-left: -120%;
+margin-top: 10%;
+}
+#clic{
+  width: 100%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+  width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:2vw;
+font-family: "simplifica";
+}
+#compraaqui{
+ width: 4.5vw; 
+  margin-top: -15%;
+  margin-left: -100%;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:1.6vw;
+font-family: "simplifica";
+}
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+#content{
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#im{
+  width: 100%;
+}
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#cont_tab{
+  background-color: #f9f9f9;
+}
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 4%;
+width: 100%;
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size: 1.3vw;
+  margin-top: 10%;
+}
+#sub{
+  margin-top: -7%;
+  font-size: 2vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:16vw solid #e1e1e1;
+  height: 2px;
+  width: 10vw
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 25%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 1.3vw;
+}
+#cuadro{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 8%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 1.5vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+/*****************************/
+ /*CORAZON*/
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 60%;
+  height: auto;
+}
+#corazon2{
+  width: 60%;
+  height: auto;
+margin-left: -160%;
+margin-top: 25%;
+}
+#clic{
+  width: 95%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+  width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:2vw;
+font-family: "simplifica";
+}
+#compraaqui{
+ width:4vw;
+   margin-left: -80%;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:1.6vw;
+font-family: "simplifica";
+}
+}
+/*Extra large devices (large desktops, 1200px and up)*******************************************************************/
+@media (min-width: 1501px) { 
+
+#content{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#im{
+  width: 100%;
+}
+
+
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#thead{
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#contenido_tabla{
+  color: #1c1c1c;
+  font-size: 1vw;
+  text-align: center;
+  font-family: "seguiemj";
+}
+#cont_tab{
+  background-color: #f9f9f9;
+}
+
+#cabecera{
+ background-color: #1c1c1c;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "seguiemj";
+  padding-top: 4%;
+width: 100%;
+  }
+#subtotal,#sub,#envio,#valores{
+    font-family: "acumin";
+    color:#1c1c1c;
+    text-align: center;
+
+}
+#subtotal{
+  font-size: 1.3vw;
+  margin-top: 10%;
+}
+#sub{
+  margin-top: -7%;
+  font-size: 2vw;
+}
+#pagar{
+  background-color: #cecece;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border:2px solid #cecece;
+  margin-bottom: 2%;
+}
+.vl {
+  border-left:16vw solid #e1e1e1;
+  height: 2px;
+  width: 10vw
+  margin-left:2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+#carro{
+ width: 25%;
+}
+#envio{
+  margin-top: 2%;
+   font-size: 1.3vw;
+}
+#cuadro{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+  margin-bottom: 8%;
+}
+#margen_input{
+  width: 20%;
+}
+#valores{
+font-size: 1.5vw;
+vertical-align: middle;
+}
+#producto{
+  width: 80px;
+}
+#x{
+  width: 3px;
+}
+ /*CORAZON*/
+ .top-right {
+  position: absolute;
+  top: 5%;
+  right: 1px;
+}
+#corazon{
+  width: 70%;
+  height: auto;
+}
+#corazon2{
+  width: 60%;
+  height: auto;
+margin-left: -160%;
+margin-top: 25%;
+}
+/******/
+#clic{
+  width: 80%;
+}
+#precio{
+  margin-top: 10%;
+  padding: 2% 2%;
+  width: 90%;
+  margin-left: 10%;
+  background-color: #F1F0F6;
+color: #808180;
+font-size:1.2vw;
+font-family: "simplifica";
+}
+#compraaqui{
+  width: 3vw;
+  margin-left: -80%;
+  height:auto;
+}
+#texto_globos{
+width: 95%;
+color: #808180;
+font-size:1.2vw;
+font-family: "simplifica";
+}
+}
