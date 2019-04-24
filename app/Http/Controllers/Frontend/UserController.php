@@ -49,7 +49,6 @@ class UserController extends Controller
 	        ]);
 	        return redirect()->back() ->with('alert', 'Usuario registrado con éxito');
 		}
-
 		
 		return back();
 		}

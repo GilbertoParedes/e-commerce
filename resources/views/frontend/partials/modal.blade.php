@@ -30,7 +30,7 @@
         </div>
       </div>
 
-{!! Form::open(['route' => 'login.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+{!! Form::open(['route' => 'cuenta.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 
       <div class="for-pwd-htm">
         <div class="group">

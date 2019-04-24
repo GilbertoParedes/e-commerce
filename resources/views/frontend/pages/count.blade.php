@@ -179,7 +179,7 @@
                      <p id="txt_correo">correo</p>         
                  </div>
                  <div class="col-12">
-                     <p id="txt_ver_direcciones">Ver mis direcciones()</p>         
+                     <a href="#createDir"></a><p id="txt_ver_direcciones">Ver mis direcciones()</p>         
                  </div>
                   <div class="col-12">
                      <p id="txt_correo">Agregar dirección</p>         
