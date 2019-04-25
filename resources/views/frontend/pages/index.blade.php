@@ -3,6 +3,7 @@
   
 @section('content')
  <br>
+ 
 <div id="content" >
   <!-- parte 1--> 
   <div class="contenedor">

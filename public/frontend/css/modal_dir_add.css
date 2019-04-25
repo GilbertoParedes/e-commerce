@@ -1,0 +1,306 @@
+ body{
+background-image: url("../images/principal/fondo.png");
+ }
+  @font-face
+ 
+{
+   font-family: "paloma";
+   src: url("../fonts/La Paloma.ttf");
+}
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
+}
+  @font-face
+{
+   font-family: "seguiemj";
+   src: url("../fonts/seguiemj.ttf");
+}
+  @font-face
+{
+   font-family: "simplifica";
+   src: url("../fonts/simplifica.ttf");
+}
+#tarjeta{
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+@media (max-width: 575.98px) { 
+
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 4vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 4vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 40px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 4vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 2.7vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 2.7vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 40px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 2.7vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+}
+ /*************************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 2.2vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 2.2vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 40px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 2.2vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.8vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.8vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 40px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 1.8vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.8vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.8vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 50px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 1.8vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+}
+/*Extra large devices (large desktops, 1200px and up)*******************************************************************/
+@media (min-width: 1501px) { 
+
+
+
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 50px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 1.3vw;
+  background-color: #1c1c1c;
+  color:white;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.5vw;
+}
+
+
+}

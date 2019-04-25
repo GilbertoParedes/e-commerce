@@ -14,8 +14,9 @@
     <link rel="stylesheet" type="text/css" id="bootstrap-css" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/lo_mas_vendido.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
-
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.js')}}"></script>
@@ -28,6 +29,8 @@
 
 </head>
 <body>
+    <div class="loader"></div>
+
 <style type="text/css" id="slider-css">
 .carousel-item > div {
     float: left;
@@ -48,6 +51,7 @@
     @include('frontend.partials.modal')
 
 </body>
+<script src="{{asset('frontend/js/loading.js')}}"></script>
 
 <script src="{{asset('frontend/js/carrousel_lomasvendido.js')}}"></script>
 </html>

@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/comprar_ahora.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
-
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
  
     <!-- Bootstrap JS -->
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
@@ -23,6 +24,7 @@
 
 </head>
 <body>
+    <div class="loader"></div>
 
     @include('frontend.partials.nav')
     <section>
@@ -32,5 +34,6 @@
     @include('frontend.partials.modal')
 
 </body>
+<script src="{{asset('frontend/js/loading.js')}}"></script>
 
 </html>

@@ -9,13 +9,15 @@
                 <ul>
                   <li><a href="visita_por_primera_vez" id="texto1">VISITA POR PRIMERA VEZ</a></li>
                   <li><a href="contactanos" id="texto1">CONTÁCTANOS</a></li>
+                  <li><a href="cuenta" id="texto1">CONFIGURACIONES</a></li>
+
                 </ul>
               </div>
          </div>
       </div>
 
      <div class="col-lg-4 col-md-4 col-sm-4 col-3 ">
-        <center><img src="frontend/icons/LOGO.png" class="img-responsive" id="logotipo"></center>
+        <center><a href="index"><img src="frontend/icons/LOGO.png" class="img-responsive" id="logotipo"></a></center>
       </div>
        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
        <div class="row" id="alineacion">

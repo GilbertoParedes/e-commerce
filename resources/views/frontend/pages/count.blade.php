@@ -162,13 +162,13 @@
       <div class="col-lg-4 col-md-12 col-sm-12 col-12" >
             <div class="row">
                 <div class="col-12">
-                    <button id="btn_ver_mis_favoritos">VER MIS FAVORITOS</button>
+                    <a href="favoritos"><button id="btn_ver_mis_favoritos">VER MIS FAVORITOS</button></a>
                 </div>
                  <div class="col-6">
-                     <button id="btn_editar">EDITAR</button>              
+                     <a href="#editarCuenta" data-toggle="modal"><button id="btn_editar">EDITAR</button>  </a>            
                  </div>
                   <div class="col-6">
-                     <button id="btn_editar">CERRAR SESIÓN</button>              
+                     <a href="#cerrarSesion"><button id="btn_editar">CERRAR SESIÓN</button>   </a>           
                  </div>
 
                  <div class="col-12">
@@ -179,13 +179,12 @@
                      <p id="txt_correo">correo</p>         
                  </div>
                  <div class="col-12">
-                     <a href="#createDir"></a><p id="txt_ver_direcciones">Ver mis direcciones()</p>         
+                     <a href="#exampleModal" data-toggle="modal"><p id="txt_ver_direcciones">Ver mis direcciones()</p>  </a>       
                  </div>
                   <div class="col-12">
-                     <p id="txt_correo">Agregar dirección</p>         
+                     <a href="#addDireccion" data-toggle="modal"><p id="txt_correo">Agregar dirección</p> </a> 
                  </div>
              </div>
-     
    </div>
   </div>
 

@@ -1,0 +1,120 @@
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
+}
+.modal-content{
+	/*background-color: blue;*/
+}
+@media (max-width: 575px) { 
+#icono_mapa{
+	width: 20%;
+	margin-left: 40%;
+	margin-right: 40%;
+	height: auto;
+}
+
+#borrar_direccion{
+	width: 5%;
+	height: auto;
+	vertical-align: middle;
+
+}
+#direcciones{
+	font-size: 3.5vw;
+	font-family: "acumin";
+}
+}
+@media (min-width: 576px) { 
+#icono_mapa{
+	width: 20%;
+	margin-left: 40%;
+	margin-right: 40%;
+	height: auto;
+}
+
+#borrar_direccion{
+	width: 5%;
+	height: auto;
+	vertical-align: middle;
+
+}
+#direcciones{
+	font-size: 3vw;
+	font-family: "acumin";
+}
+}
+
+@media (min-width: 768px) {
+#icono_mapa{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: auto;
+	margin-top: 40%;
+}
+
+#borrar_direccion{
+	padding-top: 60px;
+	width: 100%;
+
+	height: auto;
+	vertical-align: middle;
+}
+#direcciones{
+	font-size: 2vw;
+	font-family: "acumin";
+}
+
+}
+
+@media (min-width: 992px) { 
+
+#icono_mapa{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: auto;
+	margin-top: 10%;
+}
+
+#borrar_direccion{
+	padding-top: 60px;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: auto;
+	vertical-align: middle;
+}
+#direcciones{
+	font-size: 2vw;
+	font-family: "acumin";
+}
+
+}
+
+@media (min-width: 1200px) {
+
+#icono_mapa{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: auto;
+	margin-top: 25%;
+}
+
+#borrar_direccion{
+	padding-top: 75px;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: auto;
+	vertical-align: middle;
+}
+#direcciones{
+	font-size: 1.3vw;
+	font-family: "acumin";
+}
+
+}
+

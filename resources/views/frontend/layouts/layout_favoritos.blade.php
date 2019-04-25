@@ -15,7 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/favoritos.css')}}">
-
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <!-- Bootstrap JS -->
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.js')}}"></script>
@@ -25,6 +26,7 @@
 
 </head>
 <body>
+    <div class="loader"></div>
 
     @include('frontend.partials.nav')
     <section>
@@ -35,5 +37,6 @@
  <script src="frontend/js/carrousel_lomasvendido.js"></script>
 
 </body>
+<script src="{{asset('frontend/js/loading.js')}}"></script>
 
 </html>
