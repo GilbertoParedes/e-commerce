@@ -47,12 +47,11 @@ p{
   overflow: all;
 }
 
-.topnav a {
+.topnav .a {
  
   display: block;
   color: white;
-  text-align: center;
-  padding: 12px 15px;
+  padding: 2px 12px;
   text-decoration: none;
   font-size: 16px;
 }

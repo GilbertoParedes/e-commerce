@@ -7,18 +7,23 @@ use App\Http\Controllers\Controller;
 use App\Category;
 use App\Product;
 use App\ProductoCategoria;
+use App\Deseable;
+
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class GlobosController extends Controller
-{
+{   
+    protected $deseable;
     protected $category;
     protected $product;
     protected $product_category;
-      function __construct( Category $category, Product $product, ProductoCategoria $product_category)
+      function __construct( Category $category, Product $product, ProductoCategoria $product_category,Deseable $deseable)
     {
         $this->category = $category;
         $this->product = $product;
         $this->product_category = $product_category;
+        $this->deseable=$deseable;
 
     }
  
@@ -29,94 +34,283 @@ class GlobosController extends Controller
 
 	public function globos_cumpleanos()
     {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
         //categoria arreglo de cumpleaños
-        $id_cat=9;
+        $id_cat=13;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
         $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
     }
     public function globos_mejorate()
     {
+      if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=14;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+
+    public function globos_nacimientos()
+    {
+        if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=15;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+       public function globos_kids_zone()
+    {
+        if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=16;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+         public function globos_enamorados()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=17;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+         public function globos_graduaciones()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=18;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+        public function globos_letras_numeros()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
         //categoria arreglo de cumpleaños
         $id_cat=19;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
         $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
-    }
+        //buscar si el producto está registrado en favoritos
 
-    public function globos_nacimientos()
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+        public function paquetescompletos()
     {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
         //categoria arreglo de cumpleaños
         $id_cat=20;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
         $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.paquetescompletos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
     }
-       public function globos_kids_zone()
+       public function paquetes()
     {
+        if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
         //categoria arreglo de cumpleaños
         $id_cat=21;
         $categorias = $this->category->find($id_cat);
         //buscar los productos de la tabla product_category
         $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
         $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
-    }
-         public function globos_enamorados()
-    {
-        //categoria arreglo de cumpleaños
-        $id_cat=22;
-        $categorias = $this->category->find($id_cat);
-        //buscar los productos de la tabla product_category
-        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
-        $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
-    }
-         public function globos_graduaciones()
-    {
-        //categoria arreglo de cumpleaños
-        $id_cat=23;
-        $categorias = $this->category->find($id_cat);
-        //buscar los productos de la tabla product_category
-        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
-        $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
-    }
-        public function globos_letras_numeros()
-    {
-        //categoria arreglo de cumpleaños
-        $id_cat=10;
-        $categorias = $this->category->find($id_cat);
-        //buscar los productos de la tabla product_category
-        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
-        $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
-    }
-        public function paquetescompletos()
-    {
-        //categoria arreglo de cumpleaños
-        $id_cat=11;
-        $categorias = $this->category->find($id_cat);
-        //buscar los productos de la tabla product_category
-        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
-        $productos = $this->product->all();
-        return view('frontend.pages.paquetescompletos', compact('categorias', 'cat_prod','productos'));
-    }
-       public function paquetes()
-    {
-        //categoria arreglo de cumpleaños
-        $id_cat=25;
-        $categorias = $this->category->find($id_cat);
-        //buscar los productos de la tabla product_category
-        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
-        $productos = $this->product->all();
-        return view('frontend.pages.globos', compact('categorias', 'cat_prod','productos'));
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.globos')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
     }
  
 }

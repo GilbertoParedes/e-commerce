@@ -38,7 +38,7 @@ Route::get('catalogo_mejorate', 'Frontend\CatalogoController@catalogo_mejorate')
 Route::get('arreglos_temporada', 'Frontend\CatalogoController@arreglos_temporada');
 Route::get('paquetes', 'Frontend\GlobosController@paquetes');
 Route::get('comprarahora', 'Frontend\ComprarController@comprar');
-
+Route::get('detalles', 'Frontend\ProductoController@detalles');
 
 Route::get('globos_cumpleanos', 'Frontend\GlobosController@globos_cumpleanos');
 Route::get('globos_mejorate', 'Frontend\GlobosController@globos_mejorate');
@@ -48,7 +48,7 @@ Route::get('globos_enamorados', 'Frontend\GlobosController@globos_enamorados');
 Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones');
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
-	
+
 	Route::resource('cuenta', 'Frontend\UserController');
 	Route::resource('carrito_compras','Frontend\CarritoController');
 	Route::resource('index', 'Frontend\PagesController');
@@ -56,8 +56,7 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('globos', 'Frontend\GlobosController');
 	Route::resource('favoritos', 'Frontend\FavoriteController');
 
-
-
+	Route::resource('producto', 'Frontend\ProductoController');
 
 	Route::resource('users', 'Admin\UserController');
 	Route::resource('carrito', 'Admin\CarritoController');
@@ -71,6 +70,7 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
 	
 	Route::resource('catalogo_arreglos', 'Frontend\CatalogoController')->except('show');
+	Route::resource('carritocompras', 'Frontend\CarritoController');
 
 
 	

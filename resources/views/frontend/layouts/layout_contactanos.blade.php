@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Catálogo</title>
+    <title> @yield('title','HANA') | Contáctanos</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" id="bootstrap-css" href="{{asset('frontend/css/bootstrap.min.css')}}">

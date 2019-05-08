@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Catálogo</title>
+    <title> @yield('title','HANA') | Visita por primera vez</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/visita_primera_vez.css')}}">
@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner_venta.css')}}">
+
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <!-- Bootstrap JS -->
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
@@ -29,6 +31,7 @@
     <section>
         @yield('content')
     </section>
+    @include('frontend.partials.banner_compra')
     @include('frontend.partials.banner')
     @include('frontend.partials.modal')
 

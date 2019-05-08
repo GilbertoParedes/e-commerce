@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Inicio</title>
+    <title> @yield('title','HANA') | Principal</title>
     
 
     <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>

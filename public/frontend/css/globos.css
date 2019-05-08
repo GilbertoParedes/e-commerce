@@ -22,7 +22,13 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
-
+#input_transparent{
+ color: transparent;
+  size: 1%;
+  background-color: transparent;
+  height: 0px;
+  border-color: transparent;
+}
 @media (max-width: 575.98px) { 
 
 #content{
@@ -50,9 +56,8 @@ background-image: url("../images/principal/fondo.png");
 }
 #compraaqui{
   width: 11vw;
-    margin-top: -5px;
-  padding: 2% 2%;
-  margin-left: -35px;
+   margin-top: 1vw;
+  margin-left: -70%;
   height:auto;
 }
 #texto_globos{
@@ -127,8 +132,8 @@ font-family: "simplifica";
 }
 #compraaqui{
   width: 9vw;
-  margin-top: -5px;
-  margin-left: -40px;
+  margin-top: 1vw;
+  margin-left: -70%;
   height:auto;
 }
 #texto_globos{
@@ -202,7 +207,8 @@ font-family: "simplifica";
 }
 #compraaqui{
  width:6vw;  
-  margin-left: -25px;
+    margin-top: 1vw;
+  margin-left: -70%;
   height:auto;
 }
 #texto_globos{
@@ -305,9 +311,9 @@ font-size:2.5vw;
 font-family: "simplifica";
 }
 #compraaqui{
- width:5vw;
- margin-top: 5px;
-   margin-left: -80%;
+ width:5.5vw;
+  margin-top: 1vw;
+  margin-left: -70%;
   height:auto;
 }
 #texto_globos{
@@ -425,7 +431,8 @@ font-family: "simplifica";
 }
 #compraaqui{
  width:5vw;
-   margin-left: -80%;
+    margin-top: 1vw;
+  margin-left: -60%;
   height:auto;
 }
 #texto_globos{
@@ -526,8 +533,8 @@ font-family: "simplifica";
 }
 #compraaqui{
   width: 4vw;
-  margin-top: 8px;
-  margin-left: -80%;
+  margin-top: 1vw;
+  margin-left: -70%;
   height:auto;
 }
 #texto_globos{

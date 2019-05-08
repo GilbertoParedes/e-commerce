@@ -4,7 +4,8 @@
    src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
 }
 .modal-content{
-	/*background-color: blue;*/
+	background-image: url('../icons/FONDO.png');
+
 }
 @media (max-width: 575px) { 
 #icono_mapa{
@@ -104,8 +105,7 @@
 }
 
 #borrar_direccion{
-	padding-top: 75px;
-	width: 60%;
+	width:190%;
 	margin-left: 20%;
 	margin-right: 20%;
 	height: auto;

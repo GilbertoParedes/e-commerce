@@ -8,22 +8,23 @@
     <center><img src="frontend/icons/LOGO_blanco.png" id="logo_login" ></center>
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">INICIA SESIÓN</label>
     <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">CREAR CUENTA</label>
-
     <div class="login-form">
 
       <div class="sign-in-htm">
-
-        <div class="group">
-          <input id="user" type="text"  placeholder="Correo electrónico *" class="input_modales">
-        </div>
-        <div class="group">
-          <input type="text" id="fname" name="fname" placeholder="Contraseña*" class="input_modales">   
-        </div>
-        <div class="group">
-          <center><p id="texto_login">Olvidé mi contraseña</p></center>
-          <input type="submit" class="button" value="INICIAR SESIÓN">
-          <input type="submit" class="button2" value="INICIA CON FACEBOOK">
-        </div>
+        <form method="POST" action="{{ route('login') }}">
+           @csrf
+            <div class="group">
+              <input id="user" type="text"  placeholder="Correo electrónico *" class="input_modales" name="email">
+            </div>
+            <div class="group">
+              <input type="password" id="fname" name="password" placeholder="Contraseña*" class="input_modales">   
+            </div>
+            <div class="group">
+              <center><p id="texto_login">Olvidé mi contraseña</p></center>
+              <input type="submit" class="button" value="INICIAR SESIÓN">
+               <!--<input type="submit" class="button2" value="INICIA CON FACEBOOK">--> 
+            </div>
+        </form>
         <div class="group">
           <center><p id="texto_login">¿Eres nuevo en Hana?</p></center>
           <input type="submit" class="button" value="CREAR CUENTA">

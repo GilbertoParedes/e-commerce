@@ -11,37 +11,46 @@
         </button>
       </div>
       <div class="modal-body ">
-        <div class="row" >
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12" >    
-                <div class="form-group">
-                  <p for="nombre" id="textos">Nombre:</p>
-                  <input type="text" class="input_form" id="nombre" name="nombre">
-                </div>
-                <div class="form-group">
-                  <p for="email" id="textos">Apellido Paterno:</p>
-                  <input type="email" class="input_form" id="email" name="email">
-                </div>
-                <div class="form-group">
-                  <p for="email" id="textos">Apellido_materno:</p>
-                  <input type="email" class="input_form" id="email" name="email">
-                </div>
-                <div class="form-group">
-                  <p for="tel" id="textos">Email</p>
-                  <input type="text" class="input_form" id="tel" name="tel">
-                </div>    
-            </div>   
+        <form method="post" action="{{ route('cuenta.update',  $user_id) }}">
+            @method('PATCH')
+            @csrf
+                <div class="row" >
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12" >    
+                        <div class="form-group">
+                          <p for="nombre" id="textos">Nombre:</p>
+                          <input type="text" class="input_form" id="nombre" name="nombre" value="{{$name}} " required>
+                        </div>
+                        <div class="form-group">
+                          <p for="text" id="textos">Apellido Paterno:</p>
+                          <input type="text" class="input_form" name="apellido_p" value="{{$apellido_p}}" required>
+                        </div>
+                        <div class="form-group">
+                          <p for="text" id="textos">Apellido_materno:</p>
+                          <input type="text" class="input_form" name="apellido_m" value="{{$apellido_m}}" required>
+                        </div>
+                        <div class="form-group">
+                          <p for="tel" id="textos">Email</p>
+                          <input type="email" class="input_form"  name="email" value="{{$email}}" required>
+                        </div>    
+                    </div>   
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12" id="marg" >
-                   <div class="form-group">
-                      <p for="tel" id="textos">Password:</p>
-                       <input type="text" class="input_form" id="tel" name="tel"  >  
-                    </div>
-                   <div class="form-group">
-                      <p for="tel" id="textos">Introducir nuevamente la password</p>
-                       <input type="text" class="input_form" id="tel" name="tel"  >  
-                    </div>               
-                    <button type="submit" class="boton_enviar">Editar</button>
-            </div>   
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12" id="marg" >
+                             <div class="form-group">
+                              <p for="tel" id="textos">Password anterior:</p>
+                               <input type="password" class="input_form"  name="pass_anterior" required >  
+                            </div>
+                           <div class="form-group">
+                              <p for="tel" id="textos">Password nueva:</p>
+                               <input type="password" class="input_form"  name="pass_nueva"  required>  
+                            </div>
+                           <div class="form-group">
+                              <p for="tel" id="textos">Introducir nuevamente la password</p>
+                               <input type="password" class="input_form"  name="pass_otra"  required>  
+                            </div>               
+                            <button type="submit" class="boton_enviar">Editar</button>
+                    </div>  
+         </form>
+        </div> 
         </div> 
       </div>
     </div>

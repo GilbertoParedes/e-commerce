@@ -1,5 +1,5 @@
 @extends('frontend.layouts.layout_paquetescompletos')
-@section('title', 'globos')
+@section('title', 'HANA')
   
 @section('content')
   <style type="text/css">

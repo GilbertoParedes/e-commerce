@@ -22,13 +22,70 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-2 control-label">Descripción</label>
+						    <label class="col-md-2 control-label">Tipo</label>
+						    <div class="col-md-8">
+							    <select class="form-control1"  id="type" name="type">
+							      <option>Selecciona el tipo de categoría</option>
+							      <option value="arreglo">Arreglo</option>
+							      <option value="globo">Globo</option>
+							      <option value="paquete">Paquetes</option>
+							      <option value="peluche">Peluche</option>
+							      <option value="chocolate">Chocolate</option>
+							    </select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Desc. a</label>
 							<div class="col-md-8">
 								<div class="input-group">							
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="description" placeholder="Ingresa una descripción">
+									<input type="text" class="form-control1 icon" name="description" placeholder="Ingresa una descripción A">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Desc. b</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+									<input type="text" class="form-control1 icon" name="desc_b" placeholder="Ingresa una descripción B">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Desc. c</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+									<input type="text" class="form-control1 icon" name="desc_c" placeholder="Ingresa una descripción C">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Detalles</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+									<input type="text" class="form-control1 icon" name="detalle" placeholder="Ingresa los detalles">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Precio</label>
+							<div class="col-md-8">
+								<div class="input-group">							
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+									<input type="text" class="form-control1 icon" name="price" placeholder="Precio">
 								</div>
 							</div>
 						</div>
@@ -39,7 +96,7 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="quantity" placeholder="Ingresa una descripción">
+									<input type="text" class="form-control1 icon" name="quantity" placeholder="Cantidad">
 								</div>
 							</div>
 						</div>
@@ -50,7 +107,7 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" class="form-control1 icon" name="stock" placeholder="Ingresa una descripción">
+									<input type="text" class="form-control1 icon" name="stock" placeholder="Stock">
 								</div>
 							</div>
 						</div>

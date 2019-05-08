@@ -16,7 +16,7 @@ class CreateCarrito extends Migration
         Schema::create('carrito', function (Blueprint $table) {
             $table->increments('id');
             $table->date('fecha_inicio');
-            $table->date('fecha_fin');
+            $table->date('fecha_fin')->nullable();
             $table->integer('status');
             $table->bigInteger('usuario_id')->unsigned();
 

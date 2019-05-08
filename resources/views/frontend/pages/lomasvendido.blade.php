@@ -1,5 +1,5 @@
 @extends('frontend.layouts.layout_lomasvendido')
-@section('title', 'Lo más vendido')
+@section('title', 'HANA')
   
 @section('content')
 
@@ -33,16 +33,13 @@
             <div class="centrado">
               <p id="t1">Lo más </p>
               <p id="t2">VENDIDO</p>
-              <div id="boton">
-                <button id="btn_1">COMPRA AQUÍ</button>
-              </div>
+              
             </div>
         </div>
         <div class="mySlides w3-animate-left">
            <img  src="frontend/images/lomasvendido/banner2.png" style="width:100%" id="im">
            <div class="centrado5" >
             <img src="frontend/images/lomasvendido/texto1.png"  width="100%">
-               <center><button id="btn_5">COMPRA AQUÍ</button></center> 
             <img src="frontend/images/lomasvendido/texto2.png"  width="100%">
             </div>
         </div>
@@ -65,21 +62,54 @@
   </div>
 
 <br>
+   @php
+      {{ $texto="active";}}
+   @endphp
 <!-- slider2 -->
    <div class="row">
             <div id="slider-2" class="carousel carousel-by-item slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    @foreach($productos as $pro)
+                       @php
+                         $producto_id=$pro->id;
+                       @endphp
+                     <div class="carousel-item {{$texto}}">
                         <div class="col-md-3 col-sm-4 col-6">
-                            <img class="d-block img-fluid" src="frontend/images/principal/slider/1.png" alt="First slide">
-                            <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
+                            <a href="{{route('producto.show', $producto_id)}}">
+                              <img class="d-block img-fluid" src="../{{ $pro->path}}" alt="First slide">
+                            </a>
+                           <div class="top-right">
+                               @if ($validar==1)
+                               <a href="{{route('catalogo.show', $pro->id)}}">
+                                 @php
+                                   {{ $icono="corazon3"; }}
+                                 @endphp
+                                 @foreach($deseable_buscar as $favoritos)
+                                      @if($favoritos->product_id==$producto_id)
+
+                                       @php
+                                         {{ $icono="corazon4"; }}
+                                       @endphp
+
+                                      @else
+                                      @endif 
+                                    
+                                 @endforeach
+                                <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                                </a>
+                                @else
+                                @endif
+                            </div>
+            {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
                               <div class="row">
                                    <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                                       <center> <p  id="precio" >$299.00</p></center>
+                                       <center> <p  id="precio" >{{ $pro->price}}</p></center>
                                    </div>
                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
                                     <center>
-                                    <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
+                                     <button type="submit" style="background-color: transparent;border-color: transparent;">
+                                        <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                                     </button>
                                    </div>
                                </div>
 
@@ -91,57 +121,18 @@
                                        <center> <p  id="texto_globos" >Compra aquí</p></center>
                                    </div>
                                </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3 col-sm-4 col-6">
-                            <img class="d-block img-fluid" src="frontend/images/principal/slider/2.png" alt="First slide">
-                            <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-                              <div class="row">
-                                   <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                                       <center> <p  id="precio" >$299.00</p></center>
-                                   </div>
-                                   <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                                    <center>
-                                    <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                                   </div>
-                               </div>
+                    <input type="text" value="{{$producto_id}}" name="id_producto" id="input_transparent" disabled>
 
-                               <div class="row">
-                                   <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                                       <center> <p  id="texto_globos" >Envío incluido</p></center>
-                                   </div>
-                                   <div class="col-lg-5 col-md-5 col-sm-6  col-6"  >
-                                       <center> <p  id="texto_globos" >Compra aquí</p></center>
-                                   </div>
-                               </div>
-                        </div>
-                    </div>
-                   <div class="carousel-item">
-                        <div class="col-md-3 col-sm-4 col-6">
-                            <img class="d-block img-fluid" src="frontend/images/principal/slider/3.png" alt="First slide">
-                            <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-                              <div class="row">
-                                   <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                                       <center> <p  id="precio" >$299.00</p></center>
-                                   </div>
-                                   <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                                    <center>
-                                    <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                                   </div>
-                               </div>
+             {!! Form::close() !!}
 
-                               <div class="row">
-                                   <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                                       <center> <p  id="texto_globos" >Envío incluido</p></center>
-                                   </div>
-                                   <div class="col-lg-5 col-md-5 col-sm-6  col-6"  >
-                                       <center> <p  id="texto_globos" >Compra aquí</p></center>
-                                   </div>
-                               </div>
                         </div>
-                    </div>
-                    
+                    </div>   
+
+                   @php
+                       {{ $texto=""; }}
+                   @endphp 
+                   @endforeach
+    
                 </div>
                 <div id="flecha_izq">
                   <a class="carousel-control-prev" href="#slider-2" role="button" data-slide="prev">
@@ -168,99 +159,61 @@
 <!--     GLOBOS   --> 
 
     <div class="row">
+
+      @foreach ($productos_globos as $globo)
+        @php
+          {{$product=$globo->id;}}
+        @endphp
         <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-         
-             <img src="frontend/images/lomasvendido/globo 1.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-              <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >$299.00</p></center>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
+           <a href="{{route('producto.show', $product)}}">
+             <img src="../{{ $globo->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
+          </a>
+             <div class="top-right">
+                 @if ($validar==1)
+                    <a href="{{route('catalogo.show', $globo->id)}}">
+                        @php
+                            {{ $icono="corazon3"; }}
+                        @endphp
+                        @foreach($deseable_buscar as $favoritos)
+                              @if($favoritos->product_id==$product)
+                                  @php
+                                    {{ $icono="corazon4"; }}
+                                  @endphp
+                              @else
+                              @endif 
+                        @endforeach
+                        <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                    </a>
+                  @else
+                  @endif
              </div>
+           {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
+                              <div class="row">
+                                   <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
+                                       <center> <p  id="precio" >{{ $globo->price}}</p></center>
+                                   </div>
+                                   <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
+                                    <center>
+                                     <button type="submit" style="background-color: transparent;border-color: transparent;">
+                                        <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                                     </button>
+                                   </div>
+                               </div>
 
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
+                               <div class="row">
+                                   <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
+                                       <center> <p  id="texto_globos" >Envío incluido</p></center>
+                                   </div>
+                                   <div class="col-lg-5 col-md-5 col-sm-6  col-6"  >
+                                       <center> <p  id="texto_globos" >Compra aquí</p></center>
+                                   </div>
+                               </div>
+                    <input type="text" value="{{$product}}" name="id_producto" id="input_transparent" disabled>
+
+             {!! Form::close() !!}
+
         </div>   
-        <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-             <img src="frontend/images/lomasvendido/globo 2.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-             <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >$299.00</p></center>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
-             </div>
-
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-             <img src="frontend/images/lomasvendido/globo 3.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-             <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >$299.00</p></center>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
-             </div>
-
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
-        </div>   
-        <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-             <img src="frontend/images/lomasvendido/globo 4.png" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-              <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-
-            
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >$299.00</p></center>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
-             </div>
-
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
-        </div>
+       @endforeach
    </div>
 
    <!--     fin globos   --> 
@@ -275,7 +228,7 @@
        <!--     fin tarjeta   --> 
 
 
-
+<br>
 
 
 @endsection

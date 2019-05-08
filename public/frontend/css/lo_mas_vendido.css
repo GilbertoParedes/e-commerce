@@ -22,7 +22,13 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
-
+#input_transparent{
+ color: transparent;
+  size: 1%;
+  background-color: transparent;
+  height: 0px;
+  border-color: transparent;
+}
 @media (max-width: 575.98px) { 
 .centrado{
     position: absolute;
@@ -122,8 +128,8 @@ font-size:4vw;
 font-family: "simplifica";
 }
 #compraaqui{
-  width: 8vw;
-  margin-top: -5px;
+  width: 9vw;
+  margin-top: 1.5vw;
   margin-left: -40px;
   height:auto;
 }
@@ -147,13 +153,13 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-	margin-top: -45%;
+	margin-top: -46%;
 	margin-left: 95%;
 	 position:absolute;
 }
 #flecha_izq{
-	margin-top: -45%;
-	margin-left: 1%;
+	margin-top: -46%;
+	margin-left: 5%;
 	 position:absolute;
  }
  #flecha{
@@ -269,19 +275,19 @@ font-size: 2vw;
   width: 100%;
   background-color: #F1F0F6;
 color: #808180;
-font-size:2vw;
+font-size:3vw;
 font-family: "simplifica";
 }
 #compraaqui{
-  width: 30px;
-  margin-top: -5px;
-  margin-left: -40px;
+  width: 6vw;
+  margin-top: .5vw;
+  margin-left: -135%;
   height:auto;
 }
 #texto_globos{
 width: 95%;
 color: #808180;
-font-size:1.7vw;
+font-size:1.8vw;
 font-family: "simplifica";
 }
 
@@ -298,17 +304,17 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-	margin-top: -30%;
-	margin-left: 95%;
+	margin-top: -33%;
+	margin-left: 99%;
 	 position:absolute;
 }
 #flecha_izq{
-	margin-top: -30%;
+	margin-top: -33%;
 	margin-left: 1%;
 	 position:absolute;
  }
  #flecha{
- 	width: 2.5vw;
+ 	width: 2vw;
  }
  /*fin flecha*/
 
@@ -424,8 +430,9 @@ font-size:2vw;
 font-family: "simplifica";
 }
 #compraaqui{
- width: 4.5vw;  margin-top: -48%;
-  margin-left: -380%;
+ width: 4.5vw; 
+  margin-top: .6vw;
+  margin-left: -80%;
   height:auto;
 }
 #texto_globos{
@@ -448,16 +455,16 @@ font-family: "simplifica";
 
 #flecha_der{
 	margin-top: -25%;
-	margin-left: 100%;
+	margin-left: 99.5%;
 	 position:absolute;
 }
 #flecha_izq{
 	margin-top: -25%;
-	margin-left: -2%;
+	margin-left: .5%;
 	 position:absolute;
  }
  #flecha{
- 	width: 2vw;
+ 	width: 1.5vw;
  }
  /*fin flecha*/
 
@@ -575,7 +582,8 @@ font-family: "simplifica";
 }
 #compraaqui{
  width:4vw;
-   margin-left: -80%;
+ margin-top: .8vw;
+   margin-left: -60%;
   height:auto;
 }
 #texto_globos{
@@ -598,13 +606,13 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-	margin-top: -23%;
-	margin-left: 102%;
+	margin-top: -24%;
+	margin-left: 101%;
 	 position:absolute;
 }
 #flecha_izq{
-	margin-top: -23%;
-	margin-left: -4%;
+	margin-top: -24%;
+	margin-left: -1%;
 	 position:absolute;
  }
  #flecha{
@@ -732,7 +740,8 @@ font-family: "simplifica";
 }
 #compraaqui{
   width: 3vw;
-  margin-left: -80%;
+  margin-top: .5vw;
+  margin-left: -60%;
   height:auto;
 }
 #texto_globos{
@@ -758,12 +767,12 @@ font-family: "simplifica";
 /*****flechas */
 #flecha_der{
 	margin-top: -23%;
-	margin-left: 103%;
+	margin-left: 101%;
 	 position:absolute;
 }
 #flecha_izq{
 	margin-top: -23%;
-	margin-left: -5%;
+	margin-left: -1%;
 	 position:absolute;
  }
  #flecha{
@@ -772,7 +781,7 @@ font-family: "simplifica";
  /*fin flecha*/
 
  /*CORAZON*/
- .top-right {
+.top-right {
   position: absolute;
   top: 5%;
   right: 1px;

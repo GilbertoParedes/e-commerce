@@ -22,6 +22,13 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
+#input_transparent{
+ color: transparent;
+  size: 1%;
+  background-color: transparent;
+  height: 0px;
+  border-color: transparent;
+}
 @media (max-width: 575.98px) { 
 
 #content{
@@ -48,9 +55,10 @@ background-image: url("../images/principal/fondo.png");
   font-family: "simplifica";
 }
 #compraaqui{
-  width: 9vw;
-  margin-left: -40px;
+width:9vw;  
+  margin-left: -75%;
   height:auto;
+  margin-top: 1.2vw;
 }
 #texto_globos{
 width: 95%;
@@ -118,9 +126,10 @@ font-size:4vw;
 font-family: "simplifica";
 }
 #compraaqui{
-  width: 9vw;
-  margin-left: -40px;
+ width:9vw;  
+  margin-left: -65%;
   height:auto;
+  margin-top: 1.2vw;
 }
 #texto_globos{
 width: 95%;
@@ -188,8 +197,9 @@ font-family: "simplifica";
 }
 #compraaqui{
  width:6vw;  
-  margin-left: -25px;
+  margin-left: -50%;
   height:auto;
+  margin-top: .8vw;
 }
 #texto_globos{
 width: 95%;
@@ -286,8 +296,9 @@ font-size:2vw;
 font-family: "simplifica";
 }
 #compraaqui{
- width:4vw;
-   margin-left: -80%;
+  width: 4vw;
+  margin-left: -50%;
+  margin-top: .5vw;
   height:auto;
 }
 #texto_globos{
@@ -399,8 +410,9 @@ font-size:2vw;
 font-family: "simplifica";
 }
 #compraaqui{
- width:4vw;
-   margin-left: -80%;
+  width: 4vw;
+  margin-left: -50%;
+  margin-top: .5vw;
   height:auto;
 }
 #texto_globos{
@@ -471,18 +483,12 @@ border: 1px solid #202020;
     margin-top: 10px;
     margin-left: 15%;
     margin-right: 15%;
-
 }
-
-
-
 
 #im{
     width: 100%;
     height: auto;
 }
-
-
 
 /***** GLOBOS    *****/
 #precio{
@@ -496,7 +502,8 @@ font-family: "simplifica";
 }
 #compraaqui{
   width: 4vw;
-  margin-left: -80%;
+  margin-left: -50%;
+  margin-top: .5vw;
   height:auto;
 }
 #texto_globos{

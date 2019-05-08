@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner_venta.css')}}">
+
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
  
     <!-- Bootstrap JS -->
@@ -30,6 +32,7 @@
     <section>
         @yield('content')
     </section>
+    @include('frontend.partials.banner_compra')
     @include('frontend.partials.banner')
     @include('frontend.partials.modal')
 

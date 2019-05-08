@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | HANA</title>
+    <title> @yield('title','HANA') | Favorite</title>
     <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('frontend/js/slider.js')}}"></script>
 
@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/favoritos.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner_venta.css')}}">
+
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <!-- Bootstrap JS -->
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
@@ -32,6 +34,7 @@
     <section>
         @yield('content')
     </section>
+    @include('frontend.partials.banner_compra')
     @include('frontend.partials.banner')
     @include('frontend.partials.modal')
  <script src="frontend/js/carrousel_lomasvendido.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Catálogo</title>
+    <title> @yield('title','HANA') | Cuenta</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" id="bootstrap-css" href="{{asset('frontend/css/bootstrap.min.css')}}">
@@ -44,7 +44,6 @@
         @yield('content')
     </section>
     <script src="{{asset('frontend/js/carrousel_lomasvendido.js')}}"></script>
-
     @include('frontend.partials.banner')
     @include('frontend.partials.modal_view_dir')
     @include('frontend.partials.modal_add_dir')

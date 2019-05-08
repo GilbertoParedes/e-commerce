@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Inicio</title>
+    <title> @yield('title','HANA') | Lo más vendido</title>
     
 
     <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" id="bootstrap-css" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/lo_mas_vendido.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
@@ -48,6 +49,7 @@
     <section>
         @yield('content')
     </section>
+    @include('frontend.partials.banner')
     @include('frontend.partials.modal')
 
 </body>

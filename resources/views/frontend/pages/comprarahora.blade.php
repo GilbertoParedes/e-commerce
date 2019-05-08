@@ -1,5 +1,5 @@
 @extends('frontend.layouts.layout_comprarahora')
-@section('title', 'Inicio')
+@section('title', 'HANA')
   
 @section('content')
 <div id="content">

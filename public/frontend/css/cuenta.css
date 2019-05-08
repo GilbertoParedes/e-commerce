@@ -59,8 +59,8 @@ font-size:4vw;
 font-family: "simplifica";
 }
 #compraaqui{
-  width: 8vw;
-  margin-top: -5px;
+  width: 9vw;
+  margin-top: 1.5vw;
   margin-left: -40px;
   height:auto;
 }
@@ -84,17 +84,17 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-  margin-top: -50%;
-  margin-left: 104%;
+  margin-top: -42%;
+  margin-left: 101%;
    position:absolute;
 }
 #flecha_izq{
-  margin-top: -50%;
-  margin-left: -7%;
+  margin-top: -42%;
+  margin-left: -1%;
    position:absolute;
  }
  #flecha{
-  width: 3vw;
+  width: 2.5vw;
  }
  /*fin flecha*/
 
@@ -196,6 +196,12 @@ font-family: "simplifica";
   width: 40vw
   margin-top: 40%;
 }
+#margen_informacion{
+  background-image: url('../icons/FONDO.png');
+  width: 97%;
+  margin-left:1.5%; 
+  padding-top: .5%;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -229,8 +235,8 @@ font-family: "simplifica";
 
 #compraaqui{
   width:7vw;
-  margin-left: -130%;
-  margin-top: 6%;
+  margin-left: -60%;
+  margin-top: 1.6vw;
   height:auto;
 }
 
@@ -254,17 +260,17 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-  margin-top: -47%;
-  margin-left: 106%;
+  margin-top: -42%;
+  margin-left: 102%;
    position:absolute;
 }
 #flecha_izq{
-  margin-top: -47%;
-  margin-left: -8%;
+  margin-top: -42%;
+  margin-left: -2%;
    position:absolute;
  }
  #flecha{
-  width: 2vw;
+  width: 2.5vw;
  }
  /*fin flecha*/
 
@@ -366,6 +372,12 @@ font-family: "simplifica";
   width: 40vw
   margin-top: 40%;
 }
+#margen_informacion{
+  background-image: url('../icons/FONDO.png');
+  width: 90%;
+  margin-left:5%; 
+  padding-top: .5%;
+}
  }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -397,9 +409,9 @@ font-family: "simplifica";
 }
 
 #compraaqui{
-  width:5vw;
+  width:6.5vw;
   margin-left: -50%;
-  margin-top: 6%;
+  margin-top: 1.6vw;
   height:auto;
 }
 
@@ -423,17 +435,17 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-  margin-top: -45%;
-  margin-left: 104%;
+  margin-top: -39%;
+  margin-left: 101%;
    position:absolute;
 }
 #flecha_izq{
-  margin-top: -45%;
-  margin-left: -6%;
+  margin-top: -39%;
+  margin-left: -1%;
    position:absolute;
  }
  #flecha{
-  width: 1.5vw;
+  width: 1.8vw;
  }
  /*fin flecha*/
 
@@ -532,6 +544,12 @@ font-family: "simplifica";
   width: 40vw
   margin-top: 40%;
 }
+#margen_informacion{
+  background-image: url('../icons/FONDO.png');
+  width: 50%;
+  margin-left:25%; 
+  padding-top: 2%;
+}
 }
  /*************************************************************************************************************/
 
@@ -563,7 +581,7 @@ font-family: "simplifica";
 #compraaqui{
   width: 4vw;
   margin-left: -50%;
-  margin-top: 6%;
+  margin-top: 1vw;
   height:auto;
 }
 
@@ -587,13 +605,13 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-  margin-top: -46%;
-  margin-left: 104%;
+  margin-top: -40%;
+  margin-left: 101%;
    position:absolute;
 }
 #flecha_izq{
-  margin-top: -46%;
-  margin-left: -6%;
+  margin-top: -40%;
+  margin-left: -1%;
    position:absolute;
  }
  #flecha{
@@ -694,7 +712,12 @@ font-family: "simplifica";
   margin-top: 30%;
 margin-left: 50%;
 }
-
+#margen_informacion{
+  background-image: url('../icons/FONDO.png');
+  width: 40%;
+  margin-left:30%; 
+  padding-top: 2%;
+}
 }
 
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/
@@ -729,8 +752,8 @@ font-family: "simplifica";
 }
 #compraaqui{
   width: 3vw;
-  margin-left: -50%;
-  margin-top: 6%;
+  margin-left: -35%;
+  margin-top: .8vw;
   height:auto;
 }
 #texto_globos{
@@ -755,13 +778,13 @@ font-family: "simplifica";
 
 /*****flechas */
 #flecha_der{
-  margin-top: -43%;
-  margin-left: 104%;
+  margin-top: -39%;
+  margin-left: 101%;
    position:absolute;
 }
 #flecha_izq{
-  margin-top: -43%;
-  margin-left: -6%;
+  margin-top: -39%;
+  margin-left: -1%;
    position:absolute;
  }
  #flecha{
@@ -863,4 +886,10 @@ font-family: "simplifica";
 margin-left: 50%;
 }
 
+#margen_informacion{
+  background-image: url('../icons/FONDO.png');
+  width: 36%;
+  margin-left:32%; 
+  padding-top: 2%;
+}
 }

@@ -27,10 +27,6 @@
 					          <label for="price">Imagen:</label>
 					          <img src="/{{ $product->path }}"  width="100px" height="100px" alt="Photo of perfil">
 					        </div>
-
-
-
-
 					        <button type="submit" class="btn btn-primary">Modificar</button>
 					</form>
 		</div>

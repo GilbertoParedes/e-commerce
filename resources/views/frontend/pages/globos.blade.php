@@ -1,5 +1,5 @@
 @extends('frontend.layouts.layout_globos')
-@section('title', 'globos')
+@section('title', 'HANA')
   
 @section('content')
  <style type="text/css">
@@ -26,46 +26,113 @@
 <!--     GLOBOS   --> 
 
 <div class="margen">
-    <div class="row" >
-       @foreach($cat_prod as $cat)
-           <div id="un_div" >  
-              {{$categoria_producto_id=$cat->id}}
-              {{$producto_id=$cat->producto_id}}
-           </div> 
-
+<div class="row">
+  @foreach($cat_prod as $cat)
+       <div id="un_div" >  
+           {{$categoria_producto_id=$cat->id}}
+           {{$producto_id=$cat->producto_id}}
+       </div> 
+            
        @foreach($productos as $pro)
-           <div id="un_div">  {{ $id_productos=$pro->id}}</div>
-            @if ($producto_id == $id_productos)
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6" >
-         
-             <img src="../{{ $pro->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-              <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
+           <div id="un_div"> 
+              {{ $id_productos=$pro->id}}
+           </div>
 
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
-                 </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
-             </div>
+           @if ($producto_id == $id_productos)
 
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
-        </div>   
-        @endif
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6" >
 
-             
-           @endforeach
-      @endforeach   
-   </div>
+                 <!-- mostrar imagen y en rutar a ver detalles del producto -->
+                  <a href="{{route('producto.show', $pro->id)}}">
+                    <img src="../{{ $pro->path}}" alt="imagen"  style="width:100%; padding-top: 5%;">
+                  </a>
+                  
+
+                  <!-- icono añadir a favoritos validado -->
+                 
+                      <div class="top-right">
+                         @if ($validar==1)
+                         <a href="{{route('catalogo.show', $pro->id)}}">
+                           @php
+                             {{ $icono="corazon3"; }}
+                           @endphp
+                           @foreach($deseable_buscar as $favoritos)
+                                @if($favoritos->product_id==$producto_id)
+
+                                 @php
+                                   {{ $icono="corazon4"; }}
+                                 @endphp
+
+                                @else
+                                @endif 
+                              
+                           @endforeach
+                          <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                          </a>
+                          @else
+                          @endif
+                      </div>
+                 
+
+  {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
+                 <div class="row">
+                   <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
+                         <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
+                        <center>
+                          <button type="submit" style="background-color: transparent;border-color: transparent;">
+                            <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                          </button>
+                        </center>
+                     </div>
+                  </div>
+
+                 <div class="row">
+                     <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
+                         <center> <p  id="texto_globos" >Envío incluido</p></center>
+                     </div>
+                     <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
+                         <center> <p  id="texto_globos" >Compra aquí</p></center>
+                     </div>
+                 </div>
+             <input type="text" value="{{$producto_id}}" name="id_producto" id="input_transparent" >
+
+   {!! Form::close() !!}
+            </div> 
+
+       @endif
+
+       @endforeach
+
+  @endforeach   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
    <!--     fin globos   --> 
 </div>

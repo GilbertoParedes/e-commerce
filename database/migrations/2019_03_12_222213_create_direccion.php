@@ -21,7 +21,7 @@ class CreateDireccion extends Migration
             $table->string('calle',30);
             $table->string('colonia',15);
             $table->string('cp',5);
-            $table->string('telefono',11);
+            $table->bigInteger('telefono');
             $table->integer('numero');
             $table->bigInteger('usuario_id')->unsigned();
 

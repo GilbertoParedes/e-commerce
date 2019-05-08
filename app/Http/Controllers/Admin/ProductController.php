@@ -67,7 +67,12 @@ class ProductController extends Controller
 
         $this->product->create([
             'name' => $request->name,
+            'type'=> $request->type,
             'description' => $request->description,
+            'desc_b' => $request->desc_b,
+            'desc_c' => $request->desc_c,
+            'detalle' => $request->detalle,
+            'price' => $request->price,
             'quantity' => $request->quantity,
             'stock' => $request->stock,
             'path' => $path
@@ -147,13 +152,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-
      $share = Product::find($id);
      $share->delete();
-
- 
-
      return redirect('/products')->with('success', 'El producto ha sido eliminado');
-
     }
 }
