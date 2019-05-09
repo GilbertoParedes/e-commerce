@@ -10,27 +10,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+    {!! Form::open(['route' => 'direccion.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
       <div class="modal-body ">
           <div class="row" >
             <div class=" col-12" >        
                     <div class="form-group">
-                      <p for="nombre" id="textos">Canción:</p>
+                      <p for="nombre" id="textos"><input type="radio" value="">CANCIÓN</p>
                       <input type="text" class="input_form" id="nombre" name="nombre">
                     </div>
                     <div class="form-group">
-                      <p for="email" id="textos">Carta:</p>
+                      <p for="email" id="textos"><input type="radio" value="">CARTA</p>
                       <textarea id="mensaje" name="mensaje"></textarea>       
-                    </div>
-                   
+                    </div>   
                     <div class="form-group">
-                      <p for="tel" id="textos">Código postal</p>
+                      <p for="tel" id="textos"><input type="radio" value="">POEMA</p>
                       <textarea id="mensaje" name="mensaje"></textarea>       
-                   </div>    
+                    </div>    
                      <button type="submit" class="boton_enviar">LISTO</button>           
             </div>   
-      
           </div> 
       </div>
+    {!! Form::close() !!}
+  
     </div>
   </div>
 </div>

@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/detalles_producto.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/personaliza_mensaje.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/modal_complemento.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
@@ -38,6 +40,7 @@
     </section>
     @include('frontend.partials.banner2')
     @include('frontend.partials.modal_personalizar_mensaje')
+    @include('frontend.partials.modal_complemento')
     @include('frontend.partials.modal')
 
 </body>

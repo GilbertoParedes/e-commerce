@@ -34,7 +34,13 @@ background-image: url("../images/principal/fondo.png");
   color:#1c1c1c;
   font-family: "seguiemj";
 }
-
+#input_transparent{
+ color: transparent;
+  size: 1%;
+  background-color: transparent;
+  height: 0px;
+  border-color: transparent;
+}
 @media (max-width: 575.98px) { 
 
 #content{
@@ -62,12 +68,12 @@ background-image: url("../images/principal/fondo.png");
   margin-bottom: 1%;
 }
 #categoria{
-font-size: 2.5vw;
+font-size: 5.5vw;
 text-align: center;
 }
 #tipo{
-  margin-top: -5%;
-  font-size: 9vw;
+  margin-top: -8%;
+  font-size: 16vw;
   text-align: center;
 }
 .vl {
@@ -76,8 +82,8 @@ text-align: center;
   margin-bottom: 2%;
 }
 #producto{
-  width: 40%;
-margin-left: 27vw;
+  width: 80%;
+margin-left: 10%;
   height: auto;
   margin-bottom: 2vw;
 }
@@ -93,7 +99,8 @@ margin-left: 27vw;
   float: right;
 }
 #btns2{
-  width: 80%;
+  width: 85%;
+  margin-top: -.2vw;
   float: left;
 }
 #txt_desc1{
@@ -194,7 +201,8 @@ font-size: 6vw;
   font-size: 3vw;
 }
 
-
+#botones{
+width: 100%;}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -254,7 +262,8 @@ margin-left: 27vw;
   float: right;
 }
 #btns2{
-  width: 60%;
+  width: 63%;
+  margin-top: -.2vw;
   float: left;
 }
 #txt_desc1{
@@ -350,6 +359,9 @@ font-size: 4vw;
 #detalle_especifico{
   font-size: 2vw;
 }
+#botones{
+  width: 115%;
+}
  }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -407,7 +419,8 @@ margin-left: 3vw;
   float: right;
 }
 #btns2{
-  width: 80%;
+  width: 89%;
+  margin-top: -.2vw;
   float: left;
 }
 #txt_desc1{
@@ -555,7 +568,8 @@ margin-left: 3vw;
   float: right;
 }
 #btns2{
-  width: 80%;
+  width: 85%;
+  margin-top: -.1vw;
   float: left;
 }
 #txt_desc1{
@@ -700,8 +714,9 @@ margin-top: 2vw;
   float: right;
 }
 #btns2{
-  width: 80%;
+  width: 85%;
   float: left;
+  margin-top: -.1vw;
 }
 #txt_desc1{
   margin-top: -10%;
@@ -787,5 +802,7 @@ font-size: 3vw;
 #detalle_especifico{
   font-size: 1.5vw;
 }
-
+#botones{
+  width: 113%;
+}
 }
