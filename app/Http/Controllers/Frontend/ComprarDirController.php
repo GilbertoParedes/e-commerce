@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Direction;
 use App\ComprarAhora;
+use App\Carrito;
 
 
 class ComprarDirController extends Controller
@@ -14,12 +15,14 @@ class ComprarDirController extends Controller
 
     protected $direction;
     protected $comprarahora;
+    protected $carrito;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Direction $direction,ComprarAhora $comprarahora)
+    function __construct(Direction $direction,ComprarAhora $comprarahora, Carrito $carrito)
     {
         $this->direction=$direction;
         $this->comprarahora=$comprarahora;
+        $this->carrito=$carrito;
 
     }
 
@@ -54,7 +57,7 @@ class ComprarDirController extends Controller
          //extraer id del usuario
        $id_usuario=Auth::id();
        //almacenar informacion en variables
-       $id=$request->id_dir;
+       $id_direccion=$request->id_dir;
        $titular=$request->nombre;
        $facturar=$request->facturar;
        //buscar la id de carrito maxima donde el status este en activo
@@ -62,6 +65,8 @@ class ComprarDirController extends Controller
             ->where('usuario_id',  $id_usuario)
             ->where('status',  0)
             ->get();    
+       $cuenta=count($carrito_proceso);  
+     
         foreach ($carrito_proceso as $carr) {
             $carrito_id=$carr->id;
         
@@ -70,16 +75,17 @@ class ComprarDirController extends Controller
                 'titular' => $titular,
                 'facturacion' =>  $facturar,
                 'carrito_id' =>  $carrito_id,
-                'direccion_id' =>  $direccion_id
+                'direccion_id' =>  $id_direccion
             ]);
 
            return view('frontend.pages.carrito_p2')
-                ->with('validar',$valor)
-                ;  
+                ->with('validar',$valor);  
         }
        }
        else{
         $valor=0;
+        return view('frontend.pages.index')
+                ->with('validar',$valor);  
        }
     }   
 

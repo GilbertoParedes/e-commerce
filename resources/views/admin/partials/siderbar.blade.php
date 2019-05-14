@@ -34,7 +34,7 @@
 											<li id="menu-academico-avaliacoes" ><a href="{{ route('users.index') }}"> Users</a></li>
 											<li id="menu-academico-boletim" ><a href="{{ route('roles.index') }}">Roles</a></li>
 											<li id="menu-academico-avaliacoes" ><a href="{{ route('permissions.index') }}">Permisos</a></
-											<li id="menu-academico-avaliacoes" ><a href="calender.html">Permisos</a></li>
+											<li id="menu-academico-avaliacoes" ><a href="{{ route('roles_permisos.index') }}">Roles y Permisos</a></li>
 										  </ul>
 										 </li>
 										

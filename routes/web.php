@@ -68,7 +68,8 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('products', 'Admin\ProductController');
 	Route::resource('roles', 'Admin\RolesController')->except('show', 'create');
 	Route::resource('permissions', 'Admin\PermissionsController')->except('show', 'create');
-	
+	Route::resource('roles_permisos', 'Admin\RolesPermissionController');
+
 	Route::resource('catalogo_arreglos', 'Frontend\CatalogoController')->except('show');
 	Route::resource('carritocompras', 'Frontend\CarritoController');
 

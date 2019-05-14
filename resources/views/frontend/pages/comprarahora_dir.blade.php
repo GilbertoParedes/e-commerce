@@ -30,8 +30,8 @@
              </div>
              <div class="form-group">
                   <p for="tel" id="textos">¿En esta también la dirección de factuación (la dirección que aparece en tu tarjeta de crédito o extracto bancario)?</p>
-                   <div id="textos"> <input type="checkbox" name="facturar" value="si">SÍ<br></div>
-                   <div id="textos">  <input type="checkbox" name="facturar" value="no" checked> No (Si no, te lo pediremos dentro de un momento)<br></div>
+                   <div id="textos"> <input type="radio" name="facturar" value="si">SÍ<br></div>
+                   <div id="textos">  <input type="radio" name="facturar" value="no" checked> No (Si no, te lo pediremos dentro de un momento)<br></div>
              </div>
           </div>
           <div id="margen_comprar_ahora">
