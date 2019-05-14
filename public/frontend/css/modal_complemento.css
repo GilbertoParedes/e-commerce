@@ -29,192 +29,149 @@
 }
 @media (max-width: 575.98px) { 
 
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 4vw;
+  font-size: 3vw;
   color: black;
 }
-.input_form{
-  font-family: "acumin";
-  font-size: 4vw;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.8vw;
 }
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 4vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
 
+.titulo{
+  width: 85%;
 }
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
+#margen_complementos{
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#circulos{
+  width: 50%;
+}
+
+#descriptions{
+  font-size: 2.5vw;
+  color: black;
+  font-family: "acumin";
 }
 .titulo{
-  width: 70%;
+  width:70%;
   margin-left: 35%;
 }
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 2.7vw;
+  font-size: 2.5vw;
   color: black;
 }
-.input_form{
-  font-family: "acumin";
-  font-size: 2.7vw;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 2.7vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.8vw;
 }
 
 .titulo{
-  width: 70%;
+  width: 85%;
+}
+#margen_complementos{
+    width: 90%;
+    margin-left: 5%;
+}
+
+#circulos{
+  width: 50%;
+}
+
+#descriptions{
+  font-size: 2vw;
+  color: black;
+  font-family: "acumin";
+}
+.titulo{
+  width:70%;
   margin-left: 35%;
 }
+
 }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 2.2vw;
+  font-size: 2vw;
   color: black;
 }
-.input_form{
-  font-family: "acumin";
-  font-size: 2.2vw;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 2.2vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.8vw;
 }
 
 .titulo{
-  width: 70%;
+  width: 85%;
+}
+#margen_complementos{
+    width: 90%;
+    margin-left: 5%;
+}
+
+#circulos{
+  width: 50%;
+}
+
+#descriptions{
+  font-size: 1.5vw;
+  color: black;
+  font-family: "acumin";
+}
+.titulo{
+  width:70%;
   margin-left: 35%;
 }
+
 }
  /*************************************************************************************************************/
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-/*formulario*/
+
 #textos{
   font-family: "acumin";
-  font-size: 1.8vw;
+  font-size: 2vw;
   color: black;
 }
-.input_form{
-  font-family: "acumin";
-  font-size: 1.8vw;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 1.8vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.8vw;
 }
 
+.titulo{
+  width: 85%;
+}
+#margen_complementos{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#circulos{
+  width: 50%;
+}
+
+#descriptions{
+  font-size: 1.5vw;
+  color: black;
+  font-family: "acumin";
+}
 .titulo{
   width: 70%;
   margin-left: 35%;
@@ -223,52 +180,34 @@
  /*************************************************************************************************************/
 
 @media (min-width: 1200px) and (max-width: 1500px) {
-
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 1.8vw;
+  font-size: 1.3vw;
   color: black;
 }
-.input_form{
-  font-family: "acumin";
-  font-size: 1.8vw;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.5vw;
 }
-.boton_enviar{
-  float: right;
-  height: 50px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 1.8vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
-}
-
 
 .titulo{
-  width: 70%;
-  margin-left: 35%;
+  width: 80%;
+}
+#margen_complementos{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#circulos{
+  width: 50%;
+}
+
+#descriptions{
+  font-size: 1vw;
+  color: black;
+  font-family: "acumin";
 }
 }
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/

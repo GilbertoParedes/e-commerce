@@ -14,10 +14,10 @@
         <form method="POST" action="{{ route('login') }}">
            @csrf
             <div class="group">
-              <input id="user" type="text"  placeholder="Correo electrónico *" class="input_modales" name="email">
+              <input id="user" type="text"  placeholder="Correo electrónico *" class="input_modales" name="email" required>
             </div>
             <div class="group">
-              <input type="password" id="fname" name="password" placeholder="Contraseña*" class="input_modales">   
+              <input type="password" id="fname" name="password" placeholder="Contraseña*" class="input_modales" required>   
             </div>
             <div class="group">
               <center><p id="texto_login">Olvidé mi contraseña</p></center>
@@ -35,74 +35,51 @@
 
       <div class="for-pwd-htm">
         <div class="group">
-          <input id="nombre" type="text"  placeholder="Nombre" name="name" class="input_modales">
+          <input id="nombre" type="text"  placeholder="Nombre" name="name" class="input_modales" required>
         </div>
         <div class="group">
-          <input type="text" id="apellido" name="apellido" placeholder="Apellido" name="apellido" class="input_modales">  
+          <input type="text" id="apellido_p" name="apellido_p" placeholder="Apellido Paterno" name="apellido" class="input_modales" required>  
         </div>
         <div class="group">
-          <input id="correo" type="email"  placeholder="Correo electrónico" name="correo" class="input_modales">
+          <input type="text" id="apellido_m" name="apellido_m" placeholder="Apellido Materno" name="apellido" class="input_modales" required>  
         </div>
         <div class="group">
-          <input type="password" id="pass" name="pass" placeholder="Contraseña" class="input_modales" class="input_pass" >
+          <input id="correo" type="email"  placeholder="Correo electrónico" name="correo" class="input_modales" required>
+        </div>
+        <div class="group">
+          <input type="password" id="pass" name="pass" placeholder="Contraseña" class="input_modales" class="input_pass" required>
           <p id="texto_login2">Mínimo 8 caracteres, una letra mayúscula y un número</p>
         </div>
         <div class="group">
-          <input type="password" id="pass2" name="pass2" placeholder="Confirmar contraseña" class="input_modales" class="input_pass">
+          <input type="password" id="pass2" name="pass2" placeholder="Confirmar contraseña" class="input_modales" class="input_pass" required>
         </div>
         <br>
         <div class="group">
           
           <div class="row">
             <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select" name="sexo">
+              <select class="form-control form-control-sm" id="select" name="sexo" required>
                 <option selected>Sexo</option>
                 <option value="H">Femenino</option>
                 <option value="M">Masculino</option>
               </select>
             </div>
             <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select" value="edad">
+              <select class="form-control form-control-sm" id="select" value="edad" name="edad" required>
                 <option selected>Edad</option>
-                <option>18</option>
-                <option>19</option>
+               @for ($i = 18; $i < 100; $i++)
+                <option value="{{$i}}">{{$i}}</option>
+               @endfor
               </select>
             </div>
+          
           </div>
         </div><br>
         <div class="group">
           <p id="texto_login2">Fecha de aniversario (opcional)</p>
           <div class="row">
             <div class="col-sm-4">
-              <select class="form-control  form-control-sm" id="select">
-                <option>Día</option>
-                <option>1</option>
-                <option>2</option>
-              </select>
-            </div>
-            <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select" placeholder="Mes">
-                <option>Mes</option>
-                <option>Enero</option>
-                <option>Febrero</option>
-                <option>Marzo</option>
-                <option>Abril</option>
-                <option>Mayo</option>
-                <option>Junio</option>
-                <option>Julio</option>
-                <option>Agosto</option>
-                <option>Septiembre</option>
-                <option>Octubre</option>
-                <option>Noviembre</option>
-                <option>Diciembre</option>
-              </select>
-            </div>
-            <div class="col-sm-4">
-              <select class="form-control form-control-sm" id="select">
-                <option>Año</option>
-                <option>1</option>
-                <option>2</option>
-              </select>
+              <input id="correo" type="date"   name="aniversario" class="input_modales">
             </div>
           </div>
         </div> 

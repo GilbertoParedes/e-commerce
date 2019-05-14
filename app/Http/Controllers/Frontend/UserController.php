@@ -34,8 +34,12 @@ class UserController extends Controller
      if (Auth::check()) {
          $valor=1;
          $id_usuario=Auth::id();
+         //consulta de usuario
          $usuarios =$this->user->where('id',  $id_usuario)->get();
+     
+         //consulta de direcciones
          $dir =$this->direccion->where('usuario_id',  $id_usuario)->get();
+         //contar registros de direcciones
          $cantidad_direcciones=count($dir);
          //buscar si el usuario ya ha finalizado alguna compra
          $carrito_finalizado=$this->carrito
@@ -94,8 +98,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
 	   //dd($request->all());
-		$nombre=$request->nombre;
-		$apellido=$request->apellido;
+		$nombre=$request->name;
+		$apellido_p=$request->apellido_p;
+        $apellido_m=$request->apellido_m;
+        $sexo=$request->sexo;
+        $edad=$request->edad;
+        $aniversario=$request->aniversario;
+        $type_user='Client';
 		$correo=$request->correo;
 		$pass=$request->pass;
 		$pass2=$request->pass2;
@@ -109,7 +118,13 @@ class UserController extends Controller
 		else{
 			//guardar usuario
 			$this->user->create([
-	            'name' => $request->name,
+	            'name' => $nombre,
+                'apellido_p'=>$apellido_p,
+                'apellido_m'=>$apellido_m,
+                'sexo'=>$sexo,
+                'edad'=>$edad,
+                'aniversario'=>$aniversario,
+                'type_user'=>$type_user,
 	            'email' => $request->correo,
 	            'password' => bcrypt($pass),
 	        ]);

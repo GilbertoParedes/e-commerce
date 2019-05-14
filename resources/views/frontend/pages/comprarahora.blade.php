@@ -6,7 +6,7 @@
 <!-- slider1 -->
   <div class="row">
     <div class="col">
-      <img  src="frontend/images/unasesorresolvera/banner.png" id="im">
+      <img  src="../storage/app/public/category/comprar_ahora.png" id="im">
 
     </div>
   </div>

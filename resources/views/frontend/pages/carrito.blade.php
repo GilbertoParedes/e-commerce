@@ -40,11 +40,12 @@
 				    </thead>
 				    <tbody>
               @php
-                {{$subtotal=0;}}
+                {{$subtotal=0;
+                  $cantidad=0;}}
               @endphp
               @foreach($productos_carrito as $carr)
                   @php
-
+                     {{$cantidad=$cantidad+1;}}
                      {{$id_product_carr=$carr->producto_id;}}
                      {{$id_carrito_producto=$carr->id;}}
                   @endphp  
@@ -94,7 +95,21 @@
 	  				<strong><p id="sub">{{$subtotal}}</p></strong>
 	  			</div>
 	  			<div class="col-12">
-	  				<button id="pagar">IR A PAGAR</button>
+      {{--  SI AY PRODUCTOS EN EL CARRITO--}} 
+            @if ($cantidad>0)
+             
+       {{-- SI NO HAY DIRECCIONES REGISTRADAS ENTONCES VA DIRECTO A COMPRAR AHORA, DONDE SOLICITA INFORMACION PARA REGISTRAR LA DIRECCIÓN --}} 
+              @if ($cantidad_Dir>0)
+                 <a href="comprar_parte_1">
+      	  				 <button id="pagar">IR A PAGAR</button>
+                 </a>
+       {{-- SI YA TIENE DIRECCIONES ENTONCES MUESTRA UNA PANTALLA DONDE MUESTRA LAS DIRECCIONES YA REGISTRADAS POR EL USUARIO --}} 
+              @else   
+                 <a href="comprar">
+                   <button id="pagar">IR A PAGAR</button>
+                 </a>
+              @endif
+            @endif
 	  			</div>
 	  			<div class="col-12">
       				 <div class="v0"></div>
@@ -107,7 +122,11 @@
       				<div class="v0"></div>
 	  			</div>
 	  			<div class="col-12">
-	  				<center><a href="comprarahora"><img src="frontend/images/carritocompras/cuadro.png" id="cuadro"></a></center>
+             @if ($cantidad>0)
+	  				     <center>
+                    <a href="comprarahora"><img src="frontend/images/carritocompras/cuadro.png" id="cuadro"></a>
+                 </center>
+              @endif
 	  			</div>
 	  		</div>
 	  	</div>

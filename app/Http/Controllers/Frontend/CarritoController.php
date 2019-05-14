@@ -9,7 +9,7 @@ use App\Product;
 use App\Carrito;
 use App\CarritoProducto;
 use App\ProductoCategoria;
-
+use App\Direction;
 use Illuminate\Support\Facades\Auth;
 
 class CarritoController extends Controller
@@ -19,21 +19,21 @@ class CarritoController extends Controller
     protected $carrito;
     protected $carritoproducto;
     protected $productocategoria;
+    protected $direction;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(User $user, Product $producto, Carrito $carrito, CarritoProducto $carritoproducto,ProductoCategoria $productocategoria)
+    function __construct(User $user, Product $producto, Carrito $carrito, CarritoProducto $carritoproducto,ProductoCategoria $productocategoria,Direction $direction)
     {
         $this->user = $user;
         $this->producto = $producto;
         $this->carrito = $carrito;
         $this->carritoproducto = $carritoproducto;
         $this->productocategoria = $productocategoria;
+        $this->direction=$direction;
     }
 
     public function index()
     {
-       
-
      if (Auth::check()) {
          $valor=1;
          //extraer id del usuario
@@ -51,6 +51,14 @@ class CarritoController extends Controller
             ->where('status',  0)
             ->orderby('created_at','DESC')->take(1)->get();
             $contar=count($buscar_carrito);
+
+            $direcciones_user=$this->direction
+            ->where('usuario_id',  $id_usuario)
+            ->get();    
+            
+            $cantidad_Dir=count($direcciones_user);
+
+
             //si haya productos en el carrito
             if ($contar>0) {
                 foreach ($buscar_carrito as $items2) {
@@ -66,12 +74,11 @@ class CarritoController extends Controller
                 ->with('buscar_carrito',$buscar_carrito)
                 ->with('productos_carrito',$productos_carrito)
                 ->with('buscar_complemento',$buscar_complemento)
-                ->with('products',$products);
-
+                ->with('products',$products)
+                ->with('cantidad_Dir',$cantidad_Dir);     
             }
             else{
                 return redirect('index')->with('validar',$valor)->with('alert', 'Aún no tienes productos en tu carrito!');
-
             }   
 
 
