@@ -23,6 +23,10 @@ class CreateDireccion extends Migration
             $table->string('cp',5);
             $table->bigInteger('telefono');
             $table->integer('numero');
+            $table->string('tipo_direccion',20);
+            $table->string('calle_a',30);
+            $table->string('calle_b',30);
+            $table->string('referencia',60);
             $table->bigInteger('usuario_id')->unsigned();
 
              /***relacion foranea de producto***/

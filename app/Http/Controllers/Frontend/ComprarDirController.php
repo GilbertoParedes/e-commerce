@@ -88,7 +88,7 @@ class ComprarDirController extends Controller
                 ->with('validar',$valor);  
        }
     }   
-
+    
     public function destroy( $id)
     {
        $id;

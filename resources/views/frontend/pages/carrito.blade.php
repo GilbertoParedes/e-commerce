@@ -124,7 +124,7 @@
 	  			<div class="col-12">
              @if ($cantidad>0)
 	  				     <center>
-                    <a href="comprarahora"><img src="frontend/images/carritocompras/cuadro.png" id="cuadro"></a>
+                    <a href="comprar"><img src="frontend/images/carritocompras/cuadro.png" id="cuadro"></a>
                  </center>
               @endif
 	  			</div>

@@ -31,7 +31,7 @@ class CreateComprarAhora extends Migration
             /***relacion foranea de direccion***/
             $table->foreign('direccion_id')
             ->references('id')
-            ->on('carrito')
+            ->on('direccion')
             ->onDelete('cascade');
         });
     }

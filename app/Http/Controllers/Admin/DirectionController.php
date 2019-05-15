@@ -55,6 +55,11 @@ class DirectionController extends Controller
         $cp=$request->cp;
         $telefono=$request->tel;
         $numero=$request->numero;
+        $tipo_direccion=$request->type_dir;
+        $calle_a=$request->calle_a;
+        $calle_b=$request->calle_b;
+        $referencia=$request->referencia;
+
         $pais='Mexico';
         $this->direccion->create([
             'pais' => $pais,
@@ -65,6 +70,10 @@ class DirectionController extends Controller
             'cp' => $cp,
             'telefono' => $telefono,
             'numero' => $numero,
+            'tipo_direccion' => $tipo_direccion,
+            'calle_a' => $calle_a,
+            'calle_b' => $calle_b,
+            'referencia' => $referencia,
             'usuario_id' => $id_usuario
         ]);
         return redirect()->back()->with('validar',$valor)->with('alert', 'Dirección registrada con éxito!');
