@@ -55,6 +55,7 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('globos', 'Frontend\GlobosController');
 	Route::resource('favoritos', 'Frontend\FavoriteController');
 	Route::resource('comprar', 'Frontend\ComprarController');
+	Route::resource('pago', 'Frontend\PagoController');
 
 	Route::resource('producto', 'Frontend\ProductoController');
 	Route::resource('comprar_parte_1', 'Frontend\ComprarDirController');
