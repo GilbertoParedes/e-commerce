@@ -47,72 +47,133 @@ background-image: url("../images/principal/fondo.png");
   width: 100%;
 }
 
-#margen{
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 23px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 23px;
-  width: 100%;
-  height: 38px;
-  border-color: #626262;
-
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 120px;
-  font-family: "acumin";
-  font-size: 23px;
-  background-color: white;
-  border-color: #626262;
-}
-#mensaje{
-  height: 120px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 23px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
-}
 #txt{
-    font-family: "acumin";
-font-size: 5.5vw;
+font-family: "acumin";
+font-size: 4.5vw;
+margin-bottom: 1%;
+}
+#txt_tipo1{
+font-family: "acumin";
+font-size: 4vw;
+margin-bottom: 1%;
+background-color: #F1F1F1;
+float:right;
+width:90%; 
+border-style: solid;
+border-color: #F1F1F1;
+border-width: 2px;
+}
+#txt_tipo{
+font-family: "acumin";
+font-size: 4vw;
+margin-bottom: 1%;
+float:left;
+width:90%; 
+background-color: white;
+  border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#txt_subtitulos{
+  font-family: "seguiemj";
+  font-size: 3.6vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 3.2vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 3vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 4vw;
+  width: 100%;
+  height: 6.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 4vw;
+  width: 100%;
+  height: 6.2vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 4vw;
+  font-family: "acumin";
+  width:100%;
+ height: 7vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-family: "acumin";
+  font-size: 4vw; 
+  width:100%;
+ height: 7vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-family: "acumin";
+  font-size: 4vw; 
+  width:100%;
+ height: 7vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 2%;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  margin-top: 2vw;
+  font-size: 4vw;
+  font-family: "acumin";
+  width:100%;
+ height: 7vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#tarjeta_regalo{
+  width: 80%;
+  height: auto;
+  margin-top:6%;
+  margin-left: 10%;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
 }
-#marg{
-  margin-top:5.5%;
+
+#margen{
+  margin-bottom: 1vw;
+  width: 98%;
+  margin-left: 1%;
+  border-radius: 5px;
 }
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
-  margin-bottom: 5%;
+#im_num{
+  width: 5%;
+  margin-top:-1%;
 }
 }
 
@@ -130,69 +191,132 @@ border: .5px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 25px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 25px;
-  width: 100%;
-  height: 38px;
-  border-color: #626262;
-
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 120px;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
-}
-#mensaje{
-  height: 120px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
-}
 #txt{
-    font-family: "acumin";
-font-size: 4vw;
+font-family: "acumin";
+font-size: 3.3vw;
+margin-bottom: 1%;
+}
+#txt_tipo1{
+font-family: "acumin";
+font-size: 3vw;
+margin-bottom: 1%;
+background-color: #F1F1F1;
+float:right;
+width:80%; 
+border-style: solid;
+border-color: #F1F1F1;
+border-width: 2px;
+}
+#txt_tipo{
+font-family: "acumin";
+font-size: 3vw;
+margin-bottom: 1%;
+float:left;
+width:80%; 
+background-color: white;
+  border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#txt_subtitulos{
+  font-family: "seguiemj";
+  font-size: 2.5vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 2.6vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 1.7vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 3vw;
+  width: 100%;
+  height: 5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 3vw;
+  width: 100%;
+  height: 5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 3vw;
+  font-family: "acumin";
+  width:122%;
+ height: 5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 3vw;
+  font-family: "acumin";
+  width:100%;
+ height: 5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 3vw;
+  font-family: "acumin";
+  width: 100%;
+height: 5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 2%;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 3vw;
+  font-family: "acumin";
+  width: 100%;
+  height: 5vw;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 2px;
+  margin-top: 1vw;
+}
+#tarjeta_regalo{
+  width: 100%;
+  height: auto;
+  margin-top: 1vw;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
 }
 
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
+#margen{
+  margin-bottom: 1vw;
+  width: 95%;
+  margin-left: 2.5%;
+  border-radius: 5px;
+}
+#im_num{
+  width: 5%;
+  margin-top:-1%;
 }
 }
  /*************************************************************************************************************/
@@ -208,71 +332,131 @@ border: .5px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 25px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 25px;
-  width: 100%;
-  height: 38px;
-  border-color: #626262;
-
-}
-.boton_enviar{
-  float: right;
-  height: 40px;
-  width: 120px;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
-}
-#mensaje{
-  height: 120px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
-}
 #txt{
-    font-family: "acumin";
-font-size: 3.5vw;
+font-family: "acumin";
+font-size: 3vw;
+margin-bottom: 1%;
+}
+#txt_tipo1{
+font-family: "acumin";
+font-size: 2.8vw;
+margin-bottom: 1%;
+background-color: #F1F1F1;
+float:right;
+width:80%; 
+border-style: solid;
+border-color: #F1F1F1;
+border-width: 2px;
+}
+#txt_tipo{
+font-family: "acumin";
+font-size: 2.8vw;
+margin-bottom: 1%;
+float:left;
+width:80%; 
+background-color: white;
+  border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#txt_subtitulos{
+  font-family: "seguiemj";
+  font-size: 2.2vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 2vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 1.7vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 2.2vw;
+  width: 100%;
+  height: 3.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 2.2vw;
+  width: 100%;
+  height: 3.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 2.2vw;
+  font-family: "acumin";
+  width:122%;
+ height: 3.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 2.2vw;
+  font-family: "acumin";
+  width:130%;
+ height: 3.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 2.2vw;
+  font-family: "acumin";
+  width: 100%;
+height: 3.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 8.5vw;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 2.2vw;
+  font-family: "acumin";
+  width: 29%;
+  height: 3.5vw;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 2px;
+}
+#tarjeta_regalo{
+  width: 100%;
+  height: auto;
+  margin-top: -1vw;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
 }
-#marg{
-  margin-top:5.5%;
+
+#margen{
+  margin-bottom: 1vw;
+  width: 90%;
+  margin-left: 3%;
+  border-radius: 5px;
 }
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
+#im_num{
+  width: 4%;
+  margin-top:-1%;
 }
 }
  /*************************************************************************************************************/
@@ -290,72 +474,137 @@ border: .5px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 27px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 27px;
-  width: 100%;
-  height: 45px;
-  border-color: #626262;
-
-}
-.boton_enviar{
-  float: right;
-  height: 50px;
-  width: 120px;
-  font-family: "acumin";
-  font-size: 27px;
-  background-color: white;
-  border-color: #626262;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 27px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
-}
 #txt{
-    font-family: "acumin";
-font-size: 3vw;
+font-family: "acumin";
+font-size: 2.5vw;
+margin-bottom: 1%;
+}
+#txt_tipo1{
+font-family: "acumin";
+font-size: 2.2vw;
+margin-bottom: 1%;
+background-color: #F1F1F1;
+float:right;
+width:80%; 
+border-style: solid;
+border-color: #F1F1F1;
+border-width: 2px;
+}
+#txt_tipo{
+font-family: "acumin";
+font-size: 2.2vw;
+margin-bottom: 1%;
+float:left;
+width:80%; 
+background-color: white;
+  border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#txt_subtitulos{
+  font-family: "seguiemj";
+  font-size: 1.8vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.4vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 140%;
+ height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width:130%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 100%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 6.5vw;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 60%;
+  height: 2.5vw;
+  margin-right: -3vw;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 2px;
+  float: right;
+   margin-top: 6.5vw;
+
+}
+#tarjeta_regalo{
+  width: 100%;
+  height: auto;
+  margin-top: 3.2vw;
 }
 hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
-#marg{
-  margin-top:5.5%;
+
+#margen{
+  margin-bottom: 1vw;
+  width: 98%;
+  margin-left: 1%;
+  border-radius: 5px;
 }
-.boton_enviar{
-  float: right;
-  height: 47px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 28px;
-  background-color: #1c1c1c;
-  color:white;
+#im_num{
+  width: 4%;
+  margin-top:-1%;
 }
+
 }
  /*************************************************************************************************************/
 
@@ -373,64 +622,137 @@ border: 1px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 30px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 30px;
-  width: 100%;
-  height: 45px;
-  border-color: #626262;
-
-}
-
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 30px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
-}
 #txt{
-    font-family: "acumin";
+font-family: "acumin";
 font-size: 2.5vw;
+margin-bottom: 1%;
+}
+#txt_tipo1{
+font-family: "acumin";
+font-size: 2.2vw;
+margin-bottom: 1%;
+background-color: #F1F1F1;
+float:right;
+width:80%; 
+border-style: solid;
+border-color: #F1F1F1;
+border-width: 2px;
+}
+#txt_tipo{
+font-family: "acumin";
+font-size: 2.2vw;
+margin-bottom: 1%;
+float:left;
+width:80%; 
+background-color: white;
+  border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#txt_subtitulos{
+  font-family: "seguiemj";
+  font-size: 1.8vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.4vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 140%;
+ height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width:130%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 100%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 6vw;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 60%;
+  height: 2.5vw;
+  margin-right: -3vw;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 2px;
+  float: right;
+   margin-top: 6vw;
+
+}
+#tarjeta_regalo{
+  width: 100%;
+  height: auto;
+  margin-top: 3.3vw;
 }
 hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
-#marg{
-  margin-top:5%;
+
+#margen{
+  margin-bottom: 1vw;
+  width: 90%;
+  margin-left: 3%;
+  border-radius: 5px;
 }
-.boton_enviar{
-  float: right;
-  height: 50px;
-  width: 180px;
-  font-family: "acumin";
-  font-size: 32px;
-  background-color: #1c1c1c;
-  color:white;
+#im_num{
+  width: 4%;
+  margin-top:-1%;
 }
+
 }
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/
 @media (min-width: 1501px) { 
@@ -447,56 +769,7 @@ border: 1px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
-#textos{
-  font-family: "acumin";
-  font-size: 35px;
-  color: black;
-}
-.input_form{
-  font-family: "acumin";
-  font-size: 35px;
-  width: 100%;
-  margin-top: -5%;
-  height: 38px;
-  border-color: #626262;
 
-}
-.boton_enviar{
-  float: right;
-  height: 50px;
-  width: 60%;
-  font-family: "acumin";
-  font-size: 1.5vw;
-  margin-right: 2vw;
-  margin-top: 1.2vw;
-  background-color: #1c1c1c;
-  color:white;
-}
-#mensaje{
-  height: 160px;
-  width: 100%;
-  font-family: "acumin";
-  font-size: 35px;
-  background-color: white;
-  border-color: #626262;
-  border-style: solid;
-      border:1px solid #626262;
-
-}
-#mensaje:focus .boton_enviar:focus{
-    outline: none !important;
-    border:1px solid #626262;
-    box-shadow: 0 0 10px #719ECE;
-}
-/*fin formulario*/
 #txt{
 font-family: "acumin";
 font-size: 2.5vw;
@@ -508,7 +781,7 @@ font-size: 2.2vw;
 margin-bottom: 1%;
 background-color: #F1F1F1;
 float:right;
-width:60%; 
+width:80%; 
 border-style: solid;
 border-color: #F1F1F1;
 border-width: 2px;
@@ -518,7 +791,7 @@ font-family: "acumin";
 font-size: 2.2vw;
 margin-bottom: 1%;
 float:left;
-width:60%; 
+width:80%; 
 background-color: white;
   border-style: solid;
 border-color: #0d0d0d;
@@ -526,48 +799,97 @@ border-color: #0d0d0d;
 }
 #txt_subtitulos{
   font-family: "seguiemj";
-  font-size: 2vw;
+  font-size: 1.8vw;
+}
+#txt_subtitulo2{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.4vw;
+}
+#txt_subtitulo3{
+  font-family: "seguiemj";
+  font-size: 1.2vw;
+  color:#0d0d0d;
+}
+#campos_input{
+  font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#select_month{
+   font-family: "acumin";
+  color:#0d0d0d;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 2.5vw;
+   border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 200%;
+ height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago1{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width:130%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+}
+#boton_pago2{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 100%;
+height: 2.5vw;
+     border-style: solid;
+border-color: #0d0d0d;
+ border-width: 2px;
+ margin-top: 5.4vw;
+}
+#boton_pago3{
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "acumin";
+  width: 80%;
+  height: 2.5vw;
+  margin-right: -6vw;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 2px;
+  float: right;
+  margin-top: 5.4vw;
+
+}
+#tarjeta_regalo{
+  width: 150%;
+  height: auto;
+  margin-top: 1.9vw;
 }
 hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
-#marg{
-  margin-top: 3%;
-}
-#margen{
- margin-left: 10%;
- margin-right: 10%;
- width:80%;
-}
-#icono_mapa{
-	width: 50%;
-	margin-left: 20%;
-	margin-right: 20%;
-	height: auto;
-	padding-top: 1vw;
-	padding-bottom: 1vw;
 
-}
-
-#borrar_direccion{
-	width:190%;
-	margin-left: 20%;
-	margin-right: 20%;
-	height: auto;
-	vertical-align: middle;
-}
-#direcciones{
-	font-size: 1.3vw;
-	font-family: "acumin";
-}
-#margen_comprar_ahora{
-	margin-bottom: 1vw;
-	background-image: url('../icons/FONDO.png');
-	width: 80%;
-	margin-left: 10%;
-	border-radius: 10px;
-}
 #margen{
 	margin-bottom: 1vw;
 	width: 80%;

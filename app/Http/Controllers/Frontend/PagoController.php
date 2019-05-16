@@ -28,10 +28,14 @@ class PagoController extends Controller
         if (Auth::check()) {
             $valor=1;
             $id_usuario=Auth::id();
+             return view('frontend.pages.pago')
+                 ->with('validar',$valor); 
 
         }
         else{
             $valor=0;
+            return redirect('index')
+                 ->with('validar',$valor); 
         }
     }
 }
