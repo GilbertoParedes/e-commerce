@@ -7,29 +7,59 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Category;
 use App\ProductoCategoria;
-
+use App\User;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
    protected $product;
    protected $cat;
    protected $product_cat;
-
+   protected $user;
     // contructor de modelo para uso en cualquier método
-    function __construct(Product $product, Category $cat, ProductoCategoria $product_cat)
+    function __construct(Product $product, Category $cat, ProductoCategoria $product_cat, User $user)
     {
         $this->product = $product;
         $this->cat = $cat;
         $this->product_cat=$product_cat;
+        $this->user=$user;
+
     }
     public function index()
     {
-        $products = $this->product->all();
-        $categories = $this->cat->all();
-        $products_categorias = $this->product_cat->all();
+       
 
-        return view('admin.product.products', compact('products', 'categories'));
+        if (Auth::check()) {
+                    //extraccion de id de usuario que inició  sesión
+                    $id_usuario=Auth::id();
+                    //consulta de autenticacion
+                    $autenticar_user= $this->user->where('id',  $id_usuario)->get();
+                    //extraer tipo de usuario
+                    foreach ($autenticar_user as $values) {
+                      $type_user=$values->type_user;
+                        
+                        if ($type_user=="Admin") {
+                            $products = $this->product->all();
+                            $categories = $this->cat->all();
+                            $products_categorias = $this->product_cat->all();
+
+                            return view('admin.product.products', compact('products', 'categories'));
+
+                        }
+                        else{
+                            $valor=1;
+                            return redirect('index')->with('validar',$valor);
+                        }
+                    }
+        }
+        else{
+            $valor=0;
+            return view('frontend.pages.index')->with('validar',$valor);
+        }
+
+
+
     }
 
     /**

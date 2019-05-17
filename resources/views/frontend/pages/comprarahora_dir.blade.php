@@ -15,11 +15,12 @@
 <!-- texto arreglos florales -->
   <div class="row">
       <div class="col-12" >
-        <H1 id="txt_globo">SELECCIONA UNA DIRECCIÓN DE ENVÍO</H1>
+        <H1 id="txt_globo"><img src="../public/frontend/images/descripcion/1.png" id="im_num">SELECCIONA UNA DIRECCIÓN DE ENVÍO</H1>
         <hr>
       </div>   
   </div>
 <br>
+@include('frontend.partials.error')
 
   {{--  --}}
    {!! Form::open(['route' => 'comprar_parte_1.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
@@ -41,31 +42,31 @@
                 <div class="col-md-3 col-sm-12 col-12" >
                   <img src="frontend/icons/prueba.png" id="icono_mapa">
                 </div>
-                   <div class="col-md-7 col-sm-4 col-12"  >
+                   <div class="col-md-7 col-sm-12 col-12"  >
                     <div class="row">
-                          <div class="col-md-6 col-sm-12 col-12" >
+                          <div class="col-md-6 col-sm-6 col-12" >
                             <span id="direcciones">País: {{$element->pais}}</span>
                           </div>  
-                          <div class="col-md-6 col-sm-12 col-12" >
+                          <div class="col-md-6 col-sm-6 col-12" >
                             <span id="direcciones">Estado: {{$element->estado}}</span>
                           </div> 
-                            <div class="col-md-6  col-sm-12 col-12">
+                            <div class="col-md-6  col-sm-6 col-12">
                              <span id="direcciones">Colonia: {{$element->colonia}}</span>
                           </div>
-                          <div class="col-md-6 col-sm-12 col-12">
+                          <div class="col-md-6 col-sm-6 col-12">
                              <span id="direcciones">Municipio: {{$element->municipio}}</span>
                           </div> 
-                          <div class="col-md-6  col-sm-12 col-12">
+                          <div class="col-md-6  col-sm-6 col-12">
                              <span id="direcciones">Calle: {{$element->calle}}</span>
                           </div>   
                             
-                          <div class="col-md-6  col-sm-12 col-12">
+                          <div class="col-md-6  col-sm-6 col-12">
                              <span id="direcciones">Código postal: {{$element->cp}}</span>
                           </div>   
-                          <div class="col-md-6 col-sm-12 col-12">
+                          <div class="col-md-6 col-sm-6 col-12">
                              <span id="direcciones">Teléfono: {{$element->telefono}}</span>
                           </div>   
-                          <div class="col-md-6  col-sm-12 col-12">
+                          <div class="col-md-6  col-sm-6 col-12">
                              <span id="direcciones">No.: {{$element->numero}}</span>
                           </div>   
                     </div> 

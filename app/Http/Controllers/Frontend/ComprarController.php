@@ -8,20 +8,22 @@ use Illuminate\Support\Facades\Auth;
 use App\Direction;
 use App\ComprarAhora;
 use App\Carrito;
-
+use App\Pago;
+use App\Http\Requests\ComprarRequest;
 class ComprarController extends Controller
 {
     protected $direction;
     protected $comprarahora;
     protected $carrito;
+    protected $pago;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Direction $direction,ComprarAhora $comprarahora, Carrito $carrito)
+    function __construct(Direction $direction,ComprarAhora $comprarahora, Carrito $carrito, Pago $pago)
     {
         $this->direction=$direction;
         $this->comprarahora=$comprarahora;
         $this->carrito=$carrito;
-
+        $this->pago=$pago;
     }
     public function index()
     {
@@ -37,14 +39,14 @@ class ComprarController extends Controller
 		  	return view('frontend.pages.index')->with('validar',$valor)->with('alert', 'Inicia sesión para poder realizar una compra');
         }
     }
-    public function store(Request $request)
+    public function store(ComprarRequest $request)
     {
        if (Auth::check()) {
        $valor=1;
          //extraer id del usuario
        $id_usuario=Auth::id();
        //
-
+       $validated = $request->validated();
        $titular=$request->nombre;
        $facturar=$request->facturar;
        //almacenar datos en la tabla de direcion
@@ -53,9 +55,9 @@ class ComprarController extends Controller
         $calle=$request->calle;
         $colonia=$request->colonia;
         $cp=$request->cp;
-        $telefono=$request->tel;
+        $telefono=$request->telefono;
         $numero=$request->numero;
-        $tipo_direccion=$request->type_dir;
+        $tipo_direccion=$request->tipo_direccion;
         $calle_a=$request->calle_a;
         $calle_b=$request->calle_b;
         $referencia=$request->referencia;
@@ -102,8 +104,25 @@ class ComprarController extends Controller
                         'carrito_id' =>  $pk_carrito,
                         'direccion_id' =>  $pk_direccion
                     ]);
-                    //mandar al paso dos
-                     return view('frontend.pages.pago')->with('validar',$valor);  
+                    
+                    $BuscarComprarAhora=$this->comprarahora
+                    ->where('carrito_id',  $pk_carrito)
+                    ->orderby('created_at','DESC')->take(1)->get();
+                    
+                    foreach ($BuscarComprarAhora as $value_compra) {
+                        $id_comprar_ahora=$value_compra->id;
+
+                         $BuscarTarjeta=$this->pago
+                         ->where('comprar_ahora_id',  $id_comprar_ahora)
+                         ->orderby('created_at','DESC')->take(1)->get();
+
+                         //contar registros de tarjetas
+                         $contar_Tarjetas=count($BuscarTarjeta);
+                                
+                         return redirect('pago')
+                                ->with('validar',$valor)
+                                ->with('tarjetas',$contar_Tarjetas);  
+                   }
                     }
             }     
       

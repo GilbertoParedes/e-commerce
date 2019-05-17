@@ -21,7 +21,7 @@ class CreateDireccion extends Migration
             $table->string('calle',30);
             $table->string('colonia',15);
             $table->string('cp',5);
-            $table->bigInteger('telefono');
+            $table->string('telefono',10);
             $table->integer('numero');
             $table->string('tipo_direccion',20);
             $table->string('calle_a',30);

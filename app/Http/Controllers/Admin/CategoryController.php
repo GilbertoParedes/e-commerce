@@ -6,20 +6,42 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Auth;
+use App\User;
 class CategoryController extends Controller
 {
      protected $category;
-
+     protected $user;
     // contructor de modelo para uso en cualquier método
-    function __construct(Category $category)
+    function __construct(Category $category,User $user)
     {
         $this->category = $category;
+        $this->user = $user;
     }
     public function index()
     {
-     $categories = $this->category->all();
-        return view('admin.category.categories', compact('categories')); 
+        if (Auth::check()) {
+            $id_usuario=Auth::id();
+            // obtiene todos los regístros de la tabla users 
+            $autenticar_user= $this->user->where('id',  $id_usuario)->get();
+            foreach ($autenticar_user as $values) {
+              $type_user=$values->type_user;
+              if ($type_user=="Admin") {
+                $valor=1;
+
+                 $categories = $this->category->all();
+                    return view('admin.category.categories', compact('categories')); 
+             }
+              else{
+                $valor=1;
+                 return redirect('index')->with('validar',$valor);
+              }
+            }
+        }
+        else{
+        $valor=0;
+        return view('frontend.pages.index')->with('validar',$valor);
+        }
      }
 
     /**

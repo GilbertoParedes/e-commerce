@@ -15,12 +15,12 @@
 <!-- texto arreglos florales -->
   <div class="row">
       <div class="col-12" >
-        <H1 id="txt_globo">SELECCIONA UNA DIRECCIÓN DE ENVÍO</H1>
+        <H1 id="txt_globo"><img src="../public/frontend/images/descripcion/1.png" id="im_num">SELECCIONA UNA DIRECCIÓN DE ENVÍO</H1>
         <hr>
       </div>   
   </div>
 <br>
-
+@include('frontend.partials.error')
 <!--     GLOBOS   --> 
 {!! Form::open(['route' => 'comprar.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
     <div class="row" >
@@ -30,11 +30,11 @@
       
                 <div class="form-group">
                   <p for="nombre" id="textos">NOMBRE/ Quien recibe:</p>
-                  <input type="text" class="input_form" id="nombre" name="nombre" required>
+                  <input type="text" class="input_form" id="nombre" name="nombre" >
                 </div>
                 <div class="form-group">
                   <p for="direccion" id="textos">Dirección(calle, número de casa o interior, empresa)</p>
-                  <input type="text" class="input_form" id="calle" name="calle" required>
+                  <input type="text" class="input_form" id="calle" name="calle" >
                 </div>
                 <div class="form-group">
                 
@@ -49,25 +49,25 @@
                       </div>
                       <div class="col-sm-6 " >
                           <p for="cp" id="textos">Código postal</p>
-                          <input type="text" class="input_form" id="cp" name="cp" required>
+                          <input type="text" class="input_form" id="cp" name="cp" >
                       </div>
                     </div>
                 </div>
                 <div class="form-group">
                   <p for="estado" id="textos">Estado</p>
-                   <input type="text" class="input_form" id="estado" name="estado"  placeholder="Nayarit">  
+                   <input type="text" class="input_form" id="estado" name="estado"  placeholder="Nayarit" >  
                 </div>
                 <div class="form-group">
                   <p for="ciudad" id="textos">Municipio</p>
-                   <input type="text" class="input_form" id="municipio" name="municipio">  
+                   <input type="text" class="input_form" id="municipio" name="municipio" >  
                 </div>
                 <div class="form-group">
                   <p for="colonia" id="textos">Colonia</p>
-                   <input type="text" class="input_form" id="colonia" name="colonia">  
+                   <input type="text" class="input_form" id="colonia" name="colonia" >  
                 </div>
                  <div class="form-group">
                   <p for="tel" id="textos">Teléfono celular 10 dígitos</p>
-                   <input type="text" class="input_form" id="tel" name="tel">  
+                   <input type="text" class="input_form" id="telefono" name="telefono" >  
                 </div>
 
         </div>   
@@ -80,7 +80,7 @@
                 </div>
                 <div class="form-group">
                   <p for="nombre" id="textos">Tipo de dirección</p>
-                  <select class="input_form"  id="type" name="type_dir">
+                  <select class="input_form"  id="type" name="tipo_direccion">
                     <option value="Residencial">Residencial</option>
                    
                   </select>
@@ -91,16 +91,16 @@
                     <p for="email" id="textos">Entre calles</p>
                     <div class="row">
                       <div class="col-sm-6 " >
-                        <input type="text" class="input_form" id="calle_a" name="calle_a"  placeholder="Calle 1">
+                        <input type="text" class="input_form" id="calle_a" name="calle_a"  placeholder="Calle 1" >
                       </div>
                       <div class="col-sm-6" >
-                        <input type="text" class="input_form" id="calle_b" name="calle_b"  placeholder="Calle 2">
+                        <input type="text" class="input_form" id="calle_b" name="calle_b"  placeholder="Calle 2" >
                       </div>
                     </div>
                 </div>
                 <div class="form-group">
                   <p for="referencia" id="textos">Referencias</p>
-                  <input type="text" class="input_form" id="referencia" name="referencia" placeholder="Nos ayuda a ubicar mejor la dirección">
+                  <input type="text" class="input_form" id="referencia" name="referencia" placeholder="Nos ayuda a ubicar mejor la dirección" >
                 </div>
                 <div class="form-group">
                   <p for="facturar" id="textos">¿En esta también la dirección de factuación (la dirección que aparece en tu tarjeta de crédito o extracto bancario)?</p>

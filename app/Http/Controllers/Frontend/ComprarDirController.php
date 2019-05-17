@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Direction;
 use App\ComprarAhora;
 use App\Carrito;
-
+use App\Pago;
+use App\Http\Requests\DirComprarRequest;
 
 class ComprarDirController extends Controller
 {
@@ -18,12 +19,12 @@ class ComprarDirController extends Controller
     protected $carrito;
 
     // contructor de modelo para uso en cualquier método
-    function __construct(Direction $direction,ComprarAhora $comprarahora, Carrito $carrito)
+    function __construct(Direction $direction,ComprarAhora $comprarahora, Carrito $carrito, Pago $pago)
     {
         $this->direction=$direction;
         $this->comprarahora=$comprarahora;
         $this->carrito=$carrito;
-
+        $this->pago=$pago;
     }
 
     public function index()
@@ -50,12 +51,14 @@ class ComprarDirController extends Controller
 		  	return view('frontend.pages.index')->with('validar',$valor)->with('alert', 'Inicia sesión para poder realizar una compra');
         }
     }
-     public function store(Request $request)
+     public function store(DirComprarRequest $request)
     {
        if (Auth::check()) {
        $valor=1;
          //extraer id del usuario
        $id_usuario=Auth::id();
+        // Retrieve the validated input data...
+       $validated = $request->validated();
        //almacenar informacion en variables
        $id_direccion=$request->id_dir;
        $titular=$request->nombre;
@@ -77,9 +80,23 @@ class ComprarDirController extends Controller
                 'carrito_id' =>  $carrito_id,
                 'direccion_id' =>  $id_direccion
             ]);
+            $BuscarComprarAhora=$this->comprarahora
+                    ->where('carrito_id',  $carrito_id)
+                    ->orderby('created_at','DESC')->take(1)->get();
 
-           return redirect('pago')
-                ->with('validar',$valor);  
+            foreach ($BuscarComprarAhora as $value_compra) {
+                        $id_comprar_ahora=$value_compra->id;         
+              $BuscarTarjeta=$this->pago
+                   ->where('comprar_ahora_id',  $id_comprar_ahora)
+                   ->orderby('created_at','DESC')->take(1)->get();
+
+                   //contar registros de tarjetas
+                   $contar_Tarjetas=count($BuscarTarjeta);
+                          
+              return redirect('pago')
+                  ->with('validar',$valor)
+                  ->with('tarjetas',$contar_Tarjetas);  
+            }
         }
        }
        else{
@@ -95,5 +112,13 @@ class ComprarDirController extends Controller
        dd($id);
 
     }
-
+    
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            if ($this->somethingElseIsInvalid()) {
+                $validator->errors()->add('field', 'Something is wrong with this field!');
+            }
+        });
+    }
 }

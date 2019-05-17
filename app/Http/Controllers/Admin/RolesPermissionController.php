@@ -7,27 +7,52 @@ use App\Http\Controllers\Controller;
 use App\Roles;
 use App\Permission;
 use App\RolesPermission;
+use App\User;
+
+use Illuminate\Support\Facades\Auth;
 
 class RolesPermissionController extends Controller
 {
     protected $roles;
     protected $permission;
     protected $rolespermission;
-
-    function __construct(Roles $roles, Permission $permission,RolesPermission $rolespermission)
+    protected $user;
+    function __construct(Roles $roles, Permission $permission,RolesPermission $rolespermission,User $user)
     {
         $this->roles = $roles;
         $this->permission = $permission;
         $this->rolespermission = $rolespermission;  
+        $this->user = $user;  
+
     }
 
     public function index()
     {
-        $verRolesPermisos = $this->rolespermission->all();
-        $verRoles = $this->roles->all();
-        $verPermisos = $this->permission->all();
-
-        return view('admin.rolespermission.roles_permission', compact('verRolesPermisos','verRoles', 'verPermisos'));
+        if (Auth::check()) {
+            //extraccion de id de usuario que inició  sesión
+            $id_usuario=Auth::id();
+            //consulta de autenticacion
+            $autenticar_user= $this->user->where('id',  $id_usuario)->get();
+            //extraer tipo de usuario
+            foreach ($autenticar_user as $values) {
+              $type_user=$values->type_user;
+                
+                if ($type_user=="Admin") {
+                $verRolesPermisos = $this->rolespermission->all();
+                $verRoles = $this->roles->all();
+                $verPermisos = $this->permission->all();
+                   return view('admin.rolespermission.roles_permission', compact('verRolesPermisos','verRoles', 'verPermisos'));
+                }
+                else{
+                    $valor=1;
+                    return redirect('index')->with('validar',$valor);
+                }
+            }
+        }
+        else{
+            $valor=0;
+            return view('frontend.pages.index')->with('validar',$valor);
+        }
     }
 
     /**

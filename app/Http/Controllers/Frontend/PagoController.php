@@ -13,7 +13,7 @@ use App\CarritoProducto;
 use App\Pago;
 use App\Direction;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Requests\PagoRequest;
 class PagoController extends Controller
 {
    protected $product;
@@ -141,7 +141,7 @@ class PagoController extends Controller
                  ->with('validar',$valor); 
         }
     }
-    public function store(Request $request){
+    public function store(PagoRequest $request){
      $type_pay=$request->type_pay;
       $cardholder=$request->cardholder;
       $card_number=$request->card_number;
@@ -152,6 +152,7 @@ class PagoController extends Controller
       if (Auth::check()) {
             $valor=1;
             $id_usuario=Auth::id();
+            $validated = $request->validated();
             //buscar carrito de compras
             $carrito_proceso=$this->carrito
                     ->where('usuario_id',  $id_usuario)

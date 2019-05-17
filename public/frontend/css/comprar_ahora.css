@@ -109,6 +109,10 @@ border: .5px solid #202020;
   color:white;
   margin-bottom: 5%;
 }
+#im_num{
+  width: 8%;
+  margin-bottom: 1%;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -189,6 +193,10 @@ border: .5px solid #202020;
   background-color: #1c1c1c;
   color:white;
 }
+#im_num{
+  width: 6%;
+  margin-bottom: 1%;
+}
 }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -268,6 +276,10 @@ border: .5px solid #202020;
   font-size: 25px;
   background-color: #1c1c1c;
   color:white;
+}
+#im_num{
+  width: 5%;
+  margin-bottom: 1%;
 }
 }
  /*************************************************************************************************************/
@@ -351,6 +363,10 @@ border: 1px solid #202020;
   background-color: #1c1c1c;
   color:white;
 }
+#im_num{
+  width: 5%;
+  margin-bottom: 1%;
+}
 }
  /*************************************************************************************************************/
 
@@ -426,6 +442,10 @@ border: 1px solid #202020;
   background-color: #1c1c1c;
   color:white;
 }
+#im_num{
+  width: 5%;
+  margin-bottom: 1%;
+}
 }
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/
 @media (min-width: 1501px) { 
@@ -500,5 +520,9 @@ border: 1px solid #202020;
 }
 #marg{
   margin-top: 3%;
+}
+#im_num{
+  width: 5%;
+  margin-bottom: 1%;
 }
 }

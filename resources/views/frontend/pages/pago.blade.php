@@ -85,6 +85,7 @@
 	 </div> 
 
 {!! Form::close() !!}
+@include('frontend.partials.error')
 
 @if ($tarjetas>0)
 <div class="row" id="margen">
