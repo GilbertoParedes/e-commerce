@@ -47,23 +47,16 @@ background-image: url("../images/principal/fondo.png");
   width: 100%;
 }
 
-#margen{
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 23px;
+  font-size: 2vw;
   color: black;
 }
 .input_form{
   font-family: "acumin";
-  font-size: 23px;
+  font-size: 35px;
   width: 100%;
+  margin-top: -5%;
   height: 38px;
   border-color: #626262;
 
@@ -71,17 +64,18 @@ background-image: url("../images/principal/fondo.png");
 .boton_enviar{
   float: right;
   height: 40px;
-  width: 120px;
+  width: 60%;
   font-family: "acumin";
-  font-size: 23px;
-  background-color: white;
-  border-color: #626262;
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  background-color: #1c1c1c;
+  color:white;
 }
 #mensaje{
-  height: 120px;
+  height: 160px;
   width: 100%;
   font-family: "acumin";
-  font-size: 23px;
+  font-size: 35px;
   background-color: white;
   border-color: #626262;
   border-style: solid;
@@ -91,28 +85,46 @@ background-image: url("../images/principal/fondo.png");
 #mensaje:focus .boton_enviar:focus{
     outline: none !important;
     border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
+/*fin formulario*/
 #txt_globo{
     font-family: "acumin";
-font-size: 5.5vw;
+font-size: 2.5vw;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
 }
 #marg{
-  margin-top:5.5%;
+  margin-top: 3%;
 }
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
+#icono_mapa{
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+}
+
+#direcciones{
+  font-size: 1.8vw;
   font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
-  margin-bottom: 5%;
+}
+#margen_comprar_ahora{
+  margin-bottom: 1vw;
+  background-image: url('../icons/FONDO.png');
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+#margen{
+  margin-bottom: 1vw;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
 }
 }
 
@@ -130,23 +142,16 @@ border: .5px solid #202020;
   width: 100%;
 }
 
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 2vw;
   color: black;
 }
 .input_form{
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 35px;
   width: 100%;
+  margin-top: -5%;
   height: 38px;
   border-color: #626262;
 
@@ -154,17 +159,18 @@ border: .5px solid #202020;
 .boton_enviar{
   float: right;
   height: 40px;
-  width: 120px;
+  width: 60%;
   font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  background-color: #1c1c1c;
+  color:white;
 }
 #mensaje{
-  height: 120px;
+  height: 160px;
   width: 100%;
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 35px;
   background-color: white;
   border-color: #626262;
   border-style: solid;
@@ -174,25 +180,46 @@ border: .5px solid #202020;
 #mensaje:focus .boton_enviar:focus{
     outline: none !important;
     border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
+/*fin formulario*/
 #txt_globo{
     font-family: "acumin";
-font-size: 4vw;
+font-size: 2.5vw;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+#icono_mapa{
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
 }
 
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
+#direcciones{
+  font-size: 1.8vw;
   font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
+}
+#margen_comprar_ahora{
+  margin-bottom: 1vw;
+  background-image: url('../icons/FONDO.png');
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+#margen{
+  margin-bottom: 1vw;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
 }
 }
  /*************************************************************************************************************/
@@ -207,24 +234,16 @@ border: .5px solid #202020;
 #im{
   width: 100%;
 }
-
-#margen{
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 4%;
-}
-/*fin margen*/
-/*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 2vw;
   color: black;
 }
 .input_form{
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 35px;
   width: 100%;
+  margin-top: -5%;
   height: 38px;
   border-color: #626262;
 
@@ -232,17 +251,18 @@ border: .5px solid #202020;
 .boton_enviar{
   float: right;
   height: 40px;
-  width: 120px;
+  width: 60%;
   font-family: "acumin";
-  font-size: 25px;
-  background-color: white;
-  border-color: #626262;
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  background-color: #1c1c1c;
+  color:white;
 }
 #mensaje{
-  height: 120px;
+  height: 160px;
   width: 100%;
   font-family: "acumin";
-  font-size: 25px;
+  font-size: 35px;
   background-color: white;
   border-color: #626262;
   border-style: solid;
@@ -252,27 +272,46 @@ border: .5px solid #202020;
 #mensaje:focus .boton_enviar:focus{
     outline: none !important;
     border:1px solid #626262;
-    box-shadow: 0 0 4px #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
+/*fin formulario*/
 #txt_globo{
     font-family: "acumin";
-font-size: 3.5vw;
+font-size: 2.5vw;
 }
 hr{
   margin-top: -1%;
-border: .5px solid #202020;
+border: 1px solid #202020;
 }
 #marg{
-  margin-top:5.5%;
+  margin-top: 3%;
 }
-.boton_enviar{
-  float: right;
-  height: 42px;
-  width: 180px;
+#icono_mapa{
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+}
+
+#direcciones{
+  font-size: 1.8vw;
   font-family: "acumin";
-  font-size: 25px;
-  background-color: #1c1c1c;
-  color:white;
+}
+#margen_comprar_ahora{
+  margin-bottom: 1vw;
+  background-image: url('../icons/FONDO.png');
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+#margen{
+  margin-bottom: 1vw;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
 }
 }
  /*************************************************************************************************************/
@@ -300,31 +339,33 @@ border: .5px solid #202020;
 /*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 27px;
+  font-size: 2vw;
   color: black;
 }
 .input_form{
   font-family: "acumin";
-  font-size: 27px;
+  font-size: 35px;
   width: 100%;
-  height: 45px;
+  margin-top: -5%;
+  height: 38px;
   border-color: #626262;
 
 }
 .boton_enviar{
   float: right;
-  height: 50px;
-  width: 120px;
+  height: 40px;
+  width: 60%;
   font-family: "acumin";
-  font-size: 27px;
-  background-color: white;
-  border-color: #626262;
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  background-color: #1c1c1c;
+  color:white;
 }
 #mensaje{
   height: 160px;
   width: 100%;
   font-family: "acumin";
-  font-size: 27px;
+  font-size: 35px;
   background-color: white;
   border-color: #626262;
   border-style: solid;
@@ -336,25 +377,44 @@ border: .5px solid #202020;
     border:1px solid #626262;
     box-shadow: 0 0 10px #719ECE;
 }
+/*fin formulario*/
 #txt_globo{
     font-family: "acumin";
-font-size: 3vw;
+font-size: 2.5vw;
 }
 hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
 #marg{
-  margin-top:5.5%;
+  margin-top: 3%;
 }
-.boton_enviar{
-  float: right;
-  height: 47px;
-  width: 180px;
+#icono_mapa{
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+}
+
+#direcciones{
+  font-size: 1.5vw;
   font-family: "acumin";
-  font-size: 28px;
-  background-color: #1c1c1c;
-  color:white;
+}
+#margen_comprar_ahora{
+  margin-bottom: 1vw;
+  background-image: url('../icons/FONDO.png');
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+#margen{
+  margin-bottom: 1vw;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
 }
 }
  /*************************************************************************************************************/
@@ -373,6 +433,7 @@ border: 1px solid #202020;
   width: 100%;
 }
 
+
 #margen{
   width: 70%;
   margin-left: 15%;
@@ -383,23 +444,33 @@ border: 1px solid #202020;
 /*formulario*/
 #textos{
   font-family: "acumin";
-  font-size: 30px;
+  font-size: 35px;
   color: black;
 }
 .input_form{
   font-family: "acumin";
-  font-size: 30px;
+  font-size: 35px;
   width: 100%;
-  height: 45px;
+  margin-top: -5%;
+  height: 38px;
   border-color: #626262;
 
 }
-
+.boton_enviar{
+  float: right;
+  height: 40px;
+  width: 60%;
+  font-family: "acumin";
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  background-color: #1c1c1c;
+  color:white;
+}
 #mensaje{
   height: 160px;
   width: 100%;
   font-family: "acumin";
-  font-size: 30px;
+  font-size: 35px;
   background-color: white;
   border-color: #626262;
   border-style: solid;
@@ -411,6 +482,7 @@ border: 1px solid #202020;
     border:1px solid #626262;
     box-shadow: 0 0 10px #719ECE;
 }
+/*fin formulario*/
 #txt_globo{
     font-family: "acumin";
 font-size: 2.5vw;
@@ -420,16 +492,41 @@ hr{
 border: 1px solid #202020;
 }
 #marg{
-  margin-top:5%;
+  margin-top: 3%;
 }
-.boton_enviar{
-  float: right;
-  height: 50px;
-  width: 180px;
+#icono_mapa{
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+}
+
+#borrar_direccion{
+  width:190%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: auto;
+  vertical-align: middle;
+}
+#direcciones{
+  font-size: 1.3vw;
   font-family: "acumin";
-  font-size: 32px;
-  background-color: #1c1c1c;
-  color:white;
+}
+#margen_comprar_ahora{
+  margin-bottom: 1vw;
+  background-image: url('../icons/FONDO.png');
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+#margen{
+  margin-bottom: 1vw;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
 }
 }
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/

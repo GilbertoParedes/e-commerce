@@ -20,7 +20,7 @@
       </div>   
   </div>
 <br>
-@foreach ($dir as $element)
+
   {{--  --}}
    {!! Form::open(['route' => 'comprar_parte_1.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
           <div id="margen">   
@@ -34,6 +34,7 @@
                    <div id="textos">  <input type="radio" name="facturar" value="no" checked> No (Si no, te lo pediremos dentro de un momento)<br></div>
              </div>
           </div>
+          @foreach ($dir as $element)
           <div id="margen_comprar_ahora">
          
               <div class="row">
@@ -79,8 +80,11 @@
                 </div>
               </div> 
           </div>
-    {!! Form::close() !!}
-@endforeach
+          @endforeach
+
+         {!! Form::close() !!}
+
+
    
           
    <!--     fin globos   --> 

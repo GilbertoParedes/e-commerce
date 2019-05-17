@@ -78,7 +78,7 @@ class ComprarDirController extends Controller
                 'direccion_id' =>  $id_direccion
             ]);
 
-           return view('frontend.pages.carrito_p2')
+           return redirect('pago')
                 ->with('validar',$valor);  
         }
        }
