@@ -26,7 +26,7 @@ class PagoRequest extends FormRequest
         return [
               'cardholder' => 'min:3|max:40|required',
               'type_pay' => 'min:3|max:40|required',
-              'card_number' => 'min:3|max:16|required',
+              'card_number' => 'min:16|max:16|required',
               'month' => 'required',
               'year' => 'required'    
         ];
