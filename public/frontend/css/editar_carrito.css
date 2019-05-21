@@ -1,0 +1,476 @@
+ body{
+background-image: url("../images/principal/fondo.png");
+ }
+  @font-face
+ 
+{
+   font-family: "paloma";
+   src: url("../fonts/La Paloma.ttf");
+}
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
+}
+  @font-face
+{
+   font-family: "seguiemj";
+   src: url("../fonts/seguiemj.ttf");
+}
+  @font-face
+{
+   font-family: "simplifica";
+   src: url("../fonts/simplifica.ttf");
+}
+#tarjeta{
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+@media (max-width: 575.98px) { 
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 4.5vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 35px;
+  border-color: #626262;
+  margin-left: 12%;
+
+}
+.boton_enviar{
+  float: right;
+  height:auto;
+  width: 28%;
+  font-family: "acumin";
+  font-size:4vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+  margin-right: 2.5%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 5vw;
+width: 95%;
+margin-left: 2.5%;
+margin-right: 2.5%;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 2%;
+font-family: "simplifica";
+font-size: 6vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 95%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 2.5%;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 3vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 30px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height:auto;
+  width: 25%;
+  font-family: "acumin";
+  font-size:3vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+  margin-right: 10%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 3vw;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 2%;
+font-family: "simplifica";
+font-size: 3.2vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 90%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 5%;
+}
+}
+ /*************************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.5vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 30px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height:auto;
+  width: 25%;
+  font-family: "acumin";
+  font-size:2vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+  margin-right: 10%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 2vw;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 1%;
+font-family: "simplifica";
+font-size: 2.5vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 80%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 10%;
+}
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.5vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #1c1c1c;
+
+}
+.boton_enviar{
+  float: right;
+  height:auto;
+  width: 20%;
+  font-family: "acumin";
+  font-size:1.7vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 2vw;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 1%;
+font-family: "simplifica";
+font-size: 2.5vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 80%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 10%;
+}
+
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.5vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #1c1c1c;
+
+}
+.boton_enviar{
+  float: right;
+  height:auto;
+  width: 20%;
+  font-family: "acumin";
+  font-size:1.7vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 2vw;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 1%;
+font-family: "simplifica";
+font-size: 2.5vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 80%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 10%;
+}
+
+}
+/*Extra large devices (large desktops, 1200px and up)*******************************************************************/
+@media (min-width: 1501px) { 
+
+
+
+/*fin margen*/
+/*formulario*/
+#textos{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  color: black;
+}
+.input_form{
+  font-family: "acumin";
+  font-size: 1.3vw;
+  width: 100%;
+  margin-top: -5%;
+  height: 38px;
+  border-color: #626262;
+
+}
+.boton_enviar{
+  float: right;
+  height: 50px;
+  width: 180px;
+  font-family: "acumin";
+  font-size: 1.3vw;
+  background-color: #1c1c1c;
+  color:white;
+  margin-bottom: 2%;
+}
+#mensaje{
+  height: 160px;
+  width: 100%;
+  font-family: "acumin";
+  font-size: 35px;
+  background-color: white;
+  border-color: #626262;
+  border-style: solid;
+      border:1px solid #626262;
+
+}
+#mensaje:focus .boton_enviar:focus{
+    outline: none !important;
+    border:1px solid #626262;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*fin formulario*/
+#txt_globo{
+font-family: "simplifica";
+font-size: 2vw;
+color: #1c1c1c;
+}
+
+#titulo{
+  margin-top: 1%;
+font-family: "simplifica";
+font-size: 2.5vw;
+color: #1c1c1c;
+}
+#margen_informacion{
+ background-image: url("../icons/FONDO.png");
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#foto{
+  width: 80%;
+  height: auto;
+  margin-bottom: 4%;
+  margin-left: 10%;
+}
+}
+.transparente{
+  height: 1px;
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+}

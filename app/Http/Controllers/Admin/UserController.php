@@ -8,7 +8,6 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\User;
-
 class UserController extends Controller
 {
     

@@ -164,9 +164,42 @@ public function store(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+     public function edit($id)
     {
-        //
+
+      if (Auth::check()) {
+        $valor=1;
+        //extraer id del usuario
+        $id_usuario=Auth::id();
+         $carritoProducto=CarritoProducto::find($id);
+         foreach ($carritoProducto as $value) {
+            $cantidad=$value->cantidad;
+            $producto_id=$value->producto_id;
+          
+            //consulta para obtener informacion del producto
+            $buscar_producto= $this->product->where('id',  $producto_id)->get();
+            foreach ($buscar_producto as $val_producto) {
+                  $path=$val_producto->path;
+                  $nombre=$val_producto->name;
+                  $descripcion=$val_producto->description;
+
+                  return view('frontend.pages.edit_carrito')
+                   ->with('id_producto',$id)
+                   ->with('cantidad',$cantidad)
+                   ->with('path',$path)
+                   ->with('nombre',$nombre)
+                   ->with('descripcion',$descripcion)
+                   ->with('validar',$valor);
+            }
+         }
+        
+
+         
+     }
+     else{
+      $valor=0;
+      return redirect('index')->with('validar',$valor);
+     }
     }
 
     /**
@@ -176,10 +209,17 @@ public function store(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+     public function update(Request $request, $id)
     {
-        //
+     
+
+      $productoModificar = CarritoProducto::find($id);
+      $productoModificar->update($request->all());
+      
+
+      return redirect('/carritocompras')->with('success', 'El producto ha sido actualizada con éxito');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -189,6 +229,39 @@ public function store(Request $request)
      */
     public function destroy($id)
     {
-        //
+        if (Auth::check()) {
+        $valor=1;
+        //extraer id del usuario
+        $id_usuario=Auth::id();
+         $carritoProducto=$this->carrito_producto->where('id',  $id)->get();
+         foreach ($carritoProducto as $value) {
+            $cantid=$value->cantidad;
+            $producto_id=$value->producto_id;
+          
+            //consulta para obtener informacion del producto
+            $buscar_producto= $this->product->where('id',  $producto_id)->get();
+            foreach ($buscar_producto as $val_producto) {
+                  $path=$val_producto->path;
+                  $nombre=$val_producto->name;
+                  $descripcion=$val_producto->description;
+                  $precio=$val_producto->price;
+                  return view('frontend.pages.edit_carrito')
+                   ->with('id_producto',$id)
+                   ->with('cantidad',$cantid)
+                   ->with('path',$path)
+                   ->with('nombre',$nombre)
+                   ->with('descripcion',$descripcion)
+                   ->with('precio',$precio)
+                   ->with('validar',$valor);
+            }
+         }
+        
+
+         
+     }
+     else{
+      $valor=0;
+      return redirect('index')->with('validar',$valor);
+     }
     }
 }

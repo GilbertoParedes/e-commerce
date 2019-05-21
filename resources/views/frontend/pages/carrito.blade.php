@@ -36,12 +36,16 @@
 				        <td>CANTIDAD</td>
 				        <td>TOTAL</td>
 				        <td></td>
+                <td></td>
 				      </tr>
 				    </thead>
 				    <tbody>
               @php
                 {{$subtotal=0;
-                  $cantidad=0;}}
+                  $cantidad=0;
+                  $total=0;
+                  $sumar=0;
+                }}
               @endphp
               @foreach($productos_carrito as $carr)
                   @php
@@ -57,18 +61,28 @@
                       @if($id_product_carr==$id_product)
           				      <tr id="contenido_tabla">
             				        <td><img src="/{{$product->path}}" id="producto"></td>
-            				        <td id="valores">{{$costo=$product->quantity}}</td>
-            				        <td id="valores">
-            				        	<input type="number" value="1" min="0" max="1000" step="1"/>
+            				        <td id="valores">{{$costo=$product->price}}</td>
+            				        <td id="valores">{{$cantidad=$carr->cantidad}}
+            				        <!--	<input type="number" value="1" min="0" max="1000" step="1"/>-->
             				        </td>
-            				        <td id="valores">{{$costo}}</td>
-            				       
+            				        <td id="valores">{{$total=$costo*$cantidad}}</td>
+            				       @php
+                             {{$sumar=$sumar+$total;}}
+                           @endphp
                             <td id="valores">
                                 <form action="{{ route('carrito_compras.destroy', $id_carrito_producto)}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn " type="submit"><img src="frontend/icons/x2.png" width="13px"></button>
                                 </form>
+                            </td>
+                            <td id="valores">     
+                               <form action="{{ route('carrito.destroy', $id_carrito_producto)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn " type="submit"><img src="frontend/icons/modificar.png" width="13px"></button>
+                                </form>
+
                             </td>
           				      </tr> 
                         @php
@@ -92,7 +106,7 @@
 	  				<p id="subtotal">SUBTOTAL</p>
 	  			</div>
 	  			<div class="col-12" >
-	  				<strong><p id="sub">{{$subtotal}}</p></strong>
+	  				<strong><p id="sub">{{$sumar}}</p></strong>
 	  			</div>
 	  			<div class="col-12">
       {{--  SI AY PRODUCTOS EN EL CARRITO--}} 
@@ -172,6 +186,7 @@
           <input type="text" value="{{$product->id}}" name="id_producto" id="input_transparent" >
 
  {!! Form::close() !!}
+
         </div>    
          @endif
        @endforeach 

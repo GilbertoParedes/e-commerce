@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Direction;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Requests\DireccionRequest;
 class DirectionController extends Controller
 {
     protected $direccion;
@@ -42,10 +42,12 @@ class DirectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DireccionRequest $request)
     {
      if (Auth::check()) {
          $valor=1;
+        $validated = $request->validated();
+
          //extraer id del usuario
         $id_usuario=Auth::id();    
         $estado=$request->estado;
