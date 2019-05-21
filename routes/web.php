@@ -17,7 +17,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('lomasvendido', 'Frontend\PagesController@lomasvendido');
-Route::get('contactanos', 'Frontend\PagesController@contactanos');
 Route::get('visita_por_primera_vez', 'Frontend\PagesController@visitaprimeravez');
 
 
@@ -47,7 +46,8 @@ Route::get('globos_enamorados', 'Frontend\GlobosController@globos_enamorados');
 Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones');
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
-
+	
+	Route::resource('contactanos', 'Frontend\ContactanosController');
 	Route::resource('cuenta', 'Frontend\UserController');
 	Route::resource('carrito_compras','Frontend\CarritoController');
 	Route::resource('index', 'Frontend\PagesController');

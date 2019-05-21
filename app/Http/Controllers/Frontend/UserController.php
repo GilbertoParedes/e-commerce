@@ -176,12 +176,12 @@ class UserController extends Controller
     public function update(Request $request, $user_id)
     {
 
-        $nombre=$request->nombre;
+        $name=$request->name;
         $apellido_p=$request->apellido_p;
         $apellido_m=$request->apellido_m;
         $correo=$request->email;
         $pass=$request->pass_anterior;
-        $pass2=$request->pass_nueva;
+        $pass2=$request->password;
         $pass3=$request->pass_otra;
         $conv_pass=Hash::make($request->pass_anterior);
         //consulta si la contraseña es la misma que la que esta registrada

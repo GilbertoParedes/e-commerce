@@ -23,7 +23,7 @@
 
 <!--     GLOBOS   --> 
 
-
+  {!! Form::open(['route' => 'contactanos.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
     <div class="row" id="margen" >
         <div class="col-lg-12 col-md-12 col-sm-12 col-12" >
          
@@ -31,7 +31,7 @@
               <form action="/action_page.php" >
                 <div class="form-group">
                   <p for="nombre" id="textos">NOMBRE</p>
-                  <input type="text" class="input_form" id="nombre" name="nombre">
+                  <input type="text" class="input_form" id="nombre" name="name">
                 </div>
                 <div class="form-group">
                   <p for="email" id="textos">CORREO ELECTRÓNICO</p>
@@ -47,12 +47,14 @@
                     
                   </textarea>
                 </div>
+              
                 <button type="submit" class="boton_enviar">ENVIAR</button>
               </form>
            
         </div>   
       
    </div>
+  {!! Form::close() !!}
 
    <!--     fin globos   --> 
 </div>

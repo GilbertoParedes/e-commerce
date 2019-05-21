@@ -18,15 +18,15 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12" >    
                         <div class="form-group">
                           <p for="nombre" id="textos">Nombre:</p>
-                          <input type="text" class="input_form" id="nombre" name="nombre" value="{{$name}} " required>
+                          <input type="text" class="input_form" id="nombre" name="name" value="{{$name}} " required>
                         </div>
                         <div class="form-group">
                           <p for="text" id="textos">Apellido Paterno:</p>
-                          <input type="text" class="input_form" name="apellido_p" value="{{$apellido_p}}" required>
+                          <input type="text" class="input_form" name="apellido_p" value="{{$apellido_p}}" pattern="[A-Za-z]{5,15}" title="Solo se aceptan letras" required>
                         </div>
                         <div class="form-group">
                           <p for="text" id="textos">Apellido_materno:</p>
-                          <input type="text" class="input_form" name="apellido_m" value="{{$apellido_m}}" required>
+                          <input type="text" class="input_form" name="apellido_m" value="{{$apellido_m}}"  pattern="[A-Za-z]{5,15}" title="Solo se aceptan letras"required>
                         </div>
                         <div class="form-group">
                           <p for="tel" id="textos">Email</p>
@@ -41,7 +41,7 @@
                             </div>
                            <div class="form-group">
                               <p for="tel" id="textos">Password nueva:</p>
-                               <input type="password" class="input_form"  name="pass_nueva"  required>  
+                               <input type="password" class="input_form"  name="password"  required>  
                             </div>
                            <div class="form-group">
                               <p for="tel" id="textos">Introducir nuevamente la password</p>

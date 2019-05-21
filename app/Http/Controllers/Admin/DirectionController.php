@@ -42,12 +42,10 @@ class DirectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DireccionRequest $request)
+    public function store(Request $request)
     {
      if (Auth::check()) {
          $valor=1;
-        $validated = $request->validated();
-
          //extraer id del usuario
         $id_usuario=Auth::id();    
         $estado=$request->estado;
