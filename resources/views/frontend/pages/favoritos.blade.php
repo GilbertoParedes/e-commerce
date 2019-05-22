@@ -91,14 +91,16 @@
                                                               @else
                                                               @endif
                                                           </div>
-                                                                                       
+                                      {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}                                        
                                                 <div class="row">
                                                      <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
                                                          <center> <p  id="precio" >{{ $pro->price}}</p></center>
                                                      </div>
                                                      <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
                                                       <center>
-                                                      <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui1" ></a></center>
+                                                     <button type="submit" style="background-color: transparent;border-color: transparent;">
+                                                        <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                                                      </button>
                                                      </div>
                                                  </div>
 
@@ -110,6 +112,9 @@
                                                          <center> <p  id="texto_globos" >Compra aquí</p></center>
                                                      </div>
                                                  </div>
+                                                <input type="text" value="{{$pro->id}}" name="id_producto" id="input_transparent" style="background-color: transparent;border-color: transparent; height: 1px;color:transparent;" >
+
+                                        {!! Form::close() !!}
                                                  </div>
                                                  <div class="row">
                                                      <div class="col">
@@ -165,14 +170,16 @@
                                                  </a> 
                                               </div>
                                           
-                                           
+                                           {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}   
                                                 <div class="row">
                                                      <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
                                                          <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
                                                      </div>
                                                      <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
                                                       <center>
-                                                      <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui1"></a></center>
+                                                      <button type="submit" style="background-color: transparent;border-color: transparent;">
+                                                        <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                                                      </button></center>
                                                      </div>
                                                  </div>
 
@@ -184,6 +191,8 @@
                                                          <center> <p  id="texto_globos" >Compra aquí</p></center>
                                                      </div>
                                                  </div>
+                                                 <input type="text" value="{{$pro->id}}" name="id_producto" id="input_transparent" style="background-color: transparent;border-color: transparent; height: 1px;color:transparent;" >
+                                              {!! Form::close() !!}
                                                  </div>
                                                  <div class="row">
                                                      <div class="col">
