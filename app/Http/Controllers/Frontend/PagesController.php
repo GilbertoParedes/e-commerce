@@ -51,14 +51,14 @@ class PagesController extends Controller
 
         }
   
-        $categorias = $this->category->where('type',  'arreglo')->get();
+        $categorias = $this->category->where('type',  'Arreglo')->get();
         
         $deseable_buscar= $this->deseable
             ->where('user_id',  $id_usuario)
             ->get();    
     
-        $productos = $this->product->where('type',  'arreglo')->get();
-        $productos_globos = $this->product->where('type',  'globo')->get();
+        $productos = $this->product->where('type',  'Arreglo')->get();
+        $productos_globos = $this->product->where('type',  'Globo')->get();
 
 
  		return view('frontend.pages.lomasvendido')

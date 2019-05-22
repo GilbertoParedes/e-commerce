@@ -12,6 +12,8 @@ use App\Carrito;
 use App\CarritoProducto;
 use App\Pago;
 use App\Direction;
+use App\User;
+
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PagoRequest;
 class PagoController extends Controller
@@ -24,7 +26,8 @@ class PagoController extends Controller
    protected $carrito;
    protected $pago;
    protected $carrito_producto;
-   function __construct(Product $product, Category $cat, ProductoCategoria $product_cat, Deseable $deseable,ComprarAhora $comprarahora, Carrito $carrito,Pago $pago, Direction $direction,CarritoProducto $carrito_producto)
+   protected $user;
+   function __construct(Product $product, Category $cat, ProductoCategoria $product_cat, Deseable $deseable,ComprarAhora $comprarahora, Carrito $carrito,Pago $pago, Direction $direction,CarritoProducto $carrito_producto, User $user)
    {
         $this->product = $product;
         $this->cat = $cat;
@@ -35,6 +38,7 @@ class PagoController extends Controller
         $this->direction=$direction;
         $this->carrito_producto=$carrito_producto;
         $this->pago=$pago;
+        $this->user=$user;
 
    }
 
@@ -194,5 +198,44 @@ class PagoController extends Controller
             return redirect('index')
                  ->with('validar',$valor); 
       }
+    }
+    public function getObtenerinformacionpago($monto){
+     
+   
+    /*  if (Auth::check()) {
+        $id_usuario=Auth::id();
+        $email_cliente="lauratopaciovaldez@gmail.com";
+        //extraer correo electronico del ciente
+        $usuario_select=$this->user->where('id',  $id_usuario)->get();
+           foreach ($usuario_select as $getCorreo) {
+                $email_cliente=$getCorreo->email;
+            }
+      
+          $api_key="4Vj8eK4rloUd272L48hsrarnUA";
+          $info_pago=new stdClass();
+          $info_pago->merchantId="508029";
+          $info_pago->accountId="512324";
+          $info_pago->description="MIS VENTAS HANA";
+          $info_pago->referenceCode="PAGOS"
+          $info_pago->amount=$monto;
+          $info_pago->tax="0";
+          $info_pago->taxReturnBase="0";
+          $info_pago->currency="MXN";
+          $info_pago->signature=md5($api_key."~".$info_pago->merchantId."~".$info_pago->referenceCode."~".$monto."~MXN");
+          $info_pago->test="1";
+          $info_pago->buyerEmail=$email_cliente;
+          $info_pago->responseUrl="http://ecommerce.test/public/pagos/respuestapagos";
+          $info_pago->confirmationUrl="http://ecommerce.test/public/pagos/confirmacionpagos";
+          return  json_encode($info_pago);
+      }
+      else{
+                //redireccionar al inicio
+      }*/
+    }
+    public function getRespuestapagos(){
+
+    }
+    public function getConfirmacionpagos(){
+
     }
 }

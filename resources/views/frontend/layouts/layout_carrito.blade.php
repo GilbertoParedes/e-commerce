@@ -24,6 +24,7 @@
     <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap-input-spinner.js')}}"></script>
     <script src="{{asset('frontend/js/modal.js')}}"></script>
+    <script src="{{asset('frontend/js/CarritoController.js')}}"></script>
     <script>
         $("input[type='number']").inputSpinner()
     </script>

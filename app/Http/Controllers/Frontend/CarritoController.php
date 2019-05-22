@@ -69,13 +69,14 @@ class CarritoController extends Controller
                         ->where('carrito_id', $id_carrito_compras)
                         ->get();
 
-                return view('frontend.pages.carrito')
+               return view('frontend.pages.carrito')
                 ->with('validar',$valor)
                 ->with('buscar_carrito',$buscar_carrito)
                 ->with('productos_carrito',$productos_carrito)
                 ->with('buscar_complemento',$buscar_complemento)
                 ->with('products',$products)
                 ->with('cantidad_Dir',$cantidad_Dir);     
+
             }
             else{
                 return redirect('index')->with('validar',$valor)->with('alert', 'Aún no tienes productos en tu carrito!');

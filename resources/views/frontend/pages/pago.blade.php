@@ -87,6 +87,9 @@
 {!! Form::close() !!}
 @include('frontend.partials.error')
 
+<div id="idPayuButtonContainer">
+  
+</div>
 @if ($tarjetas>0)
 <div class="row" id="margen">
       <div class="col-md-12 col-sm-12 col-12" >

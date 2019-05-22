@@ -121,7 +121,7 @@
                                        <center> <p  id="texto_globos" >Compra aquí</p></center>
                                    </div>
                                </div>
-                    <input type="text" value="{{$producto_id}}" name="id_producto" id="input_transparent" disabled>
+                    <input type="text" value="{{$producto_id}}" name="id_producto" id="input_transparent" >
 
              {!! Form::close() !!}
 
@@ -208,7 +208,7 @@
                                        <center> <p  id="texto_globos" >Compra aquí</p></center>
                                    </div>
                                </div>
-                    <input type="text" value="{{$product}}" name="id_producto" id="input_transparent" disabled>
+                    <input type="text" value="{{$product}}" name="id_producto" id="input_transparent" >
 
              {!! Form::close() !!}
 

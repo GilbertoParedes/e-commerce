@@ -22,7 +22,11 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
-
+#transparente{
+  background-color: transparent;
+  border-color: transparent;
+  color: transparent;
+}
 #bordes{
   border: solid 1px #CECECE; 
 }

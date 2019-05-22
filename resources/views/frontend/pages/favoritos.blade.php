@@ -245,38 +245,63 @@
                   {{$pk_producto=$prod->id;}}
                 @endphp
               @if ($fk_producto==$pk_producto)
-              
-              <div class="col-md-3 col-sm-3 col-6" >
-                  <a href="{{route('producto.show', $pk_producto)}}">
-                   <img src="../{{$prod->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-                  </a>
-                    <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
-            
-            
-                   <div class="row">
-                     <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                           <center> <p  id="precio" >{{$prod->price}}</p></center>
-                       </div>
-                       <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                        <center>
-                          <button type="submit" style="background-color: transparent;border-color: transparent;">
-                              <img src="frontend/icons/compraaqui.png" id="compraaqui">
-                          </button>
-                        </center>
-                       </div>
-                   </div>
 
-                   <div class="row">
-                       <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                           <center> <p  id="texto_globos" >Envío incluido</p></center>
-                       </div>
-                       <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                           <center> <p  id="texto_globos" >Compra aquí</p></center>
-                       </div>
-                   </div>  
              
-          
-              </div> 
+                   
+                    <div class="col-md-3 col-sm-3 col-6" >
+                        <a href="{{route('producto.show', $pk_producto)}}">
+                         <img src="../{{$prod->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
+                        </a>
+                 
+                      <div class="top-right">
+                         @if ($validar==1)
+                         <a href="{{route('catalogo.show', $fk_producto)}}">
+                           @php
+                             {{ $icono="corazon3"; }}
+                           @endphp
+                           @foreach($favoritos as $favorit)
+                                @if($favorit->product_id==$pk_producto)
+
+                                 @php
+                                   {{ $icono="corazon4"; }}
+                                 @endphp
+
+                                @else
+                                @endif 
+                              
+                           @endforeach
+                          <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                          </a>
+                          @else
+                          @endif
+                      </div>
+           {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
+                         <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
+                                 <center> <p  id="precio" >{{$prod->price}}</p></center>
+                             </div>
+                             <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
+                              <center>
+                                <button type="submit" style="background-color: transparent;border-color: transparent;">
+                                    <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                                </button>
+                              </center>
+                             </div>
+                         </div>
+
+                         <div class="row">
+                             <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
+                                 <center> <p  id="texto_globos" >Envío incluido</p></center>
+                             </div>
+                             <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
+                                 <center> <p  id="texto_globos" >Compra aquí</p></center>
+                             </div>
+                         </div>  
+               <input type="text" value="{{$pk_producto}}" name="id_producto" id="transparente" >
+            {!! Form::close() !!}
+                    </div> 
+              
+              
               @else
               @endif 
            @endforeach 
