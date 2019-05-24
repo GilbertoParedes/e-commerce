@@ -1,0 +1,309 @@
+ body{
+background-image: url("../images/principal/fondo.png");
+ }
+  @font-face
+ 
+{
+   font-family: "paloma";
+   src: url("../fonts/La Paloma.ttf");
+}
+  @font-face
+{
+   font-family: "acumin";
+   src: url("../fonts/Acumin Pro Cond ExtraLight.otf");
+}
+  @font-face
+{
+   font-family: "seguiemj";
+   src: url("../fonts/seguiemj.ttf");
+}
+  @font-face
+{
+   font-family: "simplifica";
+   src: url("../fonts/simplifica.ttf");
+}
+#tarjeta{
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+@media (max-width: 575.98px) { 
+
+#content{
+    width: 98%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#im{
+  width: 100%;
+}
+
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 4vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+#content{
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#im{
+  width: 100%;
+}
+
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 4vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}
+ /*************************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+#content{
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+#im{
+  width: 100%;
+}
+
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 3vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+#content{
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.5vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 45%;
+  margin-left: 27.5%;
+  margin-right: 27.5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}
+ /*************************************************************************************************************/
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+#content{
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.5vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 45%;
+  margin-left: 27.5%;
+  margin-right: 27.5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}
+/*Extra large devices (large desktops, 1200px and up)*******************************************************************/
+@media (min-width: 1501px) { 
+
+#content{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#im{
+  width: 100%;
+}
+
+#margen{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+/*fin formulario*/
+#txt_globo{
+    font-family: "acumin";
+font-size: 2.5vw;
+}
+hr{
+  margin-top: -1%;
+border: 1px solid #202020;
+}
+#marg{
+  margin-top: 3%;
+}
+
+#im2{
+  width: 45%;
+  margin-left: 27.5%;
+  margin-right: 27.5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+}

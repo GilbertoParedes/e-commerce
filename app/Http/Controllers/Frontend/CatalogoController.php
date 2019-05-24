@@ -490,5 +490,20 @@ class CatalogoController extends Controller
              $id_usuario=null;
         }
    }
+       public function finalizar_compra()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+         return view('frontend.pages.finalizar')
+         ->with('validar',$valor);
+    }
 
 }

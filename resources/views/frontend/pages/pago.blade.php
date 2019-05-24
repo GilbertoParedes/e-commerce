@@ -19,112 +19,138 @@
        <hr>
       </div>   
   </div>
-{!! Form::open(['route' => 'pago.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+
+  @php
+     {{$estandar="Estandar";$premium="Premium";}}
+  @endphp
+  @if ($type_pay=="Premium")
   <div class="row">
-      <div class="col-6" >
-        <center><H1 id="txt_tipo1"><input type="radio" name="type_pay" value="estandar" id="type_pay" checked>Envío Estandar | Envío Gratis</H1></center>
+      <div class="col-6" > 
+         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
       </div>   
       <div class="col-6" >
-       <center> <H1 id="txt_tipo"><input type="radio" name="type_pay" value="premium" id="type_pay" >Envío Premium | Envío $80</H1></center>
+         <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo">Envío Premium | Envío $80</H1></a></center> 
+      </div>  
+  </div>
+ @elseif($type_pay=="Estandar")
+  <div class="row">
+      <div class="col-6" > 
+         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo">Envío Estandar | Envío Gratis</H1></a></center>
+      </div>   
+      <div class="col-6" >
+         <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo1">Envío Premium | Envío $80</H1></a></center> 
       </div>  
   </div>
 
+ @else
+   <div class="row">
+      <div class="col-6" > 
+         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
+      </div>   
+      <div class="col-6" >
+         <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo1">Envío Premium | Envío $80</H1></a></center> 
+      </div>  
+  </div>
+ @endif  
+
+
+
     <div class="row">
       <div class="col-12" >
-        <H1 id="txt"><img src="../public/frontend/images/descripcion/3.png" id="im_num">ELIGE UN MÉTODO DE PÁGO</H1>
+        <H1 id="txt"><img src="../public/frontend/images/descripcion/3.png" id="im_num">RESUMEN DE LA COMPRA</H1>
        <hr>
       </div>   
   	</div>
 
 	<div class="row" id="margen">
       <div class="col-12" >
-        <H1 id="txt_subtitulos"><b>Tarjetas de crédito o débito</b></H1>
-      </div> 
-      <div class="col-12" >
-        <p id="txt_subtitulo2">Ingresa la información del a tarjeta</p>
+        <H1 id="txt_subtitulos"><b>PRODUCTOS</b></H1>
       </div>     
-  	</div>
- 	 <div class="row" id="margen">
-	    <div class="col-lg-4 col-md-6 col-12" >
-	        <p id="txt_subtitulo3"><b>Nombre del titular de la tarjeta</b></p>
-	        <input type="text" name="cardholder" id="campos_input">
-	    </div>
-	    <div class="col-lg-4 col-md-6 col-12" >
-	        <p id="txt_subtitulo3"><b>Número de la tarjeta</b></p>
-	        <input type="text" name="card_number" id="campos_input">
-	    </div>
-	    <div class="col-lg-4 col-md-12 col-12" >
-	    	<div class="row">
-	    		 <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-		 			<p id="txt_subtitulo3"> <br></p>
-			        <select name="month" id="select_month">
-			        	@for ($i = 1; $i <13 ; $i++)
-			        		{{-- expr --}}
-			        	
-			        	<option value="{{$i}}">{{$i}}</option>
-			        	@endfor
-			        </select>
-	    		 </div>	
-	    		 <div class="col-lg-3 col-md-3 col-sm-3 col-6" >
-	    		 		<p id="txt_subtitulo3"> <br></p>
-			        <select name="year" id="select_month">
-			        	@for ($i = 2019; $i <2040 ; $i++)
-			        		{{-- expr --}}
-			        	
-			        	<option value="{{$i}}">{{$i}}</option>
-			        	@endfor
-			        </select>
-	    		 </div>
-	    		 <div class="col-sm-5 col-12" >
-	    		 	<p id="txt_subtitulo3"> <br></p>
-	    		 	<button id="boton_pago" type="submit">AÑADIR TU TARJETA</button>
-	    		 </div>
-	    	</div>
-	       
-	    </div>
-	 </div> 
+  </div>
 
-{!! Form::close() !!}
+
+
 @include('frontend.partials.error')
 
 <div id="idPayuButtonContainer">
   
 </div>
-@if ($tarjetas>0)
+
 <div class="row" id="margen">
       <div class="col-md-12 col-sm-12 col-12" >
         <div class="table-responsive">
           <table class="table">
             <thead id="thead">
               <tr>
-                <td>Tipo de envío</td>
-                <td>Titular</td>
-                <td>No. Tarjeta</td>
-                <td>Mes</td>
-                <td>Año</td>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>CANTIDAD</td>
+                <td>SUBTOTAL</td>
               </tr>
             </thead>
             <tbody>
-              @foreach ($BuscarTarjeta as $element)
-               <tr>
-                 <th>{{$type_pay=$element->type_pay}}</th>
-                 <th>{{$cardholder=$element->cardholder}}</th>
-                 <th>{{$card_number=$element->card_number}}</th>
-                 <th>{{$month=$element->month}}</th>
-                 <th>{{$year=$element->year}}</th>
-               </tr>
+              @php
+                {{$total=0;}}
+              @endphp
+              @foreach ($producto_carrito as $carr)
+                @foreach ($productos as $product)
+                  @if ($carr->producto_id==$product->id)
+                   <tr>
+                      <td><p id="txt_subtitulo2">{{$product->name}}</p></td>
+                      <td><p id="txt_subtitulo2">{{$precio=$product->price}}</p></td>
+                      <td><p id="txt_subtitulo2">{{$cantidad=$carr->cantidad}}</p></td>
+                      <td><p id="txt_subtitulo2">{{$subtotal=$precio*$cantidad}}</p></td>
+                        @php
+                          {{$total=$total+$subtotal;}}
+                        @endphp
+                     </tr>
+                    
+                  @else
+                  @endif
+
+                @endforeach
               @endforeach
+                  <tr>
+                     <td></td>
+                     <td></td>
+                     <td><p id="txt_subtitulo2"><b>TOTAL:</b></p></td>
+                     <td><p id="txt_subtitulo2"><b>{{$total}}</b></p></td>
+                  </tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="col-md-2 col-sm-12 col-12">
-        <center><button id="boton_pago">CONFIRMAR COMPRA</button></center>
+
+      @php
+            {{  $signature=md5($api_key."~".$merchantId."~".$referenceCode."~".$total."~MXN");}}
+      @endphp
+      <div class="col-12">
+         <form method="POST" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+
+            <input name="merchantId"    type="hidden"  value="{{$merchantId}}"   >
+            <input name="accountId"     type="hidden"  value="{{$accountId}}" >
+            <input name="description"   type="hidden"  value="{{$description}}"  >
+            <input name="referenceCode" type="hidden"  value="{{$referenceCode}}" >
+            <input name="amount"        type="hidden"  value="{{$total}}"   >
+            <input name="tax"           type="hidden"  value="{{$tax}}"  >
+            <input name="taxReturnBase" type="hidden"  value="{{$taxReturnBase}}" >
+            <input name="currency"      type="hidden"  value="{{$currency}}" >
+            <input name="signature"     type="hidden"  value="{{$signature}}"  >
+            <input name="test"          type="hidden"  value="{{$test}}" >
+            <input name="buyerEmail"    type="hidden"  value="{{$buyerEmail}}" >
+            <input name="shippingAddress"    type="hidden"  value="calle 93 n 47 - 56" >
+            <input name="shippingCity"    type="hidden"  value="México" >
+            <input name="shippingCountry"    type="hidden"  value="Tepic" >
+            <input name="responseUrl"    type="hidden"  value="{{$responseUrl}}" >
+            <input name="confirmationUrl"    type="hidden"  value="{{$confirmationUrl}}" >
+            <input name="Submit"        type="submit"  value="PAGAR" id="boton_pago">
+          </form>
+          </div>
+
       </div>
 </div>
-@else
 
-@endif
 
 <!-- esta opción se habilitará más adelante
 

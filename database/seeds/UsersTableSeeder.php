@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
                 'edad'=> 23,
                 'aniversario'=> '1995-08-28', 
                 'type_user'=>'Admin',
-        		'email' => 'admin@admin.com',
+        		'email' => 'lauratopaciovaldez@gmail.com',
         		'password' => bcrypt('secret'),
                 'path' => 'https://www.ecured.cu/images/thumb/c/c6/Avestruces.jpg/260px-Avestruces.jpg'
         	]

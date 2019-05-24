@@ -44,7 +44,7 @@ Route::get('catalogo_mejorate', 'Frontend\CatalogoController@catalogo_mejorate')
 Route::get('arreglos_temporada', 'Frontend\CatalogoController@arreglos_temporada');
 Route::get('paquetes', 'Frontend\GlobosController@paquetes');
 Route::get('detalles', 'Frontend\ProductoController@detalles');
-
+Route::get('finalizar_compra', 'Frontend\CatalogoController@finalizar_compra');
 Route::get('globos_cumpleanos', 'Frontend\GlobosController@globos_cumpleanos');
 Route::get('globos_mejorate', 'Frontend\GlobosController@globos_mejorate');
 Route::get('globos_nacimientos', 'Frontend\GlobosController@globos_nacimientos');
@@ -63,7 +63,13 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('favoritos', 'Frontend\FavoriteController');
 	Route::resource('comprar', 'Frontend\ComprarController');
 	Route::resource('pago', 'Frontend\PagoController');
+	Route::get('pago/obtenerinformacionpago/{monto}', 'Frontend\PagoController@getObtenerinformacionpago');
+	Route::get('respuesta', 'Frontend\PagoController@getRespuestapagos');
+	
+	
 
+	Route::get('pago/obtenerrespuestapago', 'Frontend\PagoController@getRespuestapagos');
+	Route::resource('pagos', 'Frontend\PagosController');
 	Route::resource('producto', 'Frontend\ProductoController');
 	Route::resource('comprar_parte_1', 'Frontend\ComprarDirController');
 	Route::resource('users', 'Admin\UserController');

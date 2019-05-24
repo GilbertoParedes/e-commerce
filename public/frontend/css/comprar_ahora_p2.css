@@ -780,8 +780,8 @@ font-family: "acumin";
 font-size: 2.2vw;
 margin-bottom: 1%;
 background-color: #F1F1F1;
-float:right;
 width:80%; 
+color:#0d0d0d;
 border-style: solid;
 border-color: #F1F1F1;
 border-width: 2px;
@@ -790,8 +790,8 @@ border-width: 2px;
 font-family: "acumin";
 font-size: 2.2vw;
 margin-bottom: 1%;
-float:left;
 width:80%; 
+color:#0d0d0d;
 background-color: white;
   border-style: solid;
 border-color: #0d0d0d;
@@ -803,8 +803,8 @@ border-color: #0d0d0d;
 }
 #txt_subtitulo2{
   font-family: "acumin";
-  color:#0d0d0d;
-  font-size: 1.4vw;
+  color:black;
+  font-size: 1.2vw;
 }
 #txt_subtitulo3{
   font-family: "seguiemj";

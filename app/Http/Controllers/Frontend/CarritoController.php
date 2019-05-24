@@ -69,13 +69,55 @@ class CarritoController extends Controller
                         ->where('carrito_id', $id_carrito_compras)
                         ->get();
 
-               return view('frontend.pages.carrito')
+            
+                //datos de  pago
+                 
+                  
+                   $api_key="4Vj8eK4rloUd272L48hsrarnUA";
+                   $merchantId="508029";
+                   $accountId="512324";
+                   $description="Test PAYU";
+                   $referenceCode="TestPayU";
+                   $tax="0";
+                   $taxReturnBase="0";
+                   $currency="MXN";
+                   $test="1";
+                   $responseUrl="http://ecommerce.test/public/respuesta";
+                   $confirmationUrl="http://pagos.syslacstraining.com/pagos/confirmacionpagos";
+
+              
+                //extraer correo electronico   
+                 $correo_user=$this->user
+                ->where('id',  $id_usuario)
+                ->get();  
+                foreach ($correo_user as $value) {
+                    $email=$value->email;
+                }
+                return view('frontend.pages.carrito')
                 ->with('validar',$valor)
                 ->with('buscar_carrito',$buscar_carrito)
                 ->with('productos_carrito',$productos_carrito)
                 ->with('buscar_complemento',$buscar_complemento)
                 ->with('products',$products)
-                ->with('cantidad_Dir',$cantidad_Dir);     
+                ->with('cantidad_Dir',$cantidad_Dir)
+                ->with('merchantId',$merchantId)
+                ->with('accountId',$accountId)
+                ->with('description',$description)
+                ->with('referenceCode',$referenceCode)
+                ->with('tax',$tax)
+                ->with('taxReturnBase',$taxReturnBase)
+                ->with('currency',$currency)
+                ->with('api_key',$api_key)
+                ->with('test',$test)
+                ->with('buyerEmail',$email)
+                ->with('responseUrl',$responseUrl)
+                ->with('confirmationUrl',$confirmationUrl);     
+
+
+
+
+
+
 
             }
             else{

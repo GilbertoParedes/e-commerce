@@ -16,10 +16,6 @@ class CreatePago extends Migration
         Schema::create('pago', function (Blueprint $table) {
             $table->increments('id');
             $table->string('type_pay',30);
-            $table->string('cardholder',60);
-            $table->string('card_number',16);
-            $table->integer('month');
-            $table->integer('year');
             $table->integer('comprar_ahora_id')->unsigned();
 
             $table->foreign('comprar_ahora_id')

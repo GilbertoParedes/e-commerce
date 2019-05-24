@@ -108,13 +108,8 @@
 	  			<div class="col-12" >
 	  				<strong><p id="sub">{{$sumar}}</p></strong>
 	  			</div>
-          <div class="col-12">
-            <input type="text" name="htotal" id="htotal" value="{{$sumar}}">
-          <div id="idPayuButtonContainer">
-  
-          </div>
-          </div>
-	  			<div class="col-12">
+         
+	 			<div class="col-12">
       {{--  SI AY PRODUCTOS EN EL CARRITO--}} 
             @if ($cantidad>0)
              

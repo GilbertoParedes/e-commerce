@@ -1,17 +1,17 @@
 $(document).ready(function(){
-	 CrearBotonPayu();
+	CrearBotonPayu();
 });
-
 function CrearBotonPayu()
 {
-	var montoPago=$("#htotal").val();
-	
-   /* $.ajax({
-        dataType: "json",
-        method:"GET",
-        url: "/pago/obtenerinformacionpago/"+montoPago
-    })*/
-	/*.done(function( infopago ){
+
+    var montoPago=$("#htotal").val();
+
+     $.ajax({
+                dataType: "json",
+                method:"GET",
+                url: "pago/obtenerinformacionpago/"+montoPago
+                })
+            .done(function( infopago ){
 
             var html_button="<form method='post' action='https://sandbox.gateway.payulatam.com/ppp-web-gateway/'>\
               <input name='merchantId'    type='hidden'  value='"+infopago.merchantId+"'   >\
@@ -33,10 +33,6 @@ function CrearBotonPayu()
             $("#idPayuButtonContainer").append(html_button);
 
     });
-*/
-
-
-
 
 
 }
