@@ -37,7 +37,7 @@
      {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
                  <div class="row" id="botones">
                   <div class="col-12">
-                    <input type="text" value="{{$product->id}}" name="id_producto" id="input_transparent" disabled>
+                    <input type="text" value="{{$product->id}}" name="id_producto" id="input_transparent" >
                  </div>
                  <div class="col-6">
                 

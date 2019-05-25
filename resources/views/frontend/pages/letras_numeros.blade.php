@@ -166,9 +166,86 @@ contador2 = (n0 ? 1 : 0) + (n1 ? 1 : 0) + (n2 ? 1 : 0) + (n3 ? 1 : 0) + (n4 ? 1 
           </div>
             <div class="col-md-1 col-sm-2 col-2" >
              <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="Z" onClick="limitarSelección(this,this.form)">Z</p>    
+          </div>     <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="A" onClick="limitarSelección(this,this.form)">A</p>    
           </div>
-        
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="B" onClick="limitarSelección(this,this.form)">B</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="C" onClick="limitarSelección(this,this.form)">C</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="D" onClick="limitarSelección(this,this.form)">D</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="E" onClick="limitarSelección(this,this.form)">E</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="F" onClick="limitarSelección(this,this.form)">F</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="G" onClick="limitarSelección(this,this.form)">G</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="H" onClick="limitarSelección(this,this.form)">H</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="I" onClick="limitarSelección(this,this.form)">I</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="J" onClick="limitarSelección(this,this.form)">J</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="K" onClick="limitarSelección(this,this.form)">K</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="L" onClick="limitarSelección(this,this.form)">L</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="M" onClick="limitarSelección(this,this.form)">M</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="N" onClick="limitarSelección(this,this.form)">N</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="O" onClick="limitarSelección(this,this.form)">O</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="P" onClick="limitarSelección(this,this.form)">P</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="Q" onClick="limitarSelección(this,this.form)">Q</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="R" onClick="limitarSelección(this,this.form)">R</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="S" onClick="limitarSelección(this,this.form)">S</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="T" onClick="limitarSelección(this,this.form)">T</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="U" onClick="limitarSelección(this,this.form)">U</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="V" onClick="limitarSelección(this,this.form)">V</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="W" onClick="limitarSelección(this,this.form)">W</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="X" onClick="limitarSelección(this,this.form)">X</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="Y" onClick="limitarSelección(this,this.form)">Y</p>    
+          </div>
+            <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" id="checkbox" name="casilla1[]" value="Z" onClick="limitarSelección(this,this.form)">Z</p>    
+          </div>     
  </div>
+  
 <div class="row">
       <div class="col-12" >
         <H1 id="txt_globo">ELIGE 2 NÚMEROS</H1>
@@ -207,9 +284,41 @@ contador2 = (n0 ? 1 : 0) + (n1 ? 1 : 0) + (n2 ? 1 : 0) + (n3 ? 1 : 0) + (n4 ? 1 
            <div class="col-md-1 col-sm-2 col-2" >
              <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="9" onClick="limitarSelección2(this,this.form)">9</p>    
           </div>
+ </div>      <div class="row">
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="0" onClick="limitarSelección2(this,this.form)">0</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="1" onClick="limitarSelección2(this,this.form)">1</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="2" onClick="limitarSelección2(this,this.form)">2</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="3" onClick="limitarSelección2(this,this.form)">3</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="4" onClick="limitarSelección2(this,this.form)">4</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="5" onClick="limitarSelección2(this,this.form)">5</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="6" onClick="limitarSelección2(this,this.form)">6</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="7" onClick="limitarSelección2(this,this.form)">7</p>    
+          </div>
+          <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="8" onClick="limitarSelección2(this,this.form)">8</p>    
+          </div>
+           <div class="col-md-1 col-sm-2 col-2" >
+             <p id="texto_letras"><input type="checkbox" name="casilla2[]" value="9" onClick="limitarSelección2(this,this.form)">9</p>    
+          </div>
+          <div class="col-md-3 col-sm-4 col-12"><input type="submit" value="Añadir a carrito" id="boton_pago"></div>
  </div>      
 
-<input type="submit" value="Enviar">
+
 
  {!! Form::close() !!}
 

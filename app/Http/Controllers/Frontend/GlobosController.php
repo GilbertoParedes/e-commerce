@@ -231,6 +231,22 @@ class GlobosController extends Controller
              $id_usuario=null;
         }
 
+         return view('frontend.pages.letr_num')
+         ->with('validar',$valor)
+        ;
+    }
+          public function letras()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
         //categoria arreglo de cumpleaños
         $id_cat=19;
         $categorias = $this->category->find($id_cat);
@@ -243,7 +259,38 @@ class GlobosController extends Controller
             ->where('user_id',  $id_usuario)
             ->get();    
     
-         return view('frontend.pages.globos')
+         return view('frontend.pages.letras')
+         ->with('validar',$valor)
+         ->with('categorias',$categorias)
+         ->with('cat_prod',$cat_prod)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+    }
+        public function numeros()
+    {
+       if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo de cumpleaños
+        $id_cat=24;
+        $categorias = $this->category->find($id_cat);
+        //buscar los productos de la tabla product_category
+        $cat_prod= $this->product_category->where('categoria_id',  $id_cat)->get();
+        $productos = $this->product->all();
+        //buscar si el producto está registrado en favoritos
+
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.letras')
          ->with('validar',$valor)
          ->with('categorias',$categorias)
          ->with('cat_prod',$cat_prod)

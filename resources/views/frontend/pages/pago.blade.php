@@ -82,6 +82,7 @@
           <table class="table">
             <thead id="thead">
               <tr>
+                <td>TIPO</td>
                 <td>PRODUCTO</td>
                 <td>PRECIO</td>
                 <td>CANTIDAD</td>
@@ -95,7 +96,9 @@
               @foreach ($producto_carrito as $carr)
                 @foreach ($productos as $product)
                   @if ($carr->producto_id==$product->id)
+
                    <tr>
+                      <td><p id="txt_subtitulo2">{{$product->type}}</p></td>
                       <td><p id="txt_subtitulo2">{{$product->name}}</p></td>
                       <td><p id="txt_subtitulo2">{{$precio=$product->price}}</p></td>
                       <td><p id="txt_subtitulo2">{{$cantidad=$carr->cantidad}}</p></td>
@@ -103,7 +106,7 @@
                         @php
                           {{$total=$total+$subtotal;}}
                         @endphp
-                     </tr>
+                   </tr>
                     
                   @else
                   @endif

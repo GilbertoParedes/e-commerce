@@ -114,7 +114,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'type' => 'globos',
-                'category' => 'LETRAS Y NÚMEROS',
+                'category' => 'LETRAS',
                 'path' => 'storage/app/public/category/letras_numeros.png'
             ],
             [
@@ -136,6 +136,11 @@ class CategoryTableSeeder extends Seeder
                 'type' => 'complemento',
                 'category' => 'COMPLEMENTO',
                 'path' => 'storage/app/public/category/temporada.png'
+            ],
+              [
+                'type' => 'globos',
+                'category' => 'NUMEROS',
+                'path' => 'storage/app/public/category/letras_numeros.png'
             ]
         ];
                 Category::insert($data);

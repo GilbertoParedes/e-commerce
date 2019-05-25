@@ -51,6 +51,8 @@ Route::get('globos_kids_zone', 'Frontend\GlobosController@globos_kids_zone');
 Route::get('globos_enamorados', 'Frontend\GlobosController@globos_enamorados');
 Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones');
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
+Route::get('letras', 'Frontend\GlobosController@letras');
+Route::get('numeros', 'Frontend\GlobosController@numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	
 	Route::resource('letras_numeros', 'Frontend\PaquetesCompletosController');

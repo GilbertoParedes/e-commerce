@@ -54,8 +54,7 @@ public function store(Request $request)
     //obtener id_usuario
     //conversion de la id del producto a entero
     $id_prod=(int)$id_producto;
-
-       
+  
        //consulta a tabla carrito para obtener registro de usuario y verificar si el status esta en proceso
         $buscar_carrito= $this->carrito->where('usuario_id',  $id_usuario)->orderby('created_at','DESC')->take(1)->get();
         //contar cuantos registros tiene el usuario
@@ -80,7 +79,7 @@ public function store(Request $request)
                             $this->carrito_producto->create([
                                 'cantidad' =>1,
                                 'carrito_id' => $id_carrito,
-                                'producto_id' => $id_prod
+                                'producto_id' => $id_producto
                             ]);
                      }
                      else{
