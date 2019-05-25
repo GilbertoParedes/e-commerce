@@ -22,7 +22,12 @@ background-image: url("../images/principal/fondo.png");
    font-family: "simplifica";
    src: url("../fonts/simplifica.ttf");
 }
-
+#input_transparent{
+  background-color: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 1px;
+}
 @media (max-width: 575.98px) { 
 
 #content{
@@ -38,23 +43,7 @@ background-image: url("../images/principal/fondo.png");
     height: auto;
 }
 
-/***** GLOBOS    *****/
-#precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
-  background-color: #F1F0F6;
-  color: #808180;
-  font-size:5vw;
-  font-family: "simplifica";
-}
-#compraaqui{
-  width: 11vw;
-    margin-top: -5px;
-  padding: 2% 2%;
-  margin-left: -35px;
-  height:auto;
-}
+
 #texto_globos{
 width: 95%;
 color: #808180;
@@ -98,6 +87,31 @@ hr{
   margin-top: -1%;
 border: .5px solid #202020;
 }
+#texto_letras{
+font-family: "acumin";
+font-size: 4vw;
+color: #808180;
+}
+#precio{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  background-color: #F1F0F6;
+  color: #808180;
+  font-size:5.5vw;
+  font-family: "simplifica";
+}
+#compraaqui{
+  width: 10vw;
+  margin-top: -1vw;
+  margin-left: -80%;
+  height:auto;
+}
+#bordes{
+  border: solid 2px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 92%;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -115,22 +129,6 @@ border: .5px solid #202020;
     height: auto;
 }
 
-/***** GLOBOS    *****/
-#precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
-  background-color: #F1F0F6;
-color: #808180;
-font-size:4vw;
-font-family: "simplifica";
-}
-#compraaqui{
-  width: 9vw;
-  margin-top: -5px;
-  margin-left: -40px;
-  height:auto;
-}
 #texto_globos{
 width: 95%;
 color: #808180;
@@ -172,6 +170,31 @@ hr{
   margin-top: -1%;
 border: .5px solid #202020;
 }
+#texto_letras{
+font-family: "acumin";
+font-size: 3vw;
+color: #808180;
+}
+#precio{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  background-color: #F1F0F6;
+  color: #808180;
+  font-size:4vw;
+  font-family: "simplifica";
+}
+#compraaqui{
+  width: 7.5vw;
+  margin-top: -.7vw;
+  margin-left: -60%;
+  height:auto;
+}
+#bordes{
+  border: solid 2px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 92%;
+}
 }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -191,20 +214,7 @@ border: .5px solid #202020;
 
 
 /***** productos    *****/
-#precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
-  background-color: #F1F0F6;
-color: #808180;
-font-size:3vw;
-font-family: "simplifica";
-}
-#compraaqui{
- width:6vw;  
-  margin-left: -25px;
-  height:auto;
-}
+
 #texto_globos{
 width: 95%;
 color: #808180;
@@ -247,6 +257,31 @@ font-size: 3.5vw;
 hr{
   margin-top: -1%;
 border: .5px solid #202020;
+}
+#texto_letras{
+font-family: "acumin";
+font-size: 2vw;
+color: #808180;
+}
+#precio{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  background-color: #F1F0F6;
+  color: #808180;
+  font-size:3vw;
+  font-family: "simplifica";
+}
+#compraaqui{
+  width: 5.5vw;
+  margin-top: -.7vw;
+  margin-left: -60%;
+  height:auto;
+}
+#bordes{
+  border: solid 2px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 92%;
 }
 }
  /*************************************************************************************************************/
@@ -294,22 +329,8 @@ font-size: 1.2vw;
     text-align: center;
 }
 
-/***** GLOBOS    *****/
-#precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
-  background-color: #F1F0F6;
-color: #808180;
-font-size:2.5vw;
-font-family: "simplifica";
-}
-#compraaqui{
- width:5vw;
- margin-top: 5px;
-   margin-left: -80%;
-  height:auto;
-}
+
+
 #texto_globos{
 width: 95%;
 color: #808180;
@@ -367,6 +388,31 @@ hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
+#texto_letras{
+font-family: "acumin";
+font-size: 2vw;
+color: #808180;
+}
+#precio{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  background-color: #F1F0F6;
+  color: #808180;
+  font-size:3vw;
+  font-family: "simplifica";
+}
+#compraaqui{
+  width: 5.2vw;
+  margin-top: -.6vw;
+  margin-left: -60%;
+  height:auto;
+}
+#bordes{
+  border: solid 2px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 92%;
+}
 }
  /*************************************************************************************************************/
 
@@ -414,20 +460,7 @@ font-size: 1.2vw;
 }
 
 /***** GLOBOS    *****/
-#precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
-  background-color: #F1F0F6;
-color: #808180;
-font-size:2vw;
-font-family: "simplifica";
-}
-#compraaqui{
- width:5vw;
-   margin-left: -80%;
-  height:auto;
-}
+
 #texto_globos{
 width: 95%;
 color: #808180;
@@ -485,6 +518,31 @@ hr{
   margin-top: -1%;
 border: 1px solid #202020;
 }
+#texto_letras{
+font-family: "acumin";
+font-size: 2vw;
+color: #808180;
+}
+#precio{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  background-color: #F1F0F6;
+  color: #808180;
+  font-size:2vw;
+  font-family: "simplifica";
+}
+#compraaqui{
+  width: 4vw;
+  margin-top: -.6vw;
+  margin-left: -80%;
+  height:auto;
+}
+#bordes{
+  border: solid 2px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 92%;
+}
 }
 /*Extra large devices (large desktops, 1200px and up)*******************************************************************/
 @media (min-width: 1501px) { 
@@ -498,14 +556,11 @@ border: 1px solid #202020;
 #content{
     width: 70%;
     height: auto;
-    margin-top: 10px;
+   
     margin-left: 15%;
     margin-right: 15%;
 
 }
-
-
-
 
 #im{
     width: 100%;
@@ -516,17 +571,17 @@ border: 1px solid #202020;
 
 /***** GLOBOS    *****/
 #precio{
-  margin-top: 10%;
-  padding: 2% 2%;
-  width: 100%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
   background-color: #F1F0F6;
-color: #808180;
-font-size:2vw;
-font-family: "simplifica";
+  color: #808180;
+  font-size:2vw;
+  font-family: "simplifica";
 }
 #compraaqui{
   width: 4vw;
-  margin-top: 8px;
+  margin-top: -.5vw;
   margin-left: -80%;
   height:auto;
 }
@@ -575,5 +630,15 @@ font-size: 2.5vw;
 hr{
   margin-top: -1%;
 border: 1px solid #202020;
+}
+#texto_letras{
+font-family: "acumin";
+font-size: 2vw;
+color: #808180;
+}
+#bordes{
+  border: solid 1px #F2F2F2; 
+  margin-bottom: .5vw;
+  height: 95%;
 }
 }

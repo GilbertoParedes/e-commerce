@@ -29,6 +29,35 @@ class CatalogoController extends Controller
     {
          return view('frontend.pages.catalogo');
     }
+        public function menores()
+    {
+
+        if (Auth::check()) {
+             $valor=1;
+             //extraer id del usuario
+             $id_usuario=Auth::id();
+        }
+        else{
+             $valor=0;
+             $id_usuario=null;
+        }
+
+        //categoria arreglo 
+        $type="Arreglo";
+     
+        $productos= $this->product
+            ->where('type',  $type)
+            ->get();
+        $deseable_buscar= $this->deseable
+            ->where('user_id',  $id_usuario)
+            ->get();    
+    
+         return view('frontend.pages.arreglos_menores')
+         ->with('validar',$valor)
+         ->with('productos',$productos)
+         ->with('deseable_buscar',$deseable_buscar);
+
+    }
  	public function catalogo_cumpleanos()
     {
 

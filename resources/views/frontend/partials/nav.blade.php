@@ -70,7 +70,7 @@
    <div class="dropdowns">
           <center>
             <button class="dropbtn">
-              <a href="" id="texto" class="a">ARREGLOS -$450</a>
+              <a href="menores_450" id="texto" class="a">ARREGLOS -$450</a>
             </button>
           </center>
       </div> 

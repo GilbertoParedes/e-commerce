@@ -37,28 +37,57 @@
            <div id="un_div">  {{ $id_productos=$pro->id}}</div>
             @if ($producto_id == $id_productos)
         <div class="col-lg-12 col-md-12 col-sm-12 col-12" >
-         
-             <img src="../{{ $pro->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
-              <div class="top-right"><img src="frontend/icons/corazon3.png" id="corazon"></div>
+          <div id="bordes">
+             <a href="{{route('producto.show', $producto_id)}}">
+               <img src="../{{ $pro->path}}" alt="Lo más vendido"  style="width:100%;">
+             </a>
+               <div class="top-right">
+                     <a href="{{route('catalogo.show', $producto_id)}}">
+                          @php
+                              {{ $icono="corazon3"; }}
+                          @endphp
+                          @foreach($deseable_buscar as $favoritos)
+                          @if($favoritos->product_id==$producto_id)
+                                @php
+                                  {{ $icono="corazon4"; }}
+                                @endphp
+                          @else
+                          @endif 
+                          @endforeach
+                               <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                          </a>                     
+               </div>        
+               <div class="row">
+                 <div class="col-12" >
+                         <center> <p  id="texto_letras" >5 Letras y 2 números</p></center>
+                 </div>
+               </div>
+              {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
+                 <div class="row">
+                   <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
+                         <center> <p  id="precio" >{{ $pro->price}}</p></center>
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
+                        <center>
+                          <button type="submit" style="background-color: transparent;border-color: transparent;">
+                            <img src="frontend/icons/compraaqui.png" id="compraaqui">
+                          </button>
+                        </center>
+                     </div>
+                  </div>
 
-             <div class="row">
-               <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                     <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
+                 <div class="row">
+                     <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
+                         <center> <p  id="texto_globos" >Envío incluido</p></center>
+                     </div>
+                     <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
+                         <center> <p  id="texto_globos" >Compra aquí</p></center>
+                     </div>
                  </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
-                  <center>
-                  <a href=""><img src="frontend/icons/compraaqui.png" id="compraaqui"></a></center>
-                 </div>
-             </div>
+             <input type="text" value="{{$producto_id}}" name="id_producto" id="input_transparent" >
 
-             <div class="row">
-                 <div class="col-lg-7 col-md-7 col-sm-6 col-6" >
-                     <center> <p  id="texto_globos" >Envío incluido</p></center>
-                 </div>
-                 <div class="col-lg-5 col-md-5 col-sm-6 col-6"  >
-                     <center> <p  id="texto_globos" >Compra aquí</p></center>
-                 </div>
-             </div>
+   {!! Form::close() !!}
+           </div>  
         </div>   
         @endif
 
@@ -71,3 +100,6 @@
 </div>
 
 @endsection
+
+
+

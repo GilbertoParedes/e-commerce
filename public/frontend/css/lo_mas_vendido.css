@@ -178,6 +178,22 @@ font-family: "simplifica";
   height: auto;
   margin-left:25%;
 }
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 6vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 6vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: -3%;
+ 
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -329,6 +345,22 @@ font-family: "simplifica";
   height: auto;
   margin-left:25%;
 }
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 5.5vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 5.5vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
  }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -478,6 +510,22 @@ font-family: "simplifica";
   width: 50%;
   height: auto;
   margin-left:25%;
+}
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 5vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 5vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
 }
 }
  /*************************************************************************************************************/
@@ -629,6 +677,22 @@ font-family: "simplifica";
 #corazon{
   width: 60%;
   height: auto;
+}
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
 }
 }
 
@@ -791,4 +855,20 @@ font-family: "simplifica";
   height: auto;
 }
 /******/
+/*fin formulario*/
+#txt_comprar{
+font-family: "acumin";
+font-size: 4vw;
+background: #CECECE;
+}
+#txt_facil{
+font-family: "acumin";
+font-size: 4vw;
+color: #1c1c1c;
+}
+#linea{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
 }

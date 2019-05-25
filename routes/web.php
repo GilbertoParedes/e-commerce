@@ -26,8 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('lomasvendido', 'Frontend\PagesController@lomasvendido');
 Route::get('visita_por_primera_vez', 'Frontend\PagesController@visitaprimeravez');
 
-
-
+Route::get('menores_450', 'Frontend\CatalogoController@menores');
 Route::get('catalogo_cumpleanos', 'Frontend\CatalogoController@catalogo_cumpleanos');
 Route::get('catalogo_compromisos_bodas', 'Frontend\CatalogoController@catalogo_compromisos_bodas');
 Route::get('catalogo_enamorados', 'Frontend\CatalogoController@catalogo_enamorados');
@@ -54,6 +53,7 @@ Route::get('globos_graduaciones', 'Frontend\GlobosController@globos_graduaciones
 Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	
+	Route::resource('letras_numeros', 'Frontend\PaquetesCompletosController');
 	Route::resource('contactanos', 'Frontend\ContactanosController');
 	Route::resource('cuenta', 'Frontend\UserController');
 	Route::resource('carrito_compras','Frontend\CarritoController');
