@@ -111,14 +111,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-md-2 control-label">Categoria</label>
-							<div class="col-md-8">
-								<div class="input-group" >
-                               	{!! Form::select('category', $categories->pluck('category', 'id'), '', ['class' => 'form-control']) !!}
-                           		</div>
-                           	</div>
-                       	</div>
+					
 					    <div class="form-group">
 							<label class="col-md-2 control-label">Imagen</label>
 							<div class="col-md-8">

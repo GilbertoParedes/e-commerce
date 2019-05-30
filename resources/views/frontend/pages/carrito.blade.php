@@ -160,8 +160,31 @@
        {{-- expr --}}
     
         <div class="col-md-3 col-sm-3 col-6" >
-         
+           <a href="{{route('producto.show', $product->id)}}">
              <img src="/{{$product->path}}" alt="Lo más vendido"  style="width:100%; padding-top: 5%;">
+           </a>
+            <div class="top-right">
+                      @if ($validar==1)
+                         <a href="{{route('catalogo.show', $product->id)}}">
+                           @php
+                             {{ $icono="corazon3"; }}
+                           @endphp
+                           @foreach($deseable_buscar as $favoritos)
+                                @if($favoritos->product_id==$product->id)
+
+                                 @php
+                                   {{ $icono="corazon4"; }}
+                                 @endphp
+
+                                @else
+                                @endif 
+                              
+                           @endforeach
+                          <img src="frontend/icons/{{$icono}}.png" id="corazon">
+                          </a>
+                          @else
+                     @endif
+            </div>
   {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
              <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-8 col-8" >

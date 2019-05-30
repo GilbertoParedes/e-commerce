@@ -27,9 +27,7 @@ background-image: url("../images/principal/fondo.png");
   border-color: transparent;
   color: transparent;
 }
-#bordes{
-  border: solid 1px #CECECE; 
-}
+
 @media (max-width: 575.98px) { 
 .centrado{
     position: absolute;
@@ -195,8 +193,19 @@ margin-left: -100%;
 margin-top: 10%;
 }
 #clic{
-  margin-top: 5%;
   width: 100%;
+  height: auto;
+}
+#boton_comprar{
+  margin-top: 5%;
+  background-color: transparent;
+  border-color: transparent; 
+  width:100%;
+
+}
+#bordes{
+  border: solid 1px #ececec; 
+  height: 63vw;
 }
 }
 
@@ -365,8 +374,19 @@ margin-left: -100%;
 margin-top: 10%;
 }
 #clic{
-  margin-top: 5%;
   width: 100%;
+  height: auto;
+}
+#boton_comprar{
+  margin-top: 5%;
+  background-color: transparent;
+  border-color: transparent; 
+  width:100%;
+
+}
+#bordes{
+  border: solid 1px #ececec; 
+  height: 41vw;
 }
  }
  /*************************************************************************************************************/
@@ -534,8 +554,20 @@ margin-left: -160%;
 margin-top: 25%;
 }
 #clic{
+  width: 100%;
+  height: auto;
+}
+#boton_comprar{
   margin-top: 5%;
-  width: 70%;
+  background-color: transparent;
+  border-color: transparent; 
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#bordes{
+  border: solid 1px #ececec; 
+  height: 38vw;
 }
 }
  /*************************************************************************************************************/
@@ -704,8 +736,20 @@ margin-left: -160%;
 margin-top: 25%;
 }
 #clic{
+  width: 100%;
+  height: auto;
+}
+#boton_comprar{
   margin-top: 5%;
-  width: 70%;
+  background-color: transparent;
+  border-color: transparent; 
+  width:70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#bordes{
+  border: solid 1px #ececec; 
+  height: 38vw;
 }
 }
 
@@ -882,7 +926,19 @@ margin-top: 25%;
 }
 /******/
 #clic{
-  width: 70%;
+  width: 100%;
+  height: auto;
+}
+#boton_comprar{
   margin-top: 5%;
+  background-color: transparent;
+  border-color: transparent; 
+  width:70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#bordes{
+  border: solid 1px #ececec; 
+  height: 29vw;
 }
 }

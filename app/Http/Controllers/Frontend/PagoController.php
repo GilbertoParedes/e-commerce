@@ -14,7 +14,9 @@ use App\Pago;
 use App\Direction;
 use App\User;
 use App\Pagos;
-
+use Mail;
+use Session;
+use Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PagoRequest;
 class PagoController extends Controller
@@ -53,6 +55,8 @@ class PagoController extends Controller
             $valor=1;
             $id_usuario=Auth::id();
             $type_pay=0;
+             $envio=0;
+           
             $productos = $this->product->all();
             //extraer correo electronico   
                  $correo_user=$this->user
@@ -113,15 +117,15 @@ class PagoController extends Controller
 
                       foreach ($BuscarComprarAhora as $value_compra) {
                         $id_comprar_ahora=$value_compra->id;
- 
+           
                         //consulta para obtener tarjetas añadidas
                         $BuscarTarjeta=$this->pago
                         ->where('comprar_ahora_id',  $id_comprar_ahora)
                         ->orderby('created_at','DESC')->take(1)->get();
                           foreach ($BuscarTarjeta as $tipo) {
-                              $type_pay=$tipo->type_pay;
+                             $type_pay=$tipo->type_pay;
                           }                     
-
+                        
                          //contar registros de tarjetas
                         $contar_Tarjetas=count($BuscarTarjeta);
                         
@@ -146,6 +150,8 @@ class PagoController extends Controller
                           ->with('buyerEmail',$email)
                           ->with('responseUrl',$responseUrl)
                           ->with('confirmationUrl',$confirmationUrl)
+                          
+
                          ;
 
                          
@@ -169,6 +175,7 @@ class PagoController extends Controller
                         ->with('buyerEmail',$email)
                         ->with('responseUrl',$responseUrl)
                         ->with('confirmationUrl',$confirmationUrl);
+                        
                         
 
                         }
@@ -255,13 +262,16 @@ class PagoController extends Controller
                         'month' =>  $month,
                         'year' =>  $year,
                         'comprar_ahora_id' =>  $id_comprar_ahora
-
-                    ]);
-                    return redirect('pago')
-                   ->with('validar',$valor)->with('alert', 'Tarjeta añadida con éxito!');
+                  ]);
               }
-
             }
+       /* Session::flash('message','mensaje enviado correctamente');
+        return Redirect::to('/contactanos');
+                    return redirect('pago')
+                   ->with('validar',$valor)->with('alert', 'Tarjeta añadida con éxito!');*/
+              
+
+           
             //ultimo comprar ahora 
       }
       else{
@@ -353,6 +363,14 @@ class PagoController extends Controller
     if (Auth::check()) {
             $valor=1;
             $id_usuario=Auth::id();
+            $correo="";
+            //consulta para extraer correo del usuario
+            $usuario_correo=$this->user
+                    ->where('id',  $id_usuario)
+                    ->get();
+            foreach ($usuario_correo as $value_correo) {
+             $correo=$value_correo->email;
+            }
 
             //buscar id de carrito en proceso
             //buscar carrito de compras
@@ -363,7 +381,15 @@ class PagoController extends Controller
             
             foreach ($carrito_proceso as $carr) {
                     $id_carrito=$carr->id;
-                
+                    
+                    //consulta para obtener carrito_producto
+                    $carrito_producto=$this->carrito_producto
+                    ->where('carrito_id',  $id_carrito)
+                    ->get();
+
+                    $productos=$this->product->all();
+                   
+
                 if($transactionState==4)
                     {
                     //guardar en tabla pagos
@@ -379,6 +405,25 @@ class PagoController extends Controller
                      $contatenar=array('status' => $val,  'fecha_fin'=>$processingDate);
                      $carritoFinalizar = Carrito::find($id_carrito);
                      $carritoFinalizar->update($contatenar);
+
+                     //Crear carrito nuevo 
+                      $this->carrito->create([
+                          'fecha_inicio' => NOW(),
+                          'status' =>  0,
+                          'usuario_id' =>  $id_usuario
+                     ]);
+
+                      $transaccion_datos_cliente=array('idtransaction' => $transactionId,  'fecha_fin'=>$processingDate, 'merchantId'=>$merchantId, 'merchant_name'=>$merchant_name,'productos'=>$productos,'carrito_producto'=>$carrito_producto);
+                     //enviar correo a cliente
+                      Mail::send('frontend.pages.message_pay_client', $transaccion_datos_cliente,function($msj){
+                        $msj->subject('Comprobante de compra realizada en HANA');
+                        $msj->to('lauratopaciovaldez@gmail.com');
+                      });
+                      Session::flash('message','mensaje enviado correctamente');
+                      
+                     //enviar correo a administrador
+
+
 
                     }
                 else{

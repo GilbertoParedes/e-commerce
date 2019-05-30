@@ -21,37 +21,50 @@
   </div>
 
   @php
-     {{$estandar="Estandar";$premium="Premium";}}
+     {{$estandar="Estandar";$premium="Premium"; $envio=0;}}
   @endphp
-  @if ($type_pay=="Premium")
-  <div class="row">
-      <div class=" col-sm-6 col-12" > 
-         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
-      </div>   
-      <div class=" col-sm-6 col-12" >
-         <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo">Envío Premium | Envío $80</H1></a></center> 
-      </div>  
-  </div>
- @elseif($type_pay=="Estandar")
-  <div class="row">
+  @if ($tarjetas==0)
+    @php
+      $envio=0;
+    @endphp
+    <div class="row">
       <div class="col-sm-6 col-12" > 
-         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo">Envío Estandar | Envío Gratis</H1></a></center>
+         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
       </div>   
       <div class="col-sm-6 col-12" >
          <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo1">Envío Premium | Envío $80</H1></a></center> 
       </div>  
-  </div>
+   </div>
+  @else
+     @if ($type_pay==$premium)
+        @php
+          {{$envio=80;}}
+        @endphp
+        <div class="row">
+            <div class=" col-sm-6 col-12" > 
+               <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
+            </div>   
+            <div class=" col-sm-6 col-12" >
+               <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo">Envío Premium | Envío $80</H1></a></center> 
+            </div>  
+        </div>
+       @else
+        @php
+          {{$envio=0;}}
+        @endphp
+        <div class="row">
+            <div class="col-sm-6 col-12" > 
+               <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo">Envío Estandar | Envío Gratis</H1></a></center>
+            </div>   
+            <div class="col-sm-6 col-12" >
+               <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo1">Envío Premium | Envío $80</H1></a></center> 
+            </div>  
+        </div>
 
- @else
-   <div class="row">
-      <div class="col-sm-6 col-12" > 
-         <center><a href="{{route('pagos.show',$estandar )}}"><H1 id="txt_tipo1">Envío Estandar | Envío Gratis</H1></a></center>
-      </div>   
-      <div class="col-sm-6 col-12" >
-         <center> <a href="{{route('pagos.show',$premium )}}"><H1 id="txt_tipo1">Envío Premium | Envío $80</H1></a></center> 
-      </div>  
-  </div>
- @endif  
+        
+       @endif  
+  @endif
+
 
 
 
@@ -114,10 +127,18 @@
                 @endforeach
               @endforeach
                   <tr>
+                    <td></td>
+                     <td></td>
+                     <td></td>
+                     <td><p id="txt_subtitulo2">ENVÍO:</p></td>
+                     <td><p id="txt_subtitulo2"><b>{{$envio}}</b></p></td>
+                  </tr>
+                  <tr>
+                     <td></td>
                      <td></td>
                      <td></td>
                      <td><p id="txt_subtitulo2"><b>TOTAL:</b></p></td>
-                     <td><p id="txt_subtitulo2"><b>{{$total}}</b></p></td>
+                     <td><p id="txt_subtitulo2"><b>{{$total=$total+$envio}}</b></p></td>
                   </tr>
             </tbody>
           </table>

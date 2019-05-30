@@ -54,7 +54,7 @@ Route::get('globos_letras_numeros', 'Frontend\GlobosController@globos_letras_num
 Route::get('letras', 'Frontend\GlobosController@letras');
 Route::get('numeros', 'Frontend\GlobosController@numeros');
 Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
-	
+	Route::resource('pedidos', 'Admin\ComprasRealizadasController');
 	Route::resource('letras_numeros', 'Frontend\PaquetesCompletosController');
 	Route::resource('contactanos', 'Frontend\ContactanosController');
 	Route::resource('cuenta', 'Frontend\UserController');
@@ -68,8 +68,8 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::get('pago/obtenerinformacionpago/{monto}', 'Frontend\PagoController@getObtenerinformacionpago');
 	Route::get('respuesta', 'Frontend\PagoController@getRespuestapagos');
 	
-	
-
+	Route::resource('complementos', 'Frontend\ComplementosController');
+	Route::resource('mensaje', 'Frontend\MensajeController');
 	Route::get('pago/obtenerrespuestapago', 'Frontend\PagoController@getRespuestapagos');
 	Route::resource('pagos', 'Frontend\PagosController');
 	Route::resource('producto', 'Frontend\ProductoController');

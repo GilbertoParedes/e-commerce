@@ -129,7 +129,20 @@ class UserController extends Controller
 	            'email' => $request->correo,
 	            'password' => bcrypt($pass),
 	        ]);
-	        return redirect()->back() ->with('alert', 'Usuario registrado con éxito');
+            $id_usuario=NULL;
+            //extraer id_usuario del correo electronico
+            $usuario_dato =$this->user->where('email',  $request->correo)->get();
+            foreach ($usuario_dato as $usu) {
+               $id_usuario=$usu->id;
+            }
+             $this->carrito->create([
+                          'fecha_inicio' => NOW(),
+                          'status' =>  0,
+                          'usuario_id' =>  $id_usuario
+             ]);
+            //crear carrito vacio
+
+	        return redirect()->back() ->with('alert', 'Usuario registrado con éxito, por favor inicie sesión!');
 		}
 		
 		return back();

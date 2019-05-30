@@ -118,9 +118,12 @@
                                                  </div>
                                                  <div class="row">
                                                      <div class="col">
-                                                        <a href="">
-                                                            <center><img src="frontend/images/misfavoritos/clic.png" id="clic"></center>
-                                                        </a>
+                                                        {!! Form::open(['route' => 'carrito_compras.store', 'method' => 'post']) !!}
+                                                        <button type="submit" style="background-color: transparent;border-color: transparent; width:100%">    
+                                                            <center><img src="frontend/images/misfavoritos/clic.png" id="clic">
+                                                         </button> 
+                                                         <input type="text" value="{{$pro->id}}" name="id_producto" id="input_transparent" >
+                                                        {!! Form::close() !!}  
                                                      </div>
                                                  </div>
                                           </div>
@@ -196,10 +199,12 @@
                                                  </div>
                                                  <div class="row">
                                                      <div class="col">
-                                                        <a href="">
-                                                          <center>
-                                                            <img src="frontend/images/misfavoritos/clic.png" id="clic"></center>
-                                                        </a>
+                                                         {!! Form::open(['route' => 'carrito_compras.store', 'method' => 'post']) !!}
+                                                        <button type="submit" id="boton_comprar">    
+                                                            <center><img src="frontend/images/misfavoritos/clic.png" id="clic">
+                                                         </button> 
+                                                         <input type="text" value="{{$pro->id}}" name="id_producto" id="transparente" >
+                                                        {!! Form::close() !!}  
                                                      </div>
                                                  </div>
                                           </div>

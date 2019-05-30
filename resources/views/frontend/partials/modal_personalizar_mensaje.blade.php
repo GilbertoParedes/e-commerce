@@ -10,24 +10,32 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    {!! Form::open(['route' => 'direccion.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['route' => 'mensaje.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
       <div class="modal-body ">
           <div class="row" >
+            <div class="col-12"> <p for="decir" id="textos">¿CÓMO LO QUIERES DECIR? </p></div>
             <div class=" col-12" >        
-                    <div class="form-group">
-                      <p for="nombre" id="textos"><input type="radio" value="">CANCIÓN</p>
-                      <input type="text" class="input_form" id="nombre" name="nombre">
+                    <div class="form-check">
+                      <p for="nombre" id="textos">
+                        <input class="form-check-input" type="radio" name="opciones" id="opciones" value="1" checked>
+                        CANCIÓN
+                      </p>
+                      <input type="text" class="input_form" id="nombre" name="cancion">
                     </div>
-                    <div class="form-group">
-                      <p for="email" id="textos"><input type="radio" value="">CARTA</p>
-                      <textarea id="mensaje" name="mensaje"></textarea>       
+                    <div class="form-check">
+                      <p for="email" id="textos">  <input class="form-check-input" type="radio" name="opciones" id="opciones" value="2" >
+                      CARTA</p>
+                      <textarea id="mensaje" name="carta"></textarea>       
                     </div>   
-                    <div class="form-group">
-                      <p for="tel" id="textos"><input type="radio" value="">POEMA</p>
-                      <textarea id="mensaje" name="mensaje"></textarea>       
+                    <div class="form-check">
+                      <p for="tel" id="textos">
+                        <input class="form-check-input" type="radio" name="opciones" id="opciones" value="3">
+                         POEMA</p>
+                      <textarea id="mensaje" name="poema"></textarea>       
                     </div>    
                      <button type="submit" class="boton_enviar">LISTO</button>           
             </div>   
+
           </div> 
       </div>
     {!! Form::close() !!}
