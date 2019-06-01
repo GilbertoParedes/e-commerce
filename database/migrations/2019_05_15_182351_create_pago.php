@@ -17,7 +17,8 @@ class CreatePago extends Migration
             $table->increments('id');
             $table->string('type_pay',30);
             $table->integer('comprar_ahora_id')->unsigned();
-
+            $table->date('fecha')->nullable();
+            $table->time('hora')->nullable();
             $table->foreign('comprar_ahora_id')
             ->references('id')
             ->on('comprar_ahora')

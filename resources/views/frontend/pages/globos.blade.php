@@ -77,7 +77,7 @@
   {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
                  <div class="row">
                    <div class="col-lg-8 col-md-8 col-sm-8 col-8" >
-                         <center> <p  id="precio" >{{ $pro->quantity}}</p></center>
+                         <center> <p  id="precio" >{{ $pro->price}}</p></center>
                      </div>
                      <div class="col-lg-4 col-md-4 col-sm-4 col-4"  >
                         <center>

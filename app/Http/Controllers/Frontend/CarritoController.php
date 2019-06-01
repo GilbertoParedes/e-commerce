@@ -159,6 +159,7 @@ class CarritoController extends Controller
                             ]);
                      }
                      else{
+
                         if ($cantidad_Dir>0) {
                              return redirect('comprar_parte_1') ->with('alert', 'Finaliza tu compra!');
                         }
@@ -221,10 +222,12 @@ class CarritoController extends Controller
         /*************************************FIN PRIMER IF******************************/
     }
     else{
+
         $valor=0;
         return redirect()->back()->with('validar',$valor)->with('alert', 'Inicia sesión para poder realizar una compra!');
 
     }
+
     }
   public function destroy($id_carrito_producto)
     {

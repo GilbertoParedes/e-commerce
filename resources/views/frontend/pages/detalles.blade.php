@@ -32,7 +32,7 @@
                  <div class="col-6">
                     <p id="txt_costo"><b>MX${{ $product->quantity }}.00</b></p>
                  </div>
-@if ($validar==1)
+
     <!--    BOTONES   -->     
      {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
                  <div class="row" id="botones">
@@ -67,8 +67,7 @@
      {!! Form::close() !!}
 
 
-@else
-@endif
+
 
                  <div class="col-12">
                     <p id="txt_desc2">{{ $product->desc_b}}</p>
@@ -117,39 +116,19 @@
     </div>
 <div class="container-fluid">
     <div class="row">
-       @if ($carrito>0)
-      <div class="col-sm-2 col-4" >
-        <a href="#personalizarMensaje" data-toggle="modal">
-         <img src="../frontend/images/descripcion/BOTON 1.png" id="boton_1">
-       </a>
-      </div> 
-      <div class="col-sm-2 col-4" >
+      <div class="col-sm-3 col-4" >
+        <center>
         <a href="#personalizarMensaje" data-toggle="modal">
          <img src="../frontend/images/descripcion/BOTON 2.png" id="boton_1">  
         </a> 
+        </center>
       </div>
-       <div class="col-sm-2 col-4" >
+       <div class="col-sm-3 col-4" >
           <a href="#modal_complemento" data-toggle="modal">
            <img src="../frontend/images/descripcion/BOTON 3.png" id="boton_1" >
           </a>
        </div>   
-      @else 
-      <div class="col-sm-1 col-1" >
-      </div> 
-      <div class="col-sm-2 col-4" >
-        <a href="#personalizarMensaje" data-toggle="modal">
-         <img src="../frontend/images/descripcion/BOTON 1.png" id="boton_1">
-       </a>
-      </div> 
-      <div class="col-sm-2 col-4" >
-        <a href="#personalizarMensaje" data-toggle="modal">
-         <img src="../frontend/images/descripcion/BOTON 2.png" id="boton_1">  
-        </a> 
-      </div>
-       <div class="col-sm-1 col-1" >
-      </div> 
-
-      @endif
+     
         
        <div class="col-sm-1 col-3" >
       </div>  

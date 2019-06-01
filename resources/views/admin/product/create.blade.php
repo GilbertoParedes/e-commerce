@@ -26,11 +26,11 @@
 						    <div class="col-md-8">
 							    <select class="form-control1"  id="type" name="type">
 							      <option>Selecciona el tipo de categoría</option>
-							      <option value="arreglo">Arreglo</option>
-							      <option value="globo">Globo</option>
-							      <option value="paquete">Paquetes</option>
-							      <option value="peluche">Peluche</option>
-							      <option value="chocolate">Chocolate</option>
+							      <option value="Arreglo">Arreglo</option>
+							      <option value="Globo">Globo</option>
+							      <option value="Paquete">Paquetes</option>
+							      <option value="Peluche">Peluche</option>
+							      <option value="Chocolate">Chocolate</option>
 							    </select>
 							</div>
 						</div>
@@ -111,7 +111,41 @@
 								</div>
 							</div>
 						</div>
-					
+						<div class="form-group">
+						    <label class="col-md-2 control-label">Categoría</label>
+						    <div class="col-md-8">
+							    <select class="form-control1"  id="category" name="category">
+							      <option>Selecciona el tipo de categoría</option>
+							      <option value="1">Arreglos-Cumpleaños</option>
+							      <option value="2">Arreglos-Aniversario</option>
+							      <option value="3">Arreglos-Compromisos y bodas</option>
+							      <option value="4">Arreglos-Enamorados</option>
+							      <option value="5">Arreglos-Kids Zone</option>
+							      <option value="6">Arreglos-Gracias</option>
+							      <option value="7">Arreglos-Lo siento</option>
+							      <option value="8">Arreglos-Maternidad</option>
+							      <option value="9">Arreglos-Por qué no</option>
+							      <option value="10">Arreglos-Graduaciones</option>
+							      <option value="11">Arreglos-Nacimientos</option>
+							      <option value="12">Arreglos-Mejorate</option>
+							      <option value="13">Globos-Cumpleaños</option>
+							      <option value="14">Globos-Mejorate</option>
+							      <option value="15">Globos-Nacimientos</option>
+							      <option value="16">Globos-Kids Zone</option>
+							      <option value="17">Globos-Enamorados</option>
+							      <option value="18">Globos-Graduaciones</option>
+							      <option value="19">Globos-Letras</option>
+							      <option value="20">Paquetes Completos</option>
+							      <option value="21">Paquetes</option>
+							      <option value="22">Temporada</option>
+							      <option value="23">Complementos</option>
+							      <option value="24">Globos-Números</option>
+							  
+
+
+							    </select>
+							</div>
+						</div>
 					    <div class="form-group">
 							<label class="col-md-2 control-label">Imagen</label>
 							<div class="col-md-8">

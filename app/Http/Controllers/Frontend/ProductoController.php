@@ -55,7 +55,7 @@ class ProductoController extends Controller
        $buscar_carrito= $this->carrito
             ->where('usuario_id',  $id_usuario)
             ->where('status',  0)
-            ->orderby('created_at','DESC')->take(1)->get();
+            ->get();
        $existe=count($buscar_carrito);
               //consulta en tabla productos
                  $deseable_buscar= $this->deseable
@@ -83,7 +83,7 @@ class ProductoController extends Controller
                 //productos tipo globos
                  $type_globos= $this->product
                       ->where('type',  'Globo')
-                      ->orderby('created_at','DESC')->take(3)->get();  
+                      ->orderby('created_at','ASC')->take(3)->get();  
                 //productos tipo chocolates
                  $type_chocolate= $this->product
                       ->where('type',  'Chocolate')
@@ -96,6 +96,7 @@ class ProductoController extends Controller
 
       //consulta para saber cual es el ultimo carrito de compra del usuario y con status 0 de disponible
            if ($existe>0) {
+
                  foreach ($buscar_carrito as $items) {
                     $id_carrito= $items->id;
                     //consulta para extraer los carrito_producto
@@ -104,6 +105,7 @@ class ProductoController extends Controller
                         ->get();
                  }
                   //Enviar datos
+
                   return view('frontend.pages.detalles')
                   ->with('validar',$valor)
                   ->with('product',$detailsProduct)

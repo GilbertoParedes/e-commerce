@@ -61,13 +61,44 @@
             </div>  
         </div>
 
-        
        @endif  
   @endif
+ <br>
+    <div class="row">
+      <div class="col-12" >
+        <H1 id="txt"><img src="../public/frontend/images/descripcion/3.png" id="im_num">FECHA Y HORA DE LA ENTREGA</H1>
+       <hr>
+      </div>   
+    </div>
 
-
-
-
+ {!! Form::open(['route' => 'pagos.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+    <div class="row" id="marg_fecha">
+        <div class="col-sm-4 col-12" >
+               <div class="form-group">
+                  <p for="nombre" id="txt_subtitulo2">FECHA:</p>
+                  <input type="date" class="input_form" name="fecha" required>
+                </div>
+        </div> 
+        <div class="col-sm-4 col-12" >
+               <div class="form-group">
+                  <p for="nombre" id="txt_subtitulo2">HORA:</p>
+                  <input type="time" class="input_form"  name="hora" required>
+                </div>
+        </div>
+        <div class="col-sm-4 col-12" >
+                <p for="nombre" id="txt_subtitulo2"> <input type="text" name="id_comprar_ahora" value="{{$id_comprar_ahora}}" class="transparente"></p>
+                @if ($tarjetas>0)
+                <button type="submit" id="boton_form">ENVIAR</button>
+                @else
+                 <button type="submit" id="boton_form" disabled>ENVIAR</button>
+                @endif
+        </div>    
+           
+     </div>   
+      
+  
+  {!! Form::close() !!}
+<br>
     <div class="row">
       <div class="col-12" >
         <H1 id="txt"><img src="../public/frontend/images/descripcion/3.png" id="im_num">RESUMEN DE LA COMPRA</H1>
@@ -150,7 +181,34 @@
             {{  $signature=md5($api_key."~".$merchantId."~".$referenceCode."~".$total."~MXN");}}
       @endphp
       @if ($tarjetas>0)
-       <div class="col-md-3 col-sm-6 col-12">
+      @if (is_null($fecha_entrega))
+         <div class="col-md-3 col-sm-6 col-12">
+         <form method="POST" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+
+            <input name="merchantId"    type="hidden"  value="{{$merchantId}}"   >
+            <input name="accountId"     type="hidden"  value="{{$accountId}}" >
+            <input name="description"   type="hidden"  value="{{$description}}"  >
+            <input name="referenceCode" type="hidden"  value="{{$referenceCode}}" >
+            <input name="amount"        type="hidden"  value="{{$total}}"   >
+            <input name="tax"           type="hidden"  value="{{$tax}}"  >
+            <input name="taxReturnBase" type="hidden"  value="{{$taxReturnBase}}" >
+            <input name="currency"      type="hidden"  value="{{$currency}}" >
+            <input name="signature"     type="hidden"  value="{{$signature}}"  >
+            <input name="test"          type="hidden"  value="{{$test}}" >
+            <input name="buyerEmail"    type="hidden"  value="{{$buyerEmail}}" >
+            <input name="shippingAddress"    type="hidden"  value="calle 93 n 47 - 56" >
+            <input name="shippingCity"    type="hidden"  value="México" >
+            <input name="shippingCountry"    type="hidden"  value="Tepic" >
+            <input name="responseUrl"    type="hidden"  value="{{$responseUrl}}" >
+            <input name="confirmationUrl"    type="hidden"  value="{{$confirmationUrl}}" >
+            <input name="Submit"        type="submit"  value="PAGAR" id="boton_pago2" disabled>
+          </form>
+      </div>
+      <div class="col-md-12 col-sm-12 col-12"> 
+        <p id="txt_subtitulo2">Ingresa la fecha y la hora de entrega..</p>
+      </div>
+      @else
+        <div class="col-md-3 col-sm-6 col-12">
          <form method="POST" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
 
             <input name="merchantId"    type="hidden"  value="{{$merchantId}}"   >
@@ -172,6 +230,8 @@
             <input name="Submit"        type="submit"  value="PAGAR" id="boton_pago">
           </form>
           </div>
+      @endif
+     
       @else
       <div class="col-md-3 col-sm-6 col-12">
          <form method="POST" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">

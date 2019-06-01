@@ -18,6 +18,7 @@ class CreateCarrito extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_fin')->nullable();
             $table->integer('status');
+             $table->date('entregado')->nullable();
             $table->bigInteger('usuario_id')->unsigned();
 
              /***relacion foranea de producto***/

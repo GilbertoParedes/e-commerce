@@ -31,7 +31,7 @@
 										<td>{{ $carrito->id }}</td>
 									    <td>{{ $carrito->fecha_fin}}</td>
 									    <td>{{ $user->name}} {{ $user->apellido_p}} {{ $user->apellido_m}}</td>
-									    <td>	<button type="button" class="btn btn-primary">Ver Compra</button></td>
+									    <td><a href="{{route('pedidos.edit', $carrito->id)}}"><button type="button" class="btn btn-primary">Ver Pedido</button></a></td>
 									</tr>
 								@endif
 								

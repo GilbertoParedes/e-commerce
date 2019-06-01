@@ -24,7 +24,6 @@ class PagosController extends Controller
 {
    protected $product;
    protected $cat;
- 
    protected $deseable; 
    protected $comprarahora;
    protected $carrito;
@@ -78,8 +77,53 @@ class PagosController extends Controller
      */
     public function store(Request $request)
     {
-       
+
+      if (Auth::check()) {
+            $id_usuario=Auth::id();
+            $valor=1;
+
+           $fecha=$request->fecha;
+           $hora=$request->hora;
+           $id_comprar_ahora=$request->id_comprar_ahora;
+
+           $fecha_hoy=date("Y-m-d"); 
      
+           if ($fecha>$fecha_hoy) {
+            
+           
+           //consulta para extraer id de la tabla pago
+            $consulta_pago=$this->pago
+                        ->where('comprar_ahora_id',  $id_comprar_ahora)  
+                        ->get();
+            foreach ($consulta_pago as $val) {
+                $id_pago=$val->id;
+            } 
+                  
+           //modificar fecha y hora de la tabla de pago
+
+           $contatenar=array('fecha' => $fecha,  'hora'=>$hora);
+           $carritoFinalizar = $this->pago->find($id_pago);
+           $carritoFinalizar->update($contatenar);
+
+           if ($carritoFinalizar->update()) {
+              return back()->with('validar',$valor)->with('alert', 'Fecha y Hora registrada');
+           }
+           else{
+             return redirect('index')->with('validar',$valor)->with('alert', 'Problema al guardar fecha y hora en el sistema');
+           }
+           }
+           else{
+              return back()->with('validar',$valor)->with('alert', 'La fecha de entrega debe ser superior a la fecha actual');
+           }
+
+       }
+       else{
+         $valor=0;
+            return redirect('index')->with('validar',$valor)->with('alert', 'Inicia sesión para´poder realizar una compra!');
+           
+      }
+
+
 
     }
 

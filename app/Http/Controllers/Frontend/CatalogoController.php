@@ -517,6 +517,7 @@ class CatalogoController extends Controller
         else{
              $valor=0;
              $id_usuario=null;
+              return redirect()->back()->with('validar',$valor)->with('alert', 'Inicia sesión para poder añadir el producto a favoritos!');
         }
    }
        public function finalizar_compra()

@@ -56,7 +56,8 @@ class PagoController extends Controller
             $id_usuario=Auth::id();
             $type_pay=0;
              $envio=0;
-           
+           $fecha_entrega=null;
+           $hora_entrega=null;
             $productos = $this->product->all();
             //extraer correo electronico   
                  $correo_user=$this->user
@@ -117,13 +118,15 @@ class PagoController extends Controller
 
                       foreach ($BuscarComprarAhora as $value_compra) {
                         $id_comprar_ahora=$value_compra->id;
-           
+            
                         //consulta para obtener tarjetas añadidas
                         $BuscarTarjeta=$this->pago
                         ->where('comprar_ahora_id',  $id_comprar_ahora)
                         ->orderby('created_at','DESC')->take(1)->get();
                           foreach ($BuscarTarjeta as $tipo) {
                              $type_pay=$tipo->type_pay;
+                             $fecha_entrega=$tipo->fecha;
+                             $hora_entrega=$tipo->hora;
                           }                     
                         
                          //contar registros de tarjetas
@@ -150,9 +153,11 @@ class PagoController extends Controller
                           ->with('buyerEmail',$email)
                           ->with('responseUrl',$responseUrl)
                           ->with('confirmationUrl',$confirmationUrl)
-                          
+                          ->with('id_comprar_ahora',$id_comprar_ahora)
+                          ->with('fecha_entrega',$fecha_entrega)
+                          ->with('hora_entrega',$hora_entrega);
 
-                         ;
+                         
 
                          
                         }
@@ -174,8 +179,10 @@ class PagoController extends Controller
                         ->with('test',$test)
                         ->with('buyerEmail',$email)
                         ->with('responseUrl',$responseUrl)
-                        ->with('confirmationUrl',$confirmationUrl);
-                        
+                        ->with('confirmationUrl',$confirmationUrl)
+                         ->with('id_comprar_ahora',$id_comprar_ahora) 
+                         ->with('fecha_entrega',$fecha_entrega)
+                          ->with('hora_entrega',$hora_entrega);
                         
 
                         }

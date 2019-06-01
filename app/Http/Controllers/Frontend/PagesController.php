@@ -58,7 +58,7 @@ class PagesController extends Controller
             ->get();    
     
         $productos = $this->product->where('type',  'Arreglo')->get();
-        $productos_globos = $this->product->where('type',  'Globo')->get();
+        $productos_globos = $this->product->where('type',  'Globo') ->orderby('created_at','ASC')->take(4)->get();
 
 
  		return view('frontend.pages.lomasvendido')

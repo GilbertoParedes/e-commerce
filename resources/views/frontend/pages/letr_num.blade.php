@@ -34,18 +34,7 @@
                     <img src="./frontend/images/productos/letras.png" alt="imagen"  style="width:100%; padding-top: 5%;">
                   </a>
   
-                 <div class="row">
-                   <div class="col-12" >
-                         <center> <p  id="precio" >22</p></center>
-                     </div>
-                    
-                  </div>
-
-                 <div class="row">
-                     <div class="col-12" >
-                         <center> <p  id="texto_globos" >Envío incluido</p></center>
-                     </div>
-                 </div>
+             
             </div> 
 
             <div class="col-lg-6 col-md-6 col-sm-6 col-6" >
@@ -54,23 +43,13 @@
                     <img src="./frontend/images/productos/numeros.png" alt="imagen"  style="width:100%; padding-top: 5%;">
                   </a>
   
-                 <div class="row">
-                   <div class="col-12" >
-                         <center> <p  id="precio" >22</p></center>
-                     </div>
-                    
-                  </div>
-
-                 <div class="row">
-                     <div class="col-12" >
-                         <center> <p  id="texto_globos" >Envío incluido</p></center>
-                     </div>
-                 </div>
+               
+                
             </div> 
 
- 
-
-
+ </div> 
+<br>
+ </div> 
 
 
 
