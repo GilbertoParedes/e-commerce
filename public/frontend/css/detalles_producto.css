@@ -36,9 +36,9 @@ background-image: url("../images/principal/fondo.png");
 }
 #input_transparent{
  color: transparent;
-  size: 1%;
+
   background-color: transparent;
-  height: 0px;
+  height: 1px;
   border-color: transparent;
 }
 @media (max-width: 575.98px) { 
@@ -68,6 +68,7 @@ background-image: url("../images/principal/fondo.png");
   margin-bottom: 1%;
 }
 #categoria{
+  margin-top: 2vw;
 font-size: 5.5vw;
 text-align: center;
 }
@@ -88,8 +89,8 @@ margin-left: 10%;
   margin-bottom: 2vw;
 }
 .v2 {
-  margin-left: 18%;
-  border-left:60vw solid #6e6e6d;
+  margin-left: 8%;
+  border-left:79vw solid #6e6e6d;
   height: 1px;
   margin-bottom: 4%;
 }
@@ -102,6 +103,9 @@ margin-left: 10%;
   width: 85%;
   margin-top: -.2vw;
   float: left;
+}
+#botones{
+  margin-top: -5vw;
 }
 #txt_desc1{
   margin-top: -4%;
@@ -125,15 +129,19 @@ margin-left: 10%;
     float: left;
     margin-top: -2.6%;
 }
-#boton_1{
-  width: 100%;
+#boton_0{
+  width: 90%;
   height: auto;
-
-float: center;
+  float: right;
+}
+#boton_1{
+  width: 90%;
+  height: auto;
+  float: left;
 }
 #boton_2{
   margin-top: 8%;
-  width: 100%;
+  width: 95%;
   height: auto;
   margin-bottom: 2%;
 
@@ -268,34 +276,49 @@ margin-left: 27vw;
 }
 #txt_desc1{
   margin-top: -4%;
-  font-size: 2.3vw;
+  font-size: 3vw;
   text-align: center;
 }
 #txt_desc2{
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: justify;
-  font-size: 2vw;
+  font-size: 3vw;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
 }
 #txt_envio{
-  font-size: 2vw;
+  font-size: 2.2vw;
   text-align:right;
 }
 #txt_costo{
-    font-size: 4.2vw;
+    font-size: 4.5vw;
     float: left;
     margin-top: -2.6%;
 }
-#boton_1{
-  width: 130%;
-  height: auto;
+#botones{
+  margin-top: -5vw;
 }
-#boton_2{
-  width: 105%;
+#boton_0{
+  width: 70%;
+  height: auto;
+  float: right;
+}
+#boton_1{
+  width: 70%;
   height: auto;
   float: left;
+}
+#boton_2{
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-right:  25%;
+  margin-top: 3vw;
+}
+#botones{
+  margin-top: -2vw;
+
 }
 #txt_completa{
       font-size: 3vw;
@@ -359,9 +382,7 @@ font-size: 4vw;
 #detalle_especifico{
   font-size: 2vw;
 }
-#botones{
-  width: 115%;
-}
+
  }
  /*************************************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -390,7 +411,7 @@ font-size: 4vw;
   margin-bottom: 1%;
 }
 #categoria{
-  margin-top: 2%;
+  margin-top: 2vw;
 font-size: 1.7vw;
 }
 #tipo{
@@ -424,16 +445,16 @@ margin-left: 3vw;
   float: left;
 }
 #txt_desc1{
-  margin-top: -10%;
-  font-size: 1.5vw;
+  margin-top: -5%;
+  font-size: 2vw;
 }
 #txt_desc2{
   margin-top: 5%;
   text-align: justify;
-  font-size: 1.3vw;
+  font-size: 1.8vw;
 }
 #txt_envio{
-  font-size: 1.3vw;
+  font-size: 1.5vw;
 }
 #txt_costo{
     font-size: 3vw;
@@ -441,14 +462,26 @@ margin-left: 3vw;
     margin-top: -8%;
     margin-left: -12%;
 }
-#boton_1{
-  width: 100%;
+#boton_0{
+  margin-top: 2vw;
+  width: 80%;
   height: auto;
+  float: right;
 }
-#boton_2{
+#boton_1{
+  margin-top: 2vw;
   width: 80%;
   height: auto;
   float: left;
+}
+#boton_2{
+  margin-top: 2vw;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+#botones{
+  margin-top: -2vw;
 }
 #txt_completa{
       font-size: 2.5vw;
@@ -539,7 +572,7 @@ font-size: 3vw;
   margin-bottom: 1%;
 }
 #categoria{
-  margin-top: 2%;
+  margin-top: 5%;
 font-size: 1.7vw;
 }
 #tipo{
@@ -573,16 +606,16 @@ margin-left: 3vw;
   float: left;
 }
 #txt_desc1{
-  margin-top: -10%;
-  font-size: 1.3vw;
+  margin-top: -8%;
+  font-size: 2vw;
 }
 #txt_desc2{
-  margin-top: 5%;
+  margin-top: .5%;
 
-  font-size: 1.1vw;
+  font-size: 1.7vw;
 }
 #txt_envio{
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 #txt_costo{
     font-size: 3vw;
@@ -590,14 +623,26 @@ margin-left: 3vw;
     margin-top: -8%;
     margin-left: -12%;
 }
-#boton_1{
-  width: 100%;
+#boton_0{
+  margin-top: 2vw;
+  width: 80%;
   height: auto;
+  float: right;
 }
-#boton_2{
+#boton_1{
+  margin-top: 2vw;
   width: 80%;
   height: auto;
   float: left;
+}
+#boton_2{
+  margin-top: 2vw;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+#botones{
+  margin-top: -2vw;
 }
 #txt_completa{
       font-size: 2vw;
@@ -674,12 +719,12 @@ font-size: 3vw;
   margin-bottom: 1%;
 }
 #categoria{
-  margin-top: 2%;
+  margin-top: 4vw;
 font-size: 1.7vw;
 }
 #tipo{
-  margin-top: -10%;
-  font-size: 6vw;
+  margin-top: -2vw;
+  font-size: 5vw;
 }
 .top-right {
   position: absolute;
@@ -719,7 +764,7 @@ margin-top: 2vw;
   margin-top: -.1vw;
 }
 #txt_desc1{
-  margin-top: -10%;
+  margin-top: -6%;
   font-size: 1.3vw;
 }
 #txt_desc2{
@@ -736,12 +781,18 @@ margin-top: 2vw;
     margin-top: -8%;
     margin-left: -12%;
 }
-#boton_1{
-  width: 100%;
+#boton_0{
+  width: 80%;
   height: auto;
+  float: right;
+}
+#boton_1{
+  width: 80%;
+  height: auto;
+  float: left;
 }
 #boton_2{
-  width: 80%;
+  width: 100%;
   height: auto;
   float: left;
 }

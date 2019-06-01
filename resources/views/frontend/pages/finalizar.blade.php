@@ -24,7 +24,7 @@
       <div class="col-12" >
         <H1 id="txt_globo">¿GRACIAS POR TU COMPRA! </H1>
         <hr>
-        <H1 id="txt_globo">Hemos enviado tu número de compra a tu correo electrónico </H1>
+        <H1 id="txt_globo">Se ha realizado exitosamente tu pedido!</H1>
 
       </div>   
   </div>

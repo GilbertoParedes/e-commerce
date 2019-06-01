@@ -35,12 +35,12 @@
 
     <!--    BOTONES   -->     
      {!! Form::open(['route' => 'carrito.store', 'method' => 'post']) !!}
-                 <div class="row" id="botones">
+              <div class="row" id="botones">
                   <div class="col-12">
                     <input type="text" value="{{$product->id}}" name="id_producto" id="input_transparent" >
                  </div>
 
-                 <div class="col-6">  
+                 <div class="col-6" >  
                       <a href="{{route('catalogo.show', $product->id)}}">
                           @php
                             {{ $icono="btn0"; }}
@@ -116,23 +116,24 @@
     </div>
 <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-4" >
+      <div class="col-md-3 col-sm-6 col-6" >
         <center>
         <a href="#personalizarMensaje" data-toggle="modal">
-         <img src="../frontend/images/descripcion/BOTON 2.png" id="boton_1">  
+         <img src="../frontend/images/descripcion/BOTON 2.png" id="boton_0">  
         </a> 
         </center>
       </div>
-       <div class="col-sm-3 col-4" >
+       <div class="col-md-3 col-sm-6 col-6" >
           <a href="#modal_complemento" data-toggle="modal">
            <img src="../frontend/images/descripcion/BOTON 3.png" id="boton_1" >
           </a>
+
        </div>   
      
         
-       <div class="col-sm-1 col-3" >
+       <div class="col-md-1  col-sm-1 col-3" >
       </div>  
-       <div class="col-sm-4 col-6" >
+       <div class="col-md-4 col-sm-12 col-12" >
         {!! Form::open(['route' => 'carrito_compras.store', 'method' => 'post']) !!}
         <button type="submit" style="background-color: transparent;border-color: transparent; width:100%">    
          <img src="../frontend/images/descripcion/boton 4.png" id="boton_2" >
@@ -140,7 +141,7 @@
          <input type="text" value="{{$product->id}}" name="id_producto" id="input_transparent" >
         {!! Form::close() !!}  
       </div> 
-       <div class="col-sm-1 col-3" >
+       <div class="col-sm-2 col-3" >
       </div>  
     </div>   
 </div>

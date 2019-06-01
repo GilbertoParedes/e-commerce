@@ -1,4 +1,4 @@
-@extends('frontend.layouts.layout_lomasvendido')
+@extends('frontend.layouts.layout_arreglos_menores')
 @section('title', 'HANA')
   
 @section('content')

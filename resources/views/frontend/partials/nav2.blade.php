@@ -9,8 +9,6 @@
                 <ul>
                   <li><a class="a" href="visita_por_primera_vez" id="texto1">VISITA POR PRIMERA VEZ</a></li>
                   <li><a class="a" href="contactanos" id="texto1">CONTÁCTANOS</a></li>
-                  <li><a class="a" href="cuenta" id="texto1">CONFIGURACIONES</a></li>
-
                 </ul>
               </div>
          </div>
@@ -27,7 +25,7 @@
                 </a>
               </div>
               <div class="col-3" >
-                <a href="../carritocomprass" class="a">
+                <a href="../carrito_compras" class="a">
                   <img src="../frontend/icons/carrito.png" id="iconos"> 
                 </a>
               </div>
@@ -36,11 +34,15 @@
                   <img src="../frontend/icons/corazon2.png" id="iconos"> 
                 </a>
               </div>
-              <div class="col-3">
-                <a href="../#miModal" class="a">
-                  <img src="../frontend/icons/perfil.png" id="iconos"> 
-                </a>
-              </div>
+             <div class="col-3">
+              @if ($validar==1)
+                    <a href="../cuenta" class="a">
+              @else
+                    <a href="#miModal" class="a">
+              @endif      
+                    <img src="../frontend/icons/perfil.png" id="iconos"> 
+                    </a>
+              </div>  
         
         </div>
 

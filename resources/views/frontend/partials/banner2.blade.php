@@ -1,7 +1,7 @@
 <div class=" text-center banner_correo" >
   <div id="banner_contenedor">
 
-   <form action="correo_real.php" method="post" style=" width: 100%;" >
+    {!! Form::open(['route' => 'promociones.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
      <div class="row">
         <div class="col" >
             <p id="texto_ofertas">Recibe las mejores ofertas y más </p>
@@ -16,6 +16,6 @@
              </p> 
         </div>
       </div>
-   </form>
+   {!! Form::close() !!}
   </div>
 </div>

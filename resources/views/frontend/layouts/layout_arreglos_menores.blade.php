@@ -4,42 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title','HANA') | Favoritos</title>
+    <title> @yield('title','HANA') | Arreglos Menores a 450</title>
+    
+
     <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('frontend/js/slider.js')}}"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" id="bootstrap-css" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/menu.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner_opciones.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/lo_mas_vendido.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/favoritos.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/loading.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/banner_venta.css')}}">
-
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-    <!-- Bootstrap JS -->
+
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.js')}}"></script>
+    <script src="{{asset('frontend/js/popper.min.js')}}"></script>
     <script src="{{asset('frontend/js/menu.js')}}"></script>
     <script src="{{asset('frontend/js/carrousel.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('frontend/js/modal.js')}}"></script>
+
 
 </head>
 <body>
     <div class="loader"></div>
 
+<style type="text/css" id="slider-css">
+.carousel-item > div {
+    float: left;
+}
+.carousel-by-item [class*="cloneditem-"] {
+    display: none;
+}
+.mySlides {display:none;}
+.centrado{
+  position:absolute;
+  z-index: 1;
+}
+</style>
     @include('frontend.partials.nav')
     <section>
         @yield('content')
     </section>
-    @include('frontend.partials.banner_compra')
     @include('frontend.partials.banner')
     @include('frontend.partials.modal')
- <script src="frontend/js/carrousel_lomasvendido.js"></script>
 
 </body>
 <script src="{{asset('frontend/js/loading.js')}}"></script>
 
+<script src="{{asset('frontend/js/carrousel_lomasvendido.js')}}"></script>
 </html>

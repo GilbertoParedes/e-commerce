@@ -67,7 +67,7 @@ Route::get('paquetescompletos', 'Frontend\GlobosController@paquetescompletos');
 	Route::resource('pago', 'Frontend\PagoController');
 	Route::get('pago/obtenerinformacionpago/{monto}', 'Frontend\PagoController@getObtenerinformacionpago');
 	Route::get('respuesta', 'Frontend\PagoController@getRespuestapagos');
-	
+	Route::resource('promociones', 'Frontend\PromocionController');
 	Route::resource('complementos', 'Frontend\ComplementosController');
 	Route::resource('mensaje', 'Frontend\MensajeController');
 	Route::get('pago/obtenerrespuestapago', 'Frontend\PagoController@getRespuestapagos');

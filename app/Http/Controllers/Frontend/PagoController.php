@@ -31,7 +31,7 @@ class PagoController extends Controller
    protected $carrito_producto;
    protected $user;
    protected $pagos;
-  
+   protected $direction;
    function __construct(Product $product, Category $cat, ProductoCategoria $product_cat, Deseable $deseable,ComprarAhora $comprarahora, Carrito $carrito,Pago $pago, Direction $direction,CarritoProducto $carrito_producto, User $user, Pagos $pagos)
    {
         $this->product = $product;
@@ -69,8 +69,8 @@ class PagoController extends Controller
              $api_key="4Vj8eK4rloUd272L48hsrarnUA";
                    $merchantId="508029";
                    $accountId="512324";
-                   $description="Test PAYU";
-                   $referenceCode="TestPayU";
+                   $description="Compra en HANA";
+                   $referenceCode="HANA";
                    $tax="0";
                    $taxReturnBase="0";
                    $currency="MXN";
@@ -366,6 +366,7 @@ class PagoController extends Controller
     $pseReference2=$_REQUEST['pseReference2'];
     $pseReference3=$_REQUEST['pseReference3'];
     $authorizationCode=$_REQUEST['authorizationCode'];
+    $id_direccion="";
     //extraer usuario que inicio sesion
     if (Auth::check()) {
             $valor=1;
@@ -378,6 +379,7 @@ class PagoController extends Controller
             foreach ($usuario_correo as $value_correo) {
              $correo=$value_correo->email;
             }
+
 
             //buscar id de carrito en proceso
             //buscar carrito de compras
@@ -395,7 +397,44 @@ class PagoController extends Controller
                     ->get();
 
                     $productos=$this->product->all();
-                   
+                    
+                    //extraer en tabla comprar ahora donde carrito id =$id_Carrito
+                    $Comprar_ahora_consulta=$this->comprarahora
+                    ->where('carrito_id',  $id_carrito)
+                    ->get();
+                    //extraer nombre de titular,facturacion, y direccion_id
+                    foreach ($Comprar_ahora_consulta as $val_comprar) {
+                     $comprarahora_id=$val_comprar->id;
+                     $titular=$val_comprar->titular;
+                     $facturacion=$val_comprar->facturacion;
+                     $id_direccion=$val_comprar->direccion_id;
+                    }
+
+                    //hacer consulta para extraer informacion de direccion
+                    $direccion_consulta=$this->direction
+                    ->where('id',  $id_direccion)
+                    ->get();
+
+                    //consulta a la tabla de pago para extraer tipo de pago 
+                     
+                     $tipo_envio=$this->pago
+                    ->where('comprar_ahora_id',  $comprarahora_id)
+                    ->get();
+
+                     $envio=0;
+                     $type_pay="";
+                     foreach ($tipo_envio as $typ) {
+                        $type_pay=$typ->type_pay;
+                        $fecha=$typ->fecha;
+                        $hora=$typ->hora;
+                      }
+
+                      if ($type_pay=="Premium") {
+                        $envio=80;  
+                      }
+                      else{
+                        $envio=0;
+                      }
 
                 if($transactionState==4)
                     {
@@ -419,8 +458,8 @@ class PagoController extends Controller
                           'status' =>  0,
                           'usuario_id' =>  $id_usuario
                      ]);
-
-                      $transaccion_datos_cliente=array('idtransaction' => $transactionId,  'fecha_fin'=>$processingDate, 'merchantId'=>$merchantId, 'merchant_name'=>$merchant_name,'productos'=>$productos,'carrito_producto'=>$carrito_producto);
+                     
+                      $transaccion_datos_cliente=array('idtransaction' => $transactionId,  'fecha_fin'=>$processingDate, 'merchantId'=>$merchantId, 'merchant_name'=>$merchant_name,'productos'=>$productos,'carrito_producto'=>$carrito_producto,'direccion_consulta'=>$direccion_consulta,'titular'=>$titular,'facturacion'=>$facturacion,'envio'=>$envio,'fecha'=>$fecha,'hora'=>$hora,);
                      //enviar correo a cliente
                       Mail::send('frontend.pages.message_pay_client', $transaccion_datos_cliente,function($msj){
                         $msj->subject('Comprobante de compra realizada en HANA');

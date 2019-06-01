@@ -9,7 +9,7 @@
                 <ul>
                   <li><a class="a" href="visita_por_primera_vez" id="texto1">VISITA POR PRIMERA VEZ</a></li>
                   <li><a class="a" href="contactanos" id="texto1">CONTÁCTANOS</a></li>
-                  <li><a class="a" href="cuenta" id="texto1">CONFIGURACIONES</a></li>
+                 
 
                 </ul>
               </div>
